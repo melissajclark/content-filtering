@@ -1,7 +1,7 @@
 
 // Empty object for all code to live on
 
-var filterApp = "";
+var filterApp = {};
 filterApp.sort = ["Type One", "Type Two", "Type Three", "Type Four", "Type Five"]; // object to hold options for filtering
 
 // ------------------------------------
@@ -15,9 +15,11 @@ filterApp.init = function() { // this function holds everything to start the app
 	**/
 
 	$("#filterOptions").append(
-
-
-
+		"<option value='"+ filterApp.sort[0] + "'>" +  filterApp.sort[0] + "</option>" + 
+		"<option value='"+ filterApp.sort[1] + "'>" +  filterApp.sort[1] + "</option>" +
+		"<option value='"+ filterApp.sort[2] + "'>" +  filterApp.sort[2] + "</option>" +
+		"<option value='"+ filterApp.sort[3] + "'>" +  filterApp.sort[3] + "</option>" +
+		"<option value='"+ filterApp.sort[4] + "'>" +  filterApp.sort[4] + "</option>"
 	);
 
 	/**
@@ -72,7 +74,5 @@ filterApp.init = function() { // this function holds everything to start the app
 **/
 
 $(document).ready(function(){
-
 	filterApp.init();
-
 }); // end doc ready

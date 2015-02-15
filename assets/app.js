@@ -3,6 +3,7 @@
 
 var filterApp = {};
 filterApp.sort = ["type1", "type2", "type3", "type4", "type5"]; // object to hold options for filtering
+filterApp.eachItem = "";
 
 // ------------------------------------
 
@@ -86,12 +87,15 @@ filterApp.init = function() { // this function holds everything to start the app
 		// - compare the present values to the user's selection
 		// - hide items that do not match the user's selection
 
+		// filterApp.eachItem = $("").attr('data-type');
 
-		// if ("('.filterable.filterableItem').attr('data-type')" != filterApp.selectedFilterData) {
-		// 	console.log("if statement ran: not equal"); 
-		//  } //else if ("('.filterable.filterableItem').attr('data-type')" === filterApp.selectedFilterData){
-		// // 	console.log("equal");
-		// // }
+		// console.log(filterApp.eachItem.attr('data-type'));
+
+		if ("section.filterableItem.attr('data-type')" != filterApp.selectedFilterData) {
+			console.log("if statement ran: not equal"); 
+		 } else if (filterApp.eachItem === filterApp.selectedFilterData){
+			console.log("equal");
+		}
 
 
 	 }); // end on click function

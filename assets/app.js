@@ -10,7 +10,7 @@ var filterApp = "";
 	filterApp.typeOne = $("a.typeOneFilter").on("click", function(){
 		console.log("hi");
 		$(".type1").toggleClass("filterableItemHidden");
-		// $(".type1").toggleClass("filterableItem");
+		$(".type1").toggleClass("filterableItem");
 	}); // end click function
 
 

@@ -36,5 +36,9 @@ var filterApp = "";
 		$(".type5").toggleClass("filterableItem");
 	}); // end click function
 
-	fi
+	filterApp.typeAll = $("a.typeAll").on("click", function(){
+		$(".type1, .type2, .type3, .type4, .type5").removeClass("filterableItemHidden");
+		$(".type1, .type2, .type3, .type4, .type5").toggleClass("filterableItem");
+	}); // end view all click function
+
 }); // end doc ready

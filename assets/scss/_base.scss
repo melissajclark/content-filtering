@@ -19,7 +19,7 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 body {
 	font-family:sans-serif;
-	padding:5%;
+	padding:2em;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -38,15 +38,9 @@ h1,h2,h3,h4,h5,h6 {
 
 .container {
 	margin: 0 auto;
-	max-width:70%;
-	color:grey;
+	max-width:90%;
 }
 
-@media all and (max-width:950px){
-	.container {
-		max-width:85%;
-	}
-}
 
 @media all and (max-width:500px){
 	.container {

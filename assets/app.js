@@ -42,18 +42,23 @@ filterApp.init = function() { // this function holds everything to start the app
 	$("#filterOptions").on("change", function(){
 		filterApp.sortChoice = $(this).find(":selected").val();
 		filterApp.sort = filterApp.sortChoice;
+		
+		// add legend of what is on view:
+		$("fieldset.filterResults").after("<p>Currently viewing: " + "<span class='currentContent'></span>");
 		console.log(filterApp.sortChoice);
 
 		if (filterApp.sortChoice === "type1") {
 			// hides all other types
 			$(".type2, .type4, .type5, .type3").toggleClass("filterableItemHidden");
 			$(".type2, .type4, .type5, .type3").toggleClass("filterableItem");
-			console.log("type1 selected!")
+			console.log("type1 selected!");
+
 		} else if (filterApp.sortChoice === "type2") {
 			$(".type2").toggleClass("filterableItemHidden");
 			$(".type2").toggleClass("filterableItem");
 			console.log("type2 selected");
-		};
+		}; 
+
 	});
 
 	

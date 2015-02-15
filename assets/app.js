@@ -83,14 +83,15 @@ filterApp.init = function() { // this function holds everything to start the app
 		*
 		**/ 
 
-
 		// I want to
 		// - check what values are present
 		// - compare the present values to the user's selection
 		// - hide items that do not match the user's selection
 
-		if ("$('.filterableItem').attr('data-type')" === filterApp.selectedFilterData) {
-			$(this).toggleClass("filterableItemHidden");
+
+		if ("('.filterable.filterableItem').attr('data-type')" != filterApp.selectedFilterData) {
+			// $(this).toggleClass("filterableItemHidden");
+			console.log("if statement ran");
 		};
 
 	});

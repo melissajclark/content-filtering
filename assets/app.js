@@ -51,12 +51,12 @@ filterApp.init = function() { // this function holds everything to start the app
 	$("#filterOptions").on("change", function(){
 		filterApp.sortChoice = $(this).find(":selected").val();
 		// add legend of what is on view:
-		$("p.legend").show();
+		// $("p.legend").show();
 		filterApp.sort = filterApp.sortChoice;
 
 		console.log(filterApp.sortChoice);
 
-		if (filterApp.sortChoice === "type1" && filterApp.sortChoice != "type2" && filterApp.sortChoice != "type3" && filterApp.sortChoice != "type4" && filterApp.sortChoice != "type5") {
+		if (filterApp.sortChoice === "type1") {
 			// hides all other types
 			$(".type2, .type4, .type5, .type3").toggleClass("filterableItemHidden");
 			$(".type2, .type4, .type5, .type3").toggleClass("filterableItem");

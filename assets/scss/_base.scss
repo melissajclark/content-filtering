@@ -25,16 +25,30 @@ body {
 	width:100%;
 }
 
+/*=================================================
+=            Container & Media Queries            =
+=================================================*/
+
 .container {
 	margin: 0 auto;
 	max-width:65%;
-	@media and (max-width:950px){
+}
+
+@media all and (max-width:950px){
+	.container {
 		max-width:85%;
 	}
-	@media and (max-width 500px) {
-		max-width: 100%;
+}
+
+@media all and (max-width:500px){
+	.container {
+	max-width: 100%;
 	}
 }
+
+/*-----  End of Container & Media Queries  ------*/
+
+
 
 /*-----  End of Basic Styles  ------*/
 

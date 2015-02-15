@@ -39,7 +39,7 @@ gulp.task('styles', function(){
 
 // default task
 // --------------
-gulp.task('default', ['styles', 'images']);
+gulp.task('default', ['styles']);
 
 // watch task
 // -------------
@@ -53,7 +53,7 @@ gulp.task('watch', function() {
       // Watch .scss files
       gulp.watch('scss/*.scss', ['styles']);
       gulp.watch('scss/**/*.scss', ['styles']);
-      gulp.watch('assets/images/originals/**', ['images']);
+      // gulp.watch('assets/images/originals/**', ['images']);
   
     });
 

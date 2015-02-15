@@ -38,6 +38,14 @@ filterApp.init = function() { // this function holds everything to start the app
 	* Filters Content
 	*
 	**/
+
+	$("#filterOptions").on("change", function(){
+		filterApp.sortChoice = $(this).find(":selected").val();
+		filterApp.sort = filterApp.sortChoice;
+		console.log(filterApp.sortChoice);
+	});
+
+	
 	
 	// filters type1 content
 	filterApp.typeOne = $("a.typeOneFilter").on("click", function(){

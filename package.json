@@ -1,7 +1,7 @@
 {
   "repository": {
     "type": "git",
-    "url": "https://melissajclark@bitbucket.org/melissajclark/content-filtering.git",
+    "url": "https://bitbucket.org/melissajclark/content-filtering"
   },
   "dependencies": {
     "gulp": "*",
@@ -10,6 +10,8 @@
     "gulp-minify-css": "*",
     "gulp-newer": "*",
     "gulp-imagemin": "*",
+    "tiny-lr": "*",
+    "gulp-livereload": "*",
     "gulp-plumber": "*"
   }
 }

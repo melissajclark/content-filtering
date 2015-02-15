@@ -1,6 +1,6 @@
-/*=============================================
-=            Filter Content Styles            =
-=============================================*/
+// =============================================
+// =            Filter Content Styles            =
+// =============================================*/
 
 // div that holds items
 .filterable {
@@ -9,11 +9,11 @@
 
 // individual items (sections)
 .filterableItem {
-	height:150px;
-	width:150px;
+	height:200px;
+	width:200px;
 	display:inline-block;
 	float:left;
-	margin:2%;
+	// margin:2%;
 	// vertical centering technique:
 	position:relative; // relative because it is the parent of the <p> element inside it
 }

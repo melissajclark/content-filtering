@@ -6,7 +6,10 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
     newer = require('gulp-newer'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    livereload = require('gulp-livereload'),
+    lr = require('tiny-lr'),
+    server = lr();
 
 
 // SCSS task

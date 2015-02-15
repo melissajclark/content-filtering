@@ -4,16 +4,27 @@
 
 // div that holds items
 .filterable {
-	color:white;
+	color:white;	
 }
 
-// individual items
+// individual items (sections)
 .filterableItem {
 	height:150px;
 	width:150px;
 	display:inline-block;
 	float:left;
 	margin:2%;
+	// vertical centering technique:
+	position:relative; // relative because it is the parent of the <p> element inside it
+}
+
+// item content 
+.filterableItem p {
+	position:absolute;
+	// vertical centering technique:
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .typeOne {

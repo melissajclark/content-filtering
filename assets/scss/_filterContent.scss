@@ -8,11 +8,6 @@
 	margin: 0 auto;	
 }
 
-// individual item hidden
-.filterableItemHidden {
-	display:none;
-}
-
 // individual items (sections)
 .filterableItem {
 	height:175px;
@@ -22,6 +17,11 @@
 	margin:5px;
 	// vertical centering technique:
 	position:relative; // relative because it is the parent of the <p> element inside it
+}
+
+// individual item hidden
+.filterableItemHidden {
+	display:none;
 }
 
 // item content 

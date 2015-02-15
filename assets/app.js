@@ -16,9 +16,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	$("p.legend").hide();
 	// add class of active to all items on page load
-	$(".filterable").find("section.filterableItem").addClass("allActive");
 	
-
 	/**
 	*
 	* Append sort options to selection menu

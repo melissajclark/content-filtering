@@ -88,17 +88,16 @@ filterApp.init = function() { // this function holds everything to start the app
 
 
 		if ("('.filterable.filterableItem').attr('data-type')" != filterApp.selectedFilterData) {
-			// $(this).toggleClass("filterableItemHidden");
-			console.log("if statement ran"); 
-		};
+			console.log("if statement ran: not equal"); 
+		} else if ("('.filterable.filterableItem').attr('data-type')" === filterApp.selectedFilterData){
+			console.log("equal");
+		}
 
-	});
 
-
+		)}; // end on click function
 
 }; // end filterApp.init
 
-/* End filterApp.init(); */
 
 /**
 *

@@ -2,7 +2,7 @@
 // Empty object for all code to live on
 
 var filterApp = {};
-filterApp.sort = ["Type One", "Type Two", "Type Three", "Type Four", "Type Five"]; // object to hold options for filtering
+filterApp.sort = ["type1", "type2", "type3", "type4", "type5"]; // object to hold options for filtering
 
 // ------------------------------------
 

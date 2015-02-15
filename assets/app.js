@@ -24,6 +24,17 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	/**
 	*
+	* Controls form from refreshing
+	*
+	**/
+
+	$("fieldset.filterResults").on("submit",function(event){
+		event.preventDefault();	
+	});
+	
+
+	/**
+	*
 	* Filters Content
 	*
 	**/

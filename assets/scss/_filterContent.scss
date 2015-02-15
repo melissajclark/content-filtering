@@ -35,6 +35,10 @@
 	transform: translate(-50%, -50%);
 }
 
+/*======================================================
+=        Styles for filterable content (items)    	=
+======================================================*/
+
 .type1 {
 	background:lighten(teal,14%);
 }
@@ -54,5 +58,9 @@
 .type5 {
 	background:lighten(blue,30%);
 }
+
+/*-----  End of Styles for filterable content (items)  ------*/
+
+
 
 /*-----  End of Filter Content Styles  ------*/

@@ -2,6 +2,7 @@
 // Empty object for all code to live on
 
 var filterApp = "";
+filterApp.sort = ["Type One", "Type Two", "Type Three", "Type Four", "Type Five"]; // object to hold options for filtering
 
 // ------------------------------------
 
@@ -13,9 +14,18 @@ filterApp.init = function() { // this function holds everything to start the app
 	*
 	**/
 
-	$("");
+	$("#filterOptions").append(
 
 
+
+	);
+
+	/**
+	*
+	* Filters Content
+	*
+	**/
+	
 	// filters type1 content
 	filterApp.typeOne = $("a.typeOneFilter").on("click", function(){
 		$(".type1").toggleClass("filterableItemHidden");

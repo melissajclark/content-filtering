@@ -19,11 +19,6 @@
 	position:relative; // relative because it is the parent of the <p> element inside it
 }
 
-// individual item hidden
-.filterableItemHidden {
-	display:none;
-}
-
 // item content 
 .filterableItem p {
 	text-transform:capitalize;

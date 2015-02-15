@@ -56,7 +56,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		console.log(filterApp.sortChoice);
 
-		if (filterApp.sortChoice === "type1") {
+		if (filterApp.sortChoice === "type1" && filterApp.sortChoice != "type2" && filterApp.sortChoice != "type3" && filterApp.sortChoice != "type4" && filterApp.sortChoice != "type5") {
 			// hides all other types
 			$(".type2, .type4, .type5, .type3").toggleClass("filterableItemHidden");
 			$(".type2, .type4, .type5, .type3").toggleClass("filterableItem");

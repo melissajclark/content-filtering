@@ -91,7 +91,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		if ("('.filterable.filterableItem').attr('data-type')" != filterApp.selectedFilterData) {
 			// $(this).toggleClass("filterableItemHidden");
-			console.log("if statement ran");
+			console.log("if statement ran"); 
 		};
 
 	});

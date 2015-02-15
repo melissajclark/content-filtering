@@ -10,6 +10,15 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	/**
 	*
+	* Hide legend of results on page load
+	*
+	**/
+
+	$("p.legend").hide();
+	
+
+	/**
+	*
 	* Append sort options to selection menu
 	*
 	**/
@@ -41,10 +50,10 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	$("#filterOptions").on("change", function(){
 		filterApp.sortChoice = $(this).find(":selected").val();
-		filterApp.sort = filterApp.sortChoice;
-		
 		// add legend of what is on view:
-		$("fieldset.filterResults").after("<p>Currently viewing: " + "<span class='currentContent'></span>");
+		$("p.legend").show();
+		filterApp.sort = filterApp.sortChoice;
+
 		console.log(filterApp.sortChoice);
 
 		if (filterApp.sortChoice === "type1") {
@@ -52,6 +61,8 @@ filterApp.init = function() { // this function holds everything to start the app
 			$(".type2, .type4, .type5, .type3").toggleClass("filterableItemHidden");
 			$(".type2, .type4, .type5, .type3").toggleClass("filterableItem");
 			$("span.currentContent").append("Type1");
+		} else if (filterApp.sortChoice != "type1") {
+			$("span.currentContent").find("Type1").remove();
 
 		} else if (filterApp.sortChoice === "type2") {
 			$(".type2").toggleClass("filterableItemHidden");

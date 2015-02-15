@@ -8,35 +8,30 @@ var filterApp = "";
 
 	// filters type1 content
 	filterApp.typeOne = $("a.typeOneFilter").on("click", function(){
-		console.log("hi");
 		$(".type1").toggleClass("filterableItemHidden");
 		$(".type1").toggleClass("filterableItem");
 	}); // end click function
 
 	// filters type2 content
 	filterApp.typeTwo = $("a.typeTwoFilter").on("click", function(){
-		console.log("hi");
 		$(".type2").toggleClass("filterableItemHidden");
 		$(".type2").toggleClass("filterableItem");
 	}); // end click function
 
 	// filters type3 content
 	filterApp.typeThree = $("a.typeThreeFilter").on("click", function(){
-		console.log("hi");
 		$(".type3").toggleClass("filterableItemHidden");
 		$(".type3").toggleClass("filterableItem");
 	}); // end click function
 
 		// filters type4 content
 	filterApp.typeFour = $("a.typeFourFilter").on("click", function(){
-		console.log("hi");
 		$(".type4").toggleClass("filterableItemHidden");
 		$(".type4").toggleClass("filterableItem");
 	}); // end click function
 
 	// filters type1 content
 	filterApp.typeFive = $("a.typeFiveFilter").on("click", function(){
-		console.log("hi");
 		$(".type5").toggleClass("filterableItemHidden");
 		$(".type5").toggleClass("filterableItem");
 	}); // end click function

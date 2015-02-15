@@ -77,10 +77,6 @@ filterApp.init = function() { // this function holds everything to start the app
 
 			filterApp.selectedFilterData = $(filterApp.selectedFilter).attr('data-type');
 
-
-		console.log("selectedFilter = "+ filterApp.selectedFilter);
-		console.log("selectedFilterData = "+ filterApp.selectedFilterData);
-
 		// console.log(filterApp.sort);
 
 	});

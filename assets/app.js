@@ -83,8 +83,16 @@ filterApp.init = function() { // this function holds everything to start the app
 		*
 		**/ 
 
-			if (".filterable section[data-type]" != filterApp.selectedFilterData) {
-				console.log("not equal!");
+		// I want to
+		// - check what values are present
+		// - compare the present values to the user's selection
+		// - hide items that do not match the user's selection
+
+		console.log($(".filterable").find('[data-type]'));
+
+			if (filterApp.selectedFilterData != ".filterable.filterableItem[data-type].val()") {
+				console.log("filterApp.selectedFilterData = " + filterApp.selectedFilterData);
+				$(this).hide();
 			};
 
 		// console.log(filterApp.sort);

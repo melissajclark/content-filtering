@@ -56,9 +56,14 @@ filterApp.init = function() { // this function holds everything to start the app
 		filterApp.sortChoice = $(this).find(":selected").val();	
 
 		// gets the data-type from each item 
-		$(".filterable section[data-type='" + filterApp.sortChoice + "']").removeClass("active");
+		
+		filterApp.selectedFilter = ".filterable section[data-type='" + filterApp.sortChoice + "']";
+		filterApp.selectedFilterData = $(filterApp.selectedFilter).attr('data-type');
+
 
 		console.log("filterApp.sortChoice = "+ filterApp.sortChoice);
+		console.log("selectedFilter = "+ filterApp.selectedFilter);
+		console.log("selectedFilterData = "+ filterApp.selectedFilterData);
 
 		// console.log(filterApp.sort);
 

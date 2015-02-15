@@ -26,6 +26,7 @@ I learn best by doing, so this small project is an experiment of the best way to
 - [New Media Campaigns: Work Page](http://www.newmediacampaigns.com/work#all)
 - [Zoe Rooeny: Filtrify Tutorial](http://zoerooney.com/blog/tutorials/wordpress-filtrify-a-tag-filtered-portfolio-or-gallery/)
     + [Her portfolio](http://zoerooney.com/portfolio/)
+- [Tutorial on Filtering Items](http://www.designchemical.com/blog/index.php/jquery/create-an-automatic-content-filter-using-jquery-css-classes/)
 
 **Downloaded & in /relevant-resources folder:**
 

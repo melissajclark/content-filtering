@@ -55,8 +55,10 @@ filterApp.init = function() { // this function holds everything to start the app
 		// finds the value of the user's selection (aka the desired type to view)
 		filterApp.sortChoice = $(this).find(":selected").val();	
 
-		// gets the data-type from each item and changes the colour based on selection
-		var filterSelected = $(".filterable section[data-type='" + filterApp.sortChoice + "'").find(filterApp.sortChoice);
+		// gets the data-type from each item 
+		$(".filterable section[data-type='" + filterApp.sortChoice + "']").removeClass("active");
+
+		console.log("filterApp.sortChoice = "+ filterApp.sortChoice);
 
 		// console.log(filterApp.sort);
 

@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
-	// empty variable for code to live on (object)
-	var filterContent = "";
 
-	
+	$("a.typeOneFilter").on("click", function(){
+		
+	});
 
-});
+
+}); // end doc ready

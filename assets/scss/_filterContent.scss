@@ -12,11 +12,20 @@
 .filterableItem {
 	height:175px;
 	width:175px;
+}
+
+// positioning here because this class controls movement
+.activeItem {
 	display:inline-block;
 	float:left;
 	margin:5px;
 	// vertical centering technique:
 	position:relative; // relative because it is the parent of the <p> element inside it
+}
+
+.hiddenItem {
+	display:none;
+	clear:both;
 }
 
 // item content 

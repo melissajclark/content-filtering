@@ -2,29 +2,40 @@
 =            Filter Content Styles            =
 =============================================*/
 
+.container ul {
+	list-style-type:none;
+}
+
 li.filterableItem {
 	height:150px;
 	width:150px;
+	display:inline-block;
+	float:left;
 }
 
 .typeOne {
-	background:(lighten)teal,30%;
+	// background:(lighten)teal,30%;
+	background:teal;
 }
 
 .typeTwo {
-	background:lighten(pink,30%);
+	// background:lighten(pink,30%);
+	background:pink;
 }
 
 .typeThree {
-	background:lighten(purple,30%);
+	// background:lighten(purple,30%);
+	background:purple;
 }
 
 .typeFour {
 	background:lighten(red,50%);
+	background:red;
 }
 
 .typeFive {
-	background:lighten(yellow,30%);
+	// background:lighten(yellow,30%);
+	background:yellow;
 }
 
 /*-----  End of Filter Content Styles  ------*/

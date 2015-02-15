@@ -87,14 +87,14 @@ filterApp.init = function() { // this function holds everything to start the app
 		// - hide items that do not match the user's selection
 
 
-		if ("('.filterable.filterableItem').attr('data-type')" != filterApp.selectedFilterData) {
-			console.log("if statement ran: not equal"); 
-		} else if ("('.filterable.filterableItem').attr('data-type')" === filterApp.selectedFilterData){
-			console.log("equal");
-		}
+		// if ("('.filterable.filterableItem').attr('data-type')" != filterApp.selectedFilterData) {
+		// 	console.log("if statement ran: not equal"); 
+		//  } //else if ("('.filterable.filterableItem').attr('data-type')" === filterApp.selectedFilterData){
+		// // 	console.log("equal");
+		// // }
 
 
-		)}; // end on click function
+	 }); // end on click function
 
 }; // end filterApp.init
 

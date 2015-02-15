@@ -9,7 +9,7 @@
     "gulp-autoprefixer": "*",
     // "gulp-minify-css": "*",
     "gulp-newer": "*",
-    "gulp-imagemin": "*",
+    // "gulp-imagemin": "*",
     "tiny-lr": "*",
     "gulp-livereload": "*",
     "gulp-plumber": "*"

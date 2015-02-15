@@ -55,13 +55,29 @@ filterApp.init = function() { // this function holds everything to start the app
 		// finds the value of the user's selection (aka the desired type to view)
 		filterApp.sortChoice = $(this).find(":selected").val();	
 
-		// gets the data-type from each item 
+		/**
+		*
+		* Variable (filterApp.selectedFilter): 
+		*
+		* 	- stores the selector for items with data-type matching user's selection
+		*	- filterApp.sortChoice is connected to the options in the dropdown
+		*	- filterapp.sortChoice's potential values match the data-type values
+		*
+		**/
 		
-		filterApp.selectedFilter = ".filterable section[data-type='" + filterApp.sortChoice + "']";
-		filterApp.selectedFilterData = $(filterApp.selectedFilter).attr('data-type');
+			filterApp.selectedFilter = ".filterable section[data-type='" + filterApp.sortChoice + "']";
+
+		/**
+		*
+		* Variable (filterApp.selectedFilterData): 
+		*
+		* 	- stores data-attribute of the option selected by the user
+		*
+		**/
+
+			filterApp.selectedFilterData = $(filterApp.selectedFilter).attr('data-type');
 
 
-		console.log("filterApp.sortChoice = "+ filterApp.sortChoice);
 		console.log("selectedFilter = "+ filterApp.selectedFilter);
 		console.log("selectedFilterData = "+ filterApp.selectedFilterData);
 

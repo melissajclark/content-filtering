@@ -59,10 +59,11 @@ filterApp.init = function() { // this function holds everything to start the app
 		filterApp.sort = filterApp.sortChoice;
 
 		// gets the data-type from each item and changes the colour based on selection
-		$(".filterable section[data-type='" + filterApp.sort + "'").addClass("active");
-		$(".filterable section[data-type='" + filterApp.sort + "'").find("active");
+		var filterSelected = $(".filterable section[data-type='" + filterApp.sort + "'").find(filterApp.sort);
+		// $(".filterable section[data-type='" + filterApp.sort + "'").find("active");
+		console.log(filterSelected);
 
-		console.log(filterApp.sort);
+		// console.log(filterApp.sort);
 
 	});
 

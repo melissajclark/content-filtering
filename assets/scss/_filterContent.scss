@@ -17,29 +17,23 @@
 }
 
 .typeOne {
-	// background:(lighten)teal,30%;
-	background:teal;
+	background:lighten(teal,5%);
 }
 
 .typeTwo {
-	// background:lighten(pink,30%);
-	background:pink;
+	background:lighten(pink,5%);
 }
 
 .typeThree {
-	// background:lighten(purple,30%);
-	background:purple;
+	background:lighten(purple,5%);
 }
 
 .typeFour {
-	background:lighten(red,50%);
-	background:red;
+	background:lighten(red,10%);
 }
 
 .typeFive {
-	// background:lighten(yellow,30%);
-	background:yellow;
+	background:lighten(yellow,10%);
 }
 
 /*-----  End of Filter Content Styles  ------*/
-

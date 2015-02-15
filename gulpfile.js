@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 // SCSS task
 // -------------
 gulp.task('styles', function(){
-  return sass('scss/') 
+  return sass('assets/scss/') 
       .on('error', function (err) {
           console.error('Error!', err.message);
       })

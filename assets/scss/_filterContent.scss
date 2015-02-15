@@ -2,8 +2,30 @@
 =            Filter Content Styles            =
 =============================================*/
 
+.filterableItem {
+	height:150px;
+	width:150px;
+}
 
+.typeOne {
+	background:(lighten)teal,30%;
+}
 
+.typeTwo {
+	background:lighten(pink,30%);
+}
+
+.typeThree {
+	background:lighten(purple,30%);
+}
+
+.typeFour {
+	background:lighten(red,50%);
+}
+
+.typeFive {
+	background:lighten(yellow,30%);
+}
 
 /*-----  End of Filter Content Styles  ------*/
 

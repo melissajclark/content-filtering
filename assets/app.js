@@ -77,6 +77,16 @@ filterApp.init = function() { // this function holds everything to start the app
 
 			filterApp.selectedFilterData = $(filterApp.selectedFilter).attr('data-type');
 
+		/**
+		*
+		* If Statement to evaluate results
+		*
+		**/ 
+
+			if (".filterable section[data-type]" != filterApp.selectedFilterData) {
+				console.log("not equal!");
+			};
+
 		// console.log(filterApp.sort);
 
 	});

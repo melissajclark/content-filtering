@@ -43,6 +43,14 @@ filterApp.init = function() { // this function holds everything to start the app
 		filterApp.sortChoice = $(this).find(":selected").val();
 		filterApp.sort = filterApp.sortChoice;
 		console.log(filterApp.sortChoice);
+
+		if (filterApp.sortChoice === "type1") {
+			$(".type1").toggleClass("filterableItemHidden");
+			$(".type1").toggleClass("filterableItem");
+		} else if (filterApp.sortChoice === "type2") {
+			$(".type2").toggleClass("filterableItemHidden");
+			$(".type2").toggleClass("filterableItem");
+		};
 	});
 
 	

@@ -27,15 +27,15 @@ gulp.task('styles', function(){
 
 // images task
 // --------------
-var imgSrc = 'assets/images/originals/*';
-var imgDest = 'assets/images';
+// var imgSrc = 'assets/images/originals/*';
+// var imgDest = 'assets/images';
 
-gulp.task('images', function() {
-  return gulp.src(imgSrc, {base: 'assets/images/originals'})
-        .pipe(newer(imgDest))
-        .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-        .pipe(gulp.dest(imgDest));
-});
+// gulp.task('images', function() {
+//   return gulp.src(imgSrc, {base: 'assets/images/originals'})
+//         .pipe(newer(imgDest))
+//         .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+//         .pipe(gulp.dest(imgDest));
+// });
 
 // default task
 // --------------

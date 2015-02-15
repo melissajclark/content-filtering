@@ -90,18 +90,17 @@ filterApp.init = function() { // this function holds everything to start the app
 		// - hide items that do not match the user's selection
 
 		filterApp.typeData = {
-				filterTypeOne: '$(".filterableItem[data-type='type1']")',
-				filterTypeTwo: '$(".filterableItem[data-type='type2']")',
-				filterTypeThree: '$(".filterableItem[data-type='type3']")',
-				filterTypeFour: '$(".filterableItem[data-type='type4']")',
-				filterTypeFive: '$(".filterableItem[data-type='type5']")'
+				filterTypeOne: '$(".filterableItem[data-type=type1]");',
+				filterTypeTwo: '$(".filterableItem[data-type=type2]");',
+				filterTypeThree: '$(".filterableItem[data-type=type3]");',
+				filterTypeFour: '$(".filterableItem[data-type=type4]");',
+				filterTypeFive: '$(".filterableItem[data-type=type5]");'
 			}
 
-		console.log(filterApp.allDataTypes);
+		console.log(filterApp.typeData);
 
-		if (  != filterApp.selectedFilterData) {
+		if ( filterApp.typeData.filterTypeOne === filterApp.selectedFilterData) {
 			$(this).toggleClass("filterableItemHidden");
-			
 		};
 
 	});

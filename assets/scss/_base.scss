@@ -21,6 +21,12 @@ body {
 	font-family:sans-serif;
 }
 
+h1,h2,h3,h4,h5,h6 {
+	text-transform:uppercase;
+	text-align:center;
+	color:#666;
+}
+
 .wrapper {
 	width:100%;
 }
@@ -32,6 +38,7 @@ body {
 .container {
 	margin: 0 auto;
 	max-width:65%;
+	color:purple;
 }
 
 @media all and (max-width:950px){

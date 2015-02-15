@@ -1,7 +1,7 @@
 {
   "repository": {
     "type": "git",
-    "url": " "
+    "url": "https://melissajclark@bitbucket.org/melissajclark/content-filtering.git",
   },
   "dependencies": {
     "gulp": "*",

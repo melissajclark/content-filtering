@@ -37,7 +37,8 @@ var filterApp = "";
 	}); // end click function
 
 	filterApp.typeAll = $("a.typeAll").on("click", function(){
-		$(".type1, .type2, .type3, .type4, .type5").removeClass("filterableItemHidden");
+		$(".filterable").find("filterableItemHidden").removeClass("filterableItemHidden");
+		// $(".type1, .type2, .type3, .type4, .type5").toggleClass("filterableItemHidden");
 		$(".type1, .type2, .type3, .type4, .type5").toggleClass("filterableItem");
 	}); // end view all click function
 

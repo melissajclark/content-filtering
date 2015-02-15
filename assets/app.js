@@ -49,9 +49,10 @@ filterApp.init = function() { // this function holds everything to start the app
 	**/
 
 	$("#filterOptions").on("change", function(){
-		filterApp.sortChoice = $(this).find(":selected").val();
-
+		filterApp.sortChoice = $(this).find(":selected").val();	
 		filterApp.sort = filterApp.sortChoice;
+		$(".filterable section[data-type='" + filterApp.sortChoice + "'").css('background', 'blue');
+
 		console.log(filterApp.sortChoice);
 
 	});

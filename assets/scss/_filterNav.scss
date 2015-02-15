@@ -1,0 +1,24 @@
+/*==================================
+=            Filter Nav            =
+==================================*/
+
+ul.filterNav {
+	list-style-type: none;
+	margin: 0 auto;
+	&li a.filterControl{
+		display:inline-block;
+		float:left;
+		padding:0 10px 0 10px;
+		font-size:24px;
+		text-transform:uppercase;
+	} // li a.filterControl
+	a.filterControl:hover {
+		background: lighten(teal,10%);
+		color:white; 
+	}
+} // ul.filterNav;
+
+
+
+/*-----  End of Filter Nav  ------*/
+

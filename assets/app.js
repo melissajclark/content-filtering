@@ -85,42 +85,6 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	});
 
-	
-	
-	// filters type1 content
-	filterApp.typeOne = $("a.typeOneFilter").on("click", function(){
-		$(".type1").toggleClass("filterableItemHidden");
-		$(".type1").toggleClass("filterableItem");
-	}); // end click function
-
-	// filters type2 content
-	filterApp.typeTwo = $("a.typeTwoFilter").on("click", function(){
-		$(".type2").toggleClass("filterableItemHidden");
-		$(".type2").toggleClass("filterableItem");
-	}); // end click function
-
-	// filters type3 content
-	filterApp.typeThree = $("a.typeThreeFilter").on("click", function(){
-		$(".type3").toggleClass("filterableItemHidden");
-		$(".type3").toggleClass("filterableItem");
-	}); // end click function
-
-		// filters type4 content
-	filterApp.typeFour = $("a.typeFourFilter").on("click", function(){
-		$(".type4").toggleClass("filterableItemHidden");
-		$(".type4").toggleClass("filterableItem");
-	}); // end click function
-
-	// filters type1 content
-	filterApp.typeFive = $("a.typeFiveFilter").on("click", function(){
-		$(".type5").toggleClass("filterableItemHidden");
-		$(".type5").toggleClass("filterableItem");
-	}); // end click function
-
-	filterApp.typeAll = $("a.typeAll").on("click", function(){
-		$(".filterable").find(".filterableItemHidden").removeClass("filterableItemHidden");
-		$(".type1, .type2, .type3, .type4, .type5").addClass("filterableItem");
-	}); // end view all click function
 
 }; // end filterApp.init
 

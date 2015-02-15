@@ -1,10 +1,20 @@
-$(document).ready(function(){
 
 // Empty object for all code to live on
 
 var filterApp = "";
 
 // ------------------------------------
+
+filterApp.init = function() { // this function holds everything to start the app
+
+	/**
+	*
+	* Append sort options to selection menu
+	*
+	**/
+
+	$("");
+
 
 	// filters type1 content
 	filterApp.typeOne = $("a.typeOneFilter").on("click", function(){
@@ -40,5 +50,19 @@ var filterApp = "";
 		$(".filterable").find(".filterableItemHidden").removeClass("filterableItemHidden");
 		$(".type1, .type2, .type3, .type4, .type5").addClass("filterableItem");
 	}); // end view all click function
+
+}; // end filterApp.init
+
+/* End filterApp.init(); */
+
+/**
+*
+* Doc Ready = calls all code above
+*
+**/
+
+$(document).ready(function(){
+
+	filterApp.init();
 
 }); // end doc ready

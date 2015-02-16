@@ -7,15 +7,19 @@
 
 ## About Content-Filtering
 
-I've seen a lot of websites with filterable content and also have a need to implement it on my own client projects. I know there are plugins out there but I want to understand how it works and the different methods available.
+Filtering content is a common web design pattern. There's tons of jQuery plugins out there, but I want to set it up on my own. 
 
 I learn best by doing, so this small project is an experiment of the best way to filter content using jquery. 
+
+This project uses HTML & CSS (SCSS) and data-attributes to store the data.
+
+Eventually I want to implement this in custom WordPress themes. I like to get the setup down in HTML before moving to setting up the PHP for WordPress.
 
 ## Some Questions & Topics I Need To Figure Out
 
 1. How to setup the jQuery selectors when I may not know what the content is? ie. for a client adding tags / info to works
-2. Is it better to use data attributes or classes for the relevant classifications?
-3. How to properly implement this in a custom WordPress theme?
+- Is it better to use data attributes or classes for the relevant classifications?
+- How to properly implement this in a custom WordPress theme?
 
 ------
 
@@ -28,12 +32,9 @@ I learn best by doing, so this small project is an experiment of the best way to
     + [Her portfolio](http://zoerooney.com/portfolio/)
 - [Tutorial on Filtering Items](http://www.designchemical.com/blog/index.php/jquery/create-an-automatic-content-filter-using-jquery-css-classes/)
 
-**Downloaded & in /relevant-resources folder:**
+**Plugins / Tutorials with Downloadable Files:**
 
 - _Online_: [Shuffle](http://vestride.github.io/Shuffle/)
 - _Online_: [Mixitup](https://mixitup.kunkalabs.com/)
-    + _Local_: [Mixitup Index.html](/Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/relevant-resources/mixitup/index.html)
 - _Online_: [Filtrify](http://luis-almeida.github.io/filtrify/)
-    + _Local_: [Filtrify Index.html](/Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/relevant-resources/filtrify/index.html)
 - _Online_: [Content Filter Tutorial](http://codyhouse.co/gem/content-filter/)
-    + _Local_: [Content-Filter Index](/Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/relevant-resources/content-filter/index.html)

@@ -20,7 +20,7 @@ filterApp.init = function() { // this function holds everything to start the app
 	
 	/**
 	*
-	* Append sort options to selection menu
+	* Append sort options to selection menu: types
 	*
 	**/
 

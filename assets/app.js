@@ -189,6 +189,13 @@ filterApp.init = function() { // this function holds everything to start the app
 
 			console.log(filterApp.allShapes);
 
+
+
+		filterApp.filteredItems = $( "section.filterableItem" ).filter( $("[data-shape='square']" ).toggleClass("active") );
+
+		console.log(filterApp.filteredItems);
+
+
 	
 	// ============ Function that listens on click & evaluates shape data
 
@@ -223,7 +230,6 @@ filterApp.init = function() { // this function holds everything to start the app
 
 			filterApp.selectedShapeData = $(filterApp.selectedShape).attr('data-shape');
 			console.log("filterApp.selectedShapeData = " + filterApp.selectedShapeData);
-
 		/**
 		*
 		* If Statement to evaluate results

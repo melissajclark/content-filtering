@@ -14,11 +14,13 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	/**
 	*
-	* Hide legend of results on page load
+	* Hide legend of results on page load + add active class to all items
 	*
 	**/
 
 	$("section.filterResultsCurrent").hide();
+
+	$("section.filterableItem").addClass("active");
 	
 	/**
 	*

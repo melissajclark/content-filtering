@@ -6,3 +6,8 @@ npm-debug.log
 ### sass ###
 
 .sass-cache
+
+### ignore resources ###
+
+/relevant-resources
+

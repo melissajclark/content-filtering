@@ -97,7 +97,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		*
 		**/
 		
-		$("#filterOptionsCurrent.filterNav li span.currentChoice").html(filterApp.selectedFilterData);
+		$("#filterOptionsCurrent.filterNav li span.currentChoice").html(filterApp.sortChoice);
 
 
 		filterApp.itemData = $(".filterable section.filterableItem").attr('data-type');
@@ -214,7 +214,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			console.log("all selected"); 
 		}
 
-		$("#filterOptionsCurrent.filterNav li span.currentChoice").html(filterApp.selectedShapeData);
+		$("#filterOptionsCurrent.filterNav li span.currentChoice").html(filterApp.sortChoiceShape);
 	}); // end function on shapes select
 
 

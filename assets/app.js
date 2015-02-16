@@ -44,8 +44,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		"<option value='"+ filterApp.sortShapes[0] + "'>" +  filterApp.sortShapes[0] + "</option>" + 
 		"<option value='"+ filterApp.sortShapes[1] + "'>" +  filterApp.sortShapes[1] + "</option>" +
 		"<option value='"+ filterApp.sortShapes[2] + "'>" +  filterApp.sortShapes[2] + "</option>" +
-		"<option value='"+ filterApp.sortShapes[3] + "'>" +  filterApp.sortShapes[3] + "</option>" +
-		"<option value='"+ filterApp.sortShapes[4] + "'>" +  filterApp.sortShapes[4] + "</option>"
+		"<option value='"+ filterApp.sortShapes[3] + "'>" +  filterApp.sortShapes[3] + "</option>"
 	);
 
 

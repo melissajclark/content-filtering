@@ -152,6 +152,7 @@ filterApp.init = function() { // this function holds everything to start the app
  		 	$(".filterable section.filterableItem[data-type='type2']").show(); 
  		 	$(".filterable section.filterableItem[data-type='type3']").show(); 
  		 	$(".filterable section.filterableItem[data-type='type4']").show(); 
+ 		 	console.log("all selected");
  		 	}
 
 	 }); // end on click function: types
@@ -208,7 +209,8 @@ filterApp.init = function() { // this function holds everything to start the app
 		} else if (filterApp.selectedShapeData === "all" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "circle" && filterApp.selectedShapeData != "hexagon"){
 			$(".filterable section.filterableItem[data-shape='hexagon']").show();
 			$(".filterable section.filterableItem[data-shape='square']").show(); 
-			$(".filterable section.filterableItem[data-shape='circle']").show(); 
+			$(".filterable section.filterableItem[data-shape='circle']").show();
+			console.log("all selected"); 
 		}
 
 		$("#filterOptionsCurrent.filterNav li span.currentChoice").html(filterApp.selectedShapeData);

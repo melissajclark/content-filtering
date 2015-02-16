@@ -97,7 +97,8 @@ filterApp.init = function() { // this function holds everything to start the app
 		*
 		**/
 		
-		$("#filterOptionsCurrent.filterNav li span.currentChoice").html(filterApp.sortChoice);
+		// $("#filterOptionsCurrent.filterNav li span.currentChoice").before("Type: ");
+		$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Type: " + filterApp.sortChoice);
 
 
 		filterApp.itemData = $(".filterable section.filterableItem").attr('data-type');

@@ -92,6 +92,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		* Updates span with current filter choice
 		*
 		**/
+
 		
 			$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Type: " + filterApp.sortChoice);
 
@@ -211,7 +212,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		if (filterApp.selectedShapeData === "circle" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "hexagon") {
 			$(".filterable section.filterableItem[data-shape='circle']").show(); // active item
 			$(".filterable section.filterableItem[data-shape='square']").hide(); 
-			$(".filterable section.filterableItem[data-shape='hexagon']").hide(); 
+			$(".filterable section.filterableItem[data-shape='hexagon']").hide();
 		} else if (filterApp.selectedShapeData === "square" && filterApp.selectedShapeData != "circle" && filterApp.selectedShapeData != "hexagon") {
 			$(".filterable section.filterableItem[data-shape='square']").show(); // active item
 			$(".filterable section.filterableItem[data-shape='circle']").hide(); 
@@ -224,7 +225,6 @@ filterApp.init = function() { // this function holds everything to start the app
 			$(".filterable section.filterableItem[data-shape='hexagon']").show();
 			$(".filterable section.filterableItem[data-shape='square']").show(); 
 			$(".filterable section.filterableItem[data-shape='circle']").show();
-			console.log("all selected"); 
 		}
 
 		$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);

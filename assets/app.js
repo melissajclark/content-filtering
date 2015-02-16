@@ -207,7 +207,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			$(".filterable section.filterableItem[data-shape='hexagon']").show(); // active item
 			$(".filterable section.filterableItem[data-shape='square']").hide(); 
 			$(".filterable section.filterableItem[data-shape='circle']").hide(); 
-		} else if (filterApp.selectedShapeData === "all" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "circle" && filterApp.selectedShapeData != "hexagon"){
+		} else if (filterApp.sortChoiceShape === "all" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "circle" && filterApp.selectedShapeData != "hexagon"){
 			$(".filterable section.filterableItem[data-shape='hexagon']").show();
 			$(".filterable section.filterableItem[data-shape='square']").show(); 
 			$(".filterable section.filterableItem[data-shape='circle']").show();

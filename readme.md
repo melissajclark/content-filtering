@@ -16,8 +16,8 @@ This project uses HTML & CSS (SCSS), but ultimately I want to implement the effe
 ## Some Questions & Topics I Need To Figure Out
 
 1. How to setup the jQuery selectors when I may not know what the content is? ie. for a client adding tags / info to works
-2. How to properly implement this in a custom WordPress theme?
-3. How to filter for multiple attributes at once?
+- How to properly implement this in a custom WordPress theme?
+- How to filter for multiple attributes at once?
 
 ------
 

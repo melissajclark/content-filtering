@@ -205,6 +205,18 @@ filterApp.init = function() { // this function holds everything to start the app
 			filterApp.selectedShapeData = $(filterApp.selectedShape).attr('data-shape');
 			console.log("filterApp.selectedShapeData = " + filterApp.selectedShapeData);
 
+		/**
+		*
+		* Variable (filterApp.allShapes): 
+		*
+		* 	- finds all items in the DOM with the attribute of 'data-type'
+		*	- returns HTML of all items
+		*
+		**/
+
+			filterApp.allShapes = $(".filterable").find(".filterableItem[data-shape]");
+
+			console.log(filterApp.allShapes);
 
 		/**
 		*

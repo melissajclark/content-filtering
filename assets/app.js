@@ -162,36 +162,49 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	$("#filterOptionsShapes a.filterControl").on("click",function(){ 
 
-		$("section.filterResultsCurrent").show();
+		// finds the value of the user's selection (aka the desired shape to view)
+		filterApp.sortChoiceShape = $(this).text();
 
+		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
 
 		/**
 		*
-		* Get Value of user's selection
+		* Variable (filterApp.selectedShape): 
+		*
+		*	- searches the div with a class of "filterable"
+		*	- locates any elements with the data-attribute "data-shape"
+		*	- checks the data-shape attributes for the value matching the user's selection
+		*	- when console logged it returns HTML from the DOM for each item 
 		*
 		**/
-		
-			filterApp.sortChoiceShape = $(this).text();
+
+			filterApp.selectedShape = $(".filterable").find("[data-shape='" + filterApp.sortChoiceShape + "']");
+			console.log(filterApp.selectedShape);
 
 		/**
 		*
-		* Uses user's selection within variable to store choice
+		* Variable (filterApp.selectedShapeData): 
 		*
-		**/
-		
-			filterApp.selectedShape = ".filterable section[data-shape='" + filterApp.sortChoiceShape + "']";
-
-		/**
-		*
-		* Gets the data-shape's value from user's selection
+		* 	- grabs the data-attribute value from any items in the DOM that match the user's selection 
 		*
 		**/
 
 			filterApp.selectedShapeData = $(filterApp.selectedShape).attr('data-shape');
+			console.log("filterApp.selectedShapeData = " + filterApp.selectedShapeData);
+		
 
 		/**
 		*
-		* If statement to evaluate data & compare
+		* Updates span with current filter choice: shape
+		*
+		**/
+		
+			$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
+
+
+		/**
+		*
+		* If Statement to evaluate results
 		*
 		**/
 

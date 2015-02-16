@@ -105,8 +105,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			$(".filterable section.filterableItem[data-type='type2']").hide(); 
 			$(".filterable section.filterableItem[data-type='type3']").hide(); 
 			$(".filterable section.filterableItem[data-type='type4']").hide(); 
-			$(".filterable section.filterableItem[data-type='type5']").hide();
-			// $("#filterOptionsCurrent.filterNav li span.currentChoice").html(filterApp.selectedFilterData); 
+			$(".filterable section.filterableItem[data-type='type5']").hide(); 
 			
 		 } else if (filterApp.selectedFilterData === "type2" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5"){
 		 	// hides item without the type2 data-type attribute
@@ -114,8 +113,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		 	$(".filterable section.filterableItem[data-type='type1']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type3']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type4']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type5']").hide();
-		 	// $("#filterOptionsCurrent").append("<li>" + filterApp.selectedFilterData + "</li>");  
+		 	$(".filterable section.filterableItem[data-type='type5']").hide();	  
 		 	
 		 } else if (filterApp.selectedFilterData === "type3" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5"){
 		 	// hides item without the type3 data-type attribute
@@ -124,7 +122,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		 	$(".filterable section.filterableItem[data-type='type2']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type4']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type5']").hide();
-		 	// $("#filterOptionsCurrent").append("<li>" + filterApp.selectedFilterData + "</li>"); 
+
 		 	
 		} else if (filterApp.selectedFilterData === "type4" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type5"){
 		 	// hides item without the type3 data-type attribute
@@ -133,7 +131,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		 	$(".filterable section.filterableItem[data-type='type2']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type3']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type5']").hide();
-		 	// $("#filterOptionsCurrent").append("<li>" + filterApp.selectedFilterData + "</li>");  
+
 		 	
 		 } else if (filterApp.selectedFilterData === "type5" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4"){
 		 	// hides item without the type3 data-type attribute
@@ -142,7 +140,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		 	$(".filterable section.filterableItem[data-type='type2']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type3']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type4']").hide();
-		 	// $("#filterOptionsCurrent").append("<li>" + filterApp.selectedFilterData + "</li>"); 
+
 		 	}
 		 else if (filterApp.selectedFilterData === "All" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5") {
  		 	// hides item without the type3 data-type attribute
@@ -151,7 +149,6 @@ filterApp.init = function() { // this function holds everything to start the app
  		 	$(".filterable section.filterableItem[data-type='type2']").show(); 
  		 	$(".filterable section.filterableItem[data-type='type3']").show(); 
  		 	$(".filterable section.filterableItem[data-type='type4']").show(); 
- 		 	// $("#filterOptionsCurrent").append("<li>" + filterApp.selectedFilterData + "</li>"); 
  		 	}
 
 	 }); // end on click function: types
@@ -189,6 +186,8 @@ filterApp.init = function() { // this function holds everything to start the app
 		* If statement to evaluate data & compare
 		*
 		**/
+
+		$("#filterOptionsCurrent.filterNav li span.currentChoice").html(filterApp.selectedShapeData);
 
 		if (filterApp.selectedShapeData === "circle" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "hexagon") {
 			$(".filterable section.filterableItem[data-shape='circle']").show(); // active item

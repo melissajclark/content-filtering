@@ -2,7 +2,7 @@
 // Empty object for all code to live on
 
 var filterApp = {};
-filterApp.sort = ["type1", "type2", "type3", "type4", "type5"]; // object to hold options for filtering
+filterApp.sort = ["all", "type1", "type2", "type3", "type4", "type5"]; // object to hold options for filtering
 filterApp.eachItem = "";
 
 // ------------------------------------
@@ -29,7 +29,8 @@ filterApp.init = function() { // this function holds everything to start the app
 		"<option value='"+ filterApp.sort[1] + "'>" +  filterApp.sort[1] + "</option>" +
 		"<option value='"+ filterApp.sort[2] + "'>" +  filterApp.sort[2] + "</option>" +
 		"<option value='"+ filterApp.sort[3] + "'>" +  filterApp.sort[3] + "</option>" +
-		"<option value='"+ filterApp.sort[4] + "'>" +  filterApp.sort[4] + "</option>"
+		"<option value='"+ filterApp.sort[4] + "'>" +  filterApp.sort[4] + "</option>" +
+		"<option value='"+ filterApp.sort[5] + "'>" +  filterApp.sort[5] + "</option>"
 	);
 
 	/**

@@ -16,7 +16,7 @@ filterApp.init = function() { // this function holds everything to start the app
 	*
 	**/
 
-	$("p.legend").hide();
+	$("section.filterResultsCurrent").hide();
 	// add class of active to all items on page load
 	
 	/**
@@ -57,7 +57,9 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		// finds the value of the user's selection (aka the desired type to view)
 		filterApp.sortChoice = $(this).text();
-		console.log(filterApp.sortChoice);	
+		console.log(filterApp.sortChoice);
+
+		$("section.filterResultsCurrent").show();
 
 		/**
 		*

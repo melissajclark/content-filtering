@@ -132,7 +132,16 @@ filterApp.init = function() { // this function holds everything to start the app
 		 	$(".filterable section.filterableItem[data-type='type2']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type3']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type4']").hide(); 
-		 	console.log(filterApp.selectedFilterData); }
+		 	console.log(filterApp.selectedFilterData);}
+		 else {
+ 		 	// hides item without the type3 data-type attribute
+ 		 	$(".filterable section.filterableItem[data-type='type5']").show(); // active item
+ 		 	$(".filterable section.filterableItem[data-type='type1']").show(); 
+ 		 	$(".filterable section.filterableItem[data-type='type2']").show(); 
+ 		 	$(".filterable section.filterableItem[data-type='type3']").show(); 
+ 		 	$(".filterable section.filterableItem[data-type='type4']").show(); 
+ 		 	console.log(filterApp.selectedFilterData);}
+
 
 
 	 }); // end on click function

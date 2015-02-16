@@ -73,13 +73,11 @@ filterApp.init = function() { // this function holds everything to start the app
 		*
 		**/
 		
-			filterApp.selectedFilter = ".filterable section.filterableItem[data-type='" + filterApp.sortChoice + "']";
+			// filterApp.selectedFilter = ".filterable section.filterableItem[data-type='" + filterApp.sortChoice + "']";
 
-		
+			filterApp.selectedFilter = $(".filterable").find("section.filterableItem[data-type='" + filterApp.sortChoice + "']");
 
-			filterApp.userChoice = $(".filterable").find("section.filterableItem[data-type='" + filterApp.sortChoice + "']");
-
-			console.log(filterApp.userChoice);
+			console.log(filterApp.selectedFilter);
 
 		/**
 		*
@@ -89,7 +87,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		*
 		**/
 
-			filterApp.selectedFilterData = $(filterApp.userChoice).attr('data-type');
+			filterApp.selectedFilterData = $(filterApp.selectedFilter).attr('data-type');
 			console.log("filterApp.selectedFilterData = " + filterApp.selectedFilterData);
 
 		/**

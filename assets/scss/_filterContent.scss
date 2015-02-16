@@ -8,16 +8,16 @@
 	margin: 0 auto;	
 }
 
-.filterableItem, .active {	
+.active {	
 	display:inline-block;
 	float:left;
 	// vertical centering technique:
 	position:relative; // relative because it is the parent of the <p> element inside it
 }
 
-.inactive {
-	display:none;
-} 
+// .inactive {
+// 	display:none;
+// } 
 
 // individual items (sections)
 .filterableItem {
@@ -25,6 +25,7 @@
 	width:150px;
 	margin:5px;
 	padding:10px;
+	display:none;
 }
 
 // item content 

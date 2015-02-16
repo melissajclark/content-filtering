@@ -195,11 +195,11 @@ filterApp.init = function() { // this function holds everything to start the app
 		**/
 
 
-		if (filterApp.selectedFilterData === "circle" && filterApp.selectedFilterData !"square" && filterApp.selectedFilterData !"hexagon") {
+		if (filterApp.selectedShapeData === "circle" && filterApp.selectedShapeData !"square" && filterApp.selectedShapeData !"hexagon") {
 			$(".filterable section.filterableItem[data-shape='circle']").show(); // active item
 			$(".filterable section.filterableItem[data-shape='square']").hide(); 
 			$(".filterable section.filterableItem[data-shape='hexagon']").hide(); 
-		};
+		}
 
 
 	}); // end function on shapes select

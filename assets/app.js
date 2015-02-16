@@ -188,7 +188,18 @@ filterApp.init = function() { // this function holds everything to start the app
 			filterApp.selectedShapeData = $(filterApp.selectedFilterShape).attr('data-shape');
 
 
+		/**
+		*
+		* If statement to evaluate data & compare
+		*
+		**/
 
+
+		if (filterApp.selectedFilterData === "circle" && filterApp.selectedFilterData !"square" && filterApp.selectedFilterData !"hexagon") {
+			$(".filterable section.filterableItem[data-shape='circle']").show(); // active item
+			$(".filterable section.filterableItem[data-shape='square']").hide(); 
+			$(".filterable section.filterableItem[data-shape='hexagon']").hide(); 
+		};
 
 
 	}); // end function on shapes select

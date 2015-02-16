@@ -200,21 +200,6 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
 
-		// filters through items to find the ones that match user's selection
-		filterApp.filterSelection = $( "section.filterableItem" ).filter( $('[data-shape="' + filterApp.sortChoiceShape + '"]' ));
-
-
-		filterApp.filterActiveItemActive = $("section.filterableItem").hasClass("active");
-		filterApp.filterActiveItemActive = $("section.filterableItem").hasClass("inactive");
-
-		if (filterApp.filterActiveItemActive === true) {
-			$("section.filterableItem").toggleClass("active");
-			console.log("true");
-		} else if (filterApp.filterActiveItem != false) {
-			$("section.filterableItem").toggleClass("inactive");
-			console.log("!= true")
-		}
-
 		/**
 		*
 		* Variable (filterApp.selectedShape): 
@@ -239,6 +224,21 @@ filterApp.init = function() { // this function holds everything to start the app
 
 			filterApp.selectedShapeData = $(filterApp.selectedShape).attr('data-shape');
 			console.log("filterApp.selectedShapeData = " + filterApp.selectedShapeData);
+
+
+		
+		// filters through items to find the ones that match user's selection
+		filterApp.filterSelection = $( "section.filterableItem" ).filter( $('[data-shape="' + filterApp.sortChoiceShape + '"]' ));
+
+		filterApp.filterActiveItemActive = $("section.filterableItem").hasClass("active");
+		// filterApp.filterActiveItemActive = $("section.filterableItem").hasClass("inactive");
+
+		if (filterApp.filterActiveItemActive === true) {
+			console.log("true");
+		} else if (filterApp.filterActiveItem === false) {
+			$("section.filterableItem").removeClass("active");
+			console.log("!= true")
+		}
 		/**
 		*
 		* If Statement to evaluate results

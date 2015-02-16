@@ -12,13 +12,14 @@
 	float:left;
 }
 
-ul.filterNav {
+ul.filterNav li {
 	list-style-type: none;
+	display:inline-block;
 	// margin: 0 auto;
 } // ul.filterNav;
 
 ul.filterNav li a {
-	display:inline-block;
+	// display:inline-block;
 	float:left;
 	text-align:center;
 	padding:15px;

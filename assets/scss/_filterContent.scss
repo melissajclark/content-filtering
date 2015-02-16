@@ -39,23 +39,23 @@
 =     Styles for filterable content (items): colours   =
 ======================================================*/
 
-.itemType-1 {
+[data-color~="teal"] {
 	background:lighten(teal,14%);
 }
 
-.itemType-2 {
+[data-color~="pink"] {
 	background:darken(pink,20%);
 }
 
-.itemType-3 {
+[data-color~="purple"] {
 	background:lighten(purple,5%);
 }
 
-.itemType-4 {
+[data-color~="red"] {
 	background:lighten(red,10%);
 }
 
-.itemType-5 {
+[data-color~="blue"] {
 	background:lighten(blue,30%);
 }
 

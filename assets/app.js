@@ -62,7 +62,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	/**
 	*
-	* Filters Content
+	* Filters Content: Types
 	*
 	**/
 

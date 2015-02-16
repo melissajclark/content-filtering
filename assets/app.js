@@ -92,14 +92,25 @@ filterApp.init = function() { // this function holds everything to start the app
 		// $(".filterable section.filterableItem[data-type='type1']");
 		filterApp.itemData = $(".filterable section.filterableItem").attr('data-type');
 
-		if (filterApp.selectedFilterData === "type1" ) {
+		if (filterApp.selectedFilterData === "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5") {
 			// hides items without the type1 data-type attribute
-			$(".filterable section.filterableItem[data-type='type2']").toggleClass("activeItem hiddenItem"); 
+			$(".filterable section.filterableItem[data-type='type2']").removeClass("activeItem").addClass("hiddenItem"); 
 			$(".filterable section.filterableItem[data-type='type3']").toggleClass("activeItem hiddenItem"); 
 			$(".filterable section.filterableItem[data-type='type4']").toggleClass("activeItem hiddenItem"); 
 			$(".filterable section.filterableItem[data-type='type5']").toggleClass("activeItem hiddenItem"); 
-		 } 
-	
+		 } else if (filterApp.selectedFilterData === "type2" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5"){
+		 	// hides item without the type2 data-type attribute
+		 	$(".filterable section.filterableItem[data-type='type1']").toggleClass("activeItem hiddenItem"); 
+		 	$(".filterable section.filterableItem[data-type='type3']").toggleClass("activeItem hiddenItem"); 
+		 	$(".filterable section.filterableItem[data-type='type4']").toggleClass("activeItem hiddenItem"); 
+		 	$(".filterable section.filterableItem[data-type='type5']").toggleClass("activeItem hiddenItem"); 
+		 } else if (filterApp.selectedFilterData === "type3" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5"){
+		 	// hides item without the type3 data-type attribute
+		 	$(".filterable section.filterableItem[data-type='type1']").toggleClass("activeItem hiddenItem"); 
+		 	$(".filterable section.filterableItem[data-type='type2']").toggleClass("activeItem hiddenItem"); 
+		 	$(".filterable section.filterableItem[data-type='type4']").toggleClass("activeItem hiddenItem"); 
+		 	$(".filterable section.filterableItem[data-type='type5']").toggleClass("activeItem hiddenItem"); 
+		}
 
 
 	 }); // end on click function

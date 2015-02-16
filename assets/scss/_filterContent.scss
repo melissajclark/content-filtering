@@ -25,7 +25,7 @@
 
 .hiddenItem {
 	display:none;
-	clear:both;
+	// clear:both;
 }
 
 // item content 
@@ -40,7 +40,7 @@
 }
 
 /*======================================================
-=        Styles for filterable content (items)    	=
+=     Styles for filterable content (items): colours   =
 ======================================================*/
 
 .itemType-1 {
@@ -63,7 +63,9 @@
 	background:lighten(blue,30%);
 }
 
-/*-----  End of Styles for filterable content (items)  ------*/
+/*-----  End of Styles for filterable content (items): colours  ------*/
+
+
 
 
 

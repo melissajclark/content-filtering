@@ -150,7 +150,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	
 
-	$("#filterOptionsShapes").on("change",function(){ 
+	$("#filterOptionsShapes a.filterControl").on("click",function(){ 
 
 		/**
 		*
@@ -158,7 +158,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		*
 		**/
 		
-			filterApp.sortChoiceShape = $(this).find(":selected").val();
+			filterApp.sortChoiceShape = $(this).text();
 
 		/**
 		*

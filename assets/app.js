@@ -91,7 +91,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		**/
 
 			filterApp.selectedFilter = $(".filterable").find("[data-type='" + filterApp.sortChoice + "']");
-			console.log(filterApp.selectedFilter);
+			// console.log(filterApp.selectedFilter);
 
 		/**
 		*
@@ -214,7 +214,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		**/
 
 			filterApp.selectedShape = $(".filterable").find("[data-shape='" + filterApp.sortChoiceShape + "']");
-			console.log(filterApp.selectedShape);
+			// console.log(filterApp.selectedShape);
 
 		/**
 		*

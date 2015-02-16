@@ -89,6 +89,18 @@ filterApp.init = function() { // this function holds everything to start the app
 			filterApp.selectedFilterData = $(filterApp.selectedFilter).attr('data-type');
 			console.log("filterApp.selectedFilterData = " + filterApp.selectedFilterData);
 
+		/**
+		*
+		* Variable (filterApp.alDataTypes): 
+		*
+		* 	- finds all items in the DOM with the attribute of 'data-type'
+		*	- returns HTML of all items
+		*
+		**/
+
+			filterApp.allDataTypes = $(".filterable").find(".filterableItem[data-type]");
+
+			console.log(filterApp.allDataTypes);
 
 		/**
 		*

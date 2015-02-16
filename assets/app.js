@@ -52,7 +52,6 @@ filterApp.init = function() { // this function holds everything to start the app
 	*
 	**/
 
-
 	$("#filterOptionsTypes a.filterControl").on("click", function(){ // runs when dropdown of items changes
 
 		// finds the value of the user's selection (aka the desired type to view)
@@ -60,9 +59,8 @@ filterApp.init = function() { // this function holds everything to start the app
 		console.log(filterApp.sortChoice);
 
 
-		$("section.filterResultsCurrent").show();
+		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
 
-	
 		/**
 		*
 		* Variable (filterApp.selectedFilter): 
@@ -96,9 +94,6 @@ filterApp.init = function() { // this function holds everything to start the app
 		**/
 		
 			$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Type: " + filterApp.sortChoice);
-
-
-		filterApp.itemData = $(".filterable section.filterableItem").attr('data-type');
 
 
 		/**

@@ -159,10 +159,34 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	 }); // end on click function: types
 
-	$("#filterOptionsShapes").on("change",function(){
+	
 
-		filterApp.sortChoiceShape = $(this).find(":selected").val();
-		console.log(filterApp.sortChoiceShape);
+	$("#filterOptionsShapes").on("change",function(){ 
+
+		/**
+		*
+		* Get Value of user's selection
+		*
+		**/
+		
+			filterApp.sortChoiceShape = $(this).find(":selected").val();
+
+		/**
+		*
+		* Uses user's selection within variable to store choice
+		*
+		**/
+		
+			filterApp.selectedFilterShape = ".filterable section[data-shape='" + filterApp.sortChoiceShape + "']";
+
+		/**
+		*
+		* Gets the data-shape's value from user's selection
+		*
+		**/
+
+			filterApp.selectedFilterShapeData = $(filterApp.selectedFilterShape).attr('data-shape');
+
 
 
 	}); // end function on shapes select

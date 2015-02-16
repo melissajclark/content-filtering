@@ -89,13 +89,13 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		// filterApp.eachItem = $("").attr('data-type');
 
-		// console.log(filterApp.eachItem.attr('data-type'));
+		// $(".filterable section.filterableItem[data-type='type1']");
+		filterApp.itemData = $(".filterable section.filterableItem").attr('data-type');
 
-		if ("section.filterableItem.attr('data-type')" != filterApp.selectedFilterData) {
-			console.log("if statement ran: not equal"); 
-		 } else if (filterApp.eachItem === filterApp.selectedFilterData){
-			console.log("equal");
-		}
+		if (filterApp.itemData === filterApp.selectedFilterData) {
+			$(".filterable section.filterableItem[data-type='type1']").toggleClass("activeItem hiddenItem"); 
+		 } 
+	
 
 
 	 }); // end on click function

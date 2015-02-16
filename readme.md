@@ -7,18 +7,19 @@
 
 ## About Content-Filtering
 
-Filtering content by specific attributes is a common web design pattern. There's lots of jQuery plugins out there to do this (Filtrify, mixItUp, Shuffle, etc).
+Filtering content is a common web design pattern. There's tons of jQuery plugins out there, but I want to set it up on my own. 
 
-Plugins can be fantastic but I don't want to rely on them. I learn best by doing, so this small project is an experiment of the best way to filter content using jquery. This project uses data-attributes to store the relevant data for filtering content.
+I learn best by doing, so this small project is an experiment of the best way to filter content using jquery. 
 
-This project uses HTML & CSS (SCSS), but ultimately I want to implement the effect in custom WordPress themes. 
+This project uses HTML & CSS (SCSS) and data-attributes to store the data.
+
+Eventually I want to implement this in custom WordPress themes. I like to get the setup down in HTML before moving to setting up the PHP for WordPress.
 
 ## Some Questions & Topics I Need To Figure Out
 
 1. How to setup the jQuery selectors when I may not know what the content is? ie. for a client adding tags / info to works
+- Is it better to use data attributes or classes for the relevant classifications?
 - How to properly implement this in a custom WordPress theme?
-- How to filter for multiple attributes at once?
-- 
 
 ------
 
@@ -31,7 +32,7 @@ This project uses HTML & CSS (SCSS), but ultimately I want to implement the effe
     + [Her portfolio](http://zoerooney.com/portfolio/)
 - [Tutorial on Filtering Items](http://www.designchemical.com/blog/index.php/jquery/create-an-automatic-content-filter-using-jquery-css-classes/)
 
-**Downloaded & in /relevant-resources folder:**
+**Plugins / Tutorials with Downloadable Files:**
 
 - _Online_: [Shuffle](http://vestride.github.io/Shuffle/)
 - _Online_: [Mixitup](https://mixitup.kunkalabs.com/)

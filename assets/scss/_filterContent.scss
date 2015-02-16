@@ -65,6 +65,43 @@
 
 /*-----  End of Styles for filterable content (items): colours  ------*/
 
+/*======================================================
+=      Styles for filterable content (items) shapes  =
+======================================================*/
+
+[data-shape~="circle"]{
+	border-radius:50%;
+}
+
+[data-shape~="hexagon"]{
+	position: relative;
+	width: 300px; 
+	height: 173.21px;
+	margin: 86.60px 0;
+}
+
+[data-shape~="hexagon"]:before,
+[data-shape~="hexagon"]:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+}
+
+[data-shape~="hexagon"]:before {
+  bottom: 100%;
+  border-bottom: 86.60px solid #64C7CC;
+}
+
+[data-shape~="hexagon"]:after {
+  top: 100%;
+  width: 0;
+  border-top: 86.60px solid #64C7CC;
+}
+
+/*-----  End of Styles for filterable content (items) shapes  ------*/
+
 
 
 

@@ -1,8 +1,4 @@
 {
-  "repository": {
-    "type": "git",
-    "url": "https://bitbucket.org/melissajclark/content-filtering"
-  },
   "dependencies": {
     "gulp": "*",
     "gulp-ruby-sass": "*",

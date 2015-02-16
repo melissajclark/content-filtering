@@ -59,7 +59,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		console.log(filterApp.sortChoice);
 
 
-		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
+		// $("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
 
 		/**
 		*
@@ -94,7 +94,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		**/
 
 		
-			$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Type: " + filterApp.sortChoice);
+			// $("#filterOptionsCurrent.filterNav li span.currentChoice").html("Type: " + filterApp.sortChoice);
 
 
 		/**
@@ -157,6 +157,12 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		 	}
 
+		if (filterApp.sortChoice === "all") {
+			$("section.filterResultsCurrent").hide();
+		} else {
+			$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Type: " + filterApp.sortChoiceShape);
+		}
+
 	 }); // end on click function: types
 
 	
@@ -200,7 +206,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		*
 		**/
 		
-			$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
+			// $("#filterOptionsCurrent.filterNav li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
 
 
 		/**
@@ -227,7 +233,13 @@ filterApp.init = function() { // this function holds everything to start the app
 			$(".filterable section.filterableItem[data-shape='circle']").show();
 		}
 
-		$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
+		
+		if (filterApp.sortChoiceShape === "all") {
+			$("section.filterResultsCurrent").hide();
+		} else {
+			$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
+		}
+
 	}); // end function on shapes select
 
 

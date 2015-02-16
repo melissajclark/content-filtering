@@ -41,10 +41,10 @@ filterApp.init = function() { // this function holds everything to start the app
 	**/
 
 	$("#filterOptionsShapes").append(
-		"<option value='"+ filterApp.sortShapes[0] + "'>" +  filterApp.sortShapes[0] + "</option>" + 
-		"<option value='"+ filterApp.sortShapes[1] + "'>" +  filterApp.sortShapes[1] + "</option>" +
-		"<option value='"+ filterApp.sortShapes[2] + "'>" +  filterApp.sortShapes[2] + "</option>" +
-		"<option value='"+ filterApp.sortShapes[3] + "'>" +  filterApp.sortShapes[3] + "</option>"
+		"<li value='"+ filterApp.sortShapes[0] + "'><a class='filterControl' href='#'>" +  filterApp.sortShapes[0] + "</a></li>" + 
+		"<li value='"+ filterApp.sortShapes[1] + "'><a class='filterControl' href='#'>" +  filterApp.sortShapes[1] + "</a></li>" +
+		"<li value='"+ filterApp.sortShapes[2] + "'><a class='filterControl' href='#'>" +  filterApp.sortShapes[2] + "</a></li>" +
+		"<li value='"+ filterApp.sortShapes[3] + "'><a class='filterControl' href='#'>" +  filterApp.sortShapes[3] + "</a></li>"
 	);
 
 

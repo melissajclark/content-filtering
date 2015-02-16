@@ -102,8 +102,9 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		filterApp.itemData = $(".filterable section.filterableItem").attr('data-type');
 
-		if (filterApp.selectedFilterData === "all" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5") {
-			// hides items without the type1 data-type attribute
+		if (filterApp.sortChoice === "all") {
+			// Important: above uses different variable than rest of if statement
+			// this is because "all" is not a data-attribute, but simply an item in the list of options (text)
 			$(".filterable section.filterableItem[data-type='type1']").show(); // active item
 			$(".filterable section.filterableItem[data-type='type2']").show(); 
 			$(".filterable section.filterableItem[data-type='type3']").show(); 

@@ -34,9 +34,5 @@ This project uses HTML & CSS (SCSS), but ultimately I want to implement the effe
 
 - _Online_: [Shuffle](http://vestride.github.io/Shuffle/)
 - _Online_: [Mixitup](https://mixitup.kunkalabs.com/)
-   <!--  + _Local_: [Mixitup Index.html](/Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/relevant-resources/mixitup/index.html) -->
 - _Online_: [Filtrify](http://luis-almeida.github.io/filtrify/)
-  <!--   + _Local_: [Filtrify Index.html](/Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/relevant-resources/filtrify/index.html) -->
 - _Online_: [Content Filter Tutorial](http://codyhouse.co/gem/content-filter/)
-    <!-- + _Local_: [Content-Filter Index](/Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/relevant-resources/content-filter/index.html)
- -->

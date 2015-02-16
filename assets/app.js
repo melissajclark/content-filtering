@@ -203,9 +203,6 @@ filterApp.init = function() { // this function holds everything to start the app
 		
 		filterApp.filteredItems = $( "section.filterableItem" ).filter( $('[data-shape="' + filterApp.sortChoiceShape + '"]' ).toggleClass("active") );
 
-		// if item does not have class of active
-		// addClass inactive 
-
 		filterApp.filterActiveItem = $("section.filterableItem").hasClass("active");
 
 		console.log(filterApp.filterActiveItem);

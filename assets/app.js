@@ -10,6 +10,8 @@ filterApp.eachItem = "";
 
 filterApp.init = function() { // this function holds everything to start the app
 
+	// ======== functions that need to occur on page load ============
+
 	/**
 	*
 	* Hide legend of results on page load
@@ -46,12 +48,14 @@ filterApp.init = function() { // this function holds everything to start the app
 		"<li value='"+ filterApp.sortShapes[3] + "'><a class='filterControl' href='#'>" +  filterApp.sortShapes[3] + "</a></li>"
 	);	
 
+
+	// ======== End functions that need to occur on page load ===========
+
 	/**
 	*
 	* Filters Content: Types
 	*
 	**/
-
 
 	$("#filterOptionsTypes a.filterControl").on("click", function(){ // runs when dropdown of items changes
 
@@ -60,48 +64,37 @@ filterApp.init = function() { // this function holds everything to start the app
 		console.log(filterApp.sortChoice);
 
 
-		$("section.filterResultsCurrent").show();
-
-	
 		/**
 		*
 		* Variable (filterApp.selectedFilter): 
 		*
-		* 	- stores the selector for items with data-type matching user's selection
-		*	- filterApp.sortChoice is connected to the options in the dropdown
-		*	- filterapp.sortChoice's potential values match the data-type values
+		*	- searches the div with a class of "filterable"
+		*	- locates any elements with the data-attribute "data-type"
+		*	- checks the data-type attributes for the value matching the user's selection
+		*	- when console logged it returns HTML from the DOM for each item 
 		*
 		**/
-		
-			filterApp.selectedFilter = ".filterable section[data-type='" + filterApp.sortChoice + "']";
+
+			filterApp.selectedFilter = $(".filterable").find("[data-type='" + filterApp.sortChoice + "']");
+			console.log(filterApp.selectedFilter);
 
 		/**
 		*
 		* Variable (filterApp.selectedFilterData): 
 		*
-		* 	- stores data-attribute of the option selected by the user
+		* 	- grabs the data-attribute value from any items in the DOM that match the user's selection 
 		*
 		**/
 
 			filterApp.selectedFilterData = $(filterApp.selectedFilter).attr('data-type');
+			console.log("filterApp.selectedFilterData = " + filterApp.selectedFilterData);
+
 
 		/**
 		*
 		* If Statement to evaluate results
 		*
-		**/ 
-
-		/**
-		*
-		* Updates span with current filter choice
-		*
 		**/
-		
-		// $("#filterOptionsCurrent.filterNav li span.currentChoice").before("Type: ");
-		$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Type: " + filterApp.sortChoice);
-
-
-		filterApp.itemData = $(".filterable section.filterableItem").attr('data-type');
 
 		if (filterApp.sortChoice === "all") {
 			// Important: above uses different variable than rest of if statement
@@ -157,49 +150,60 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		 	}
 
+		if (filterApp.sortChoice === "all") {
+			$("section.filterResultsCurrent").hide();
+		} else {
+			$("section.filterResultsCurrent").show();
+			$("li span.currentChoice").html("Type: " + filterApp.selectedFilterData);
+		}
+
 	 }); // end on click function: types
 
 	
 
 	$("#filterOptionsShapes a.filterControl").on("click",function(){ 
 
-		$("section.filterResultsCurrent").show();
+		// finds the value of the user's selection (aka the desired shape to view)
+		filterApp.sortChoiceShape = $(this).text();
 
+		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
 
 		/**
 		*
-		* Get Value of user's selection
+		* Variable (filterApp.selectedShape): 
+		*
+		*	- searches the div with a class of "filterable"
+		*	- locates any elements with the data-attribute "data-shape"
+		*	- checks the data-shape attributes for the value matching the user's selection
+		*	- when console logged it returns HTML from the DOM for each item 
 		*
 		**/
-		
-			filterApp.sortChoiceShape = $(this).text();
+
+			filterApp.selectedShape = $(".filterable").find("[data-shape='" + filterApp.sortChoiceShape + "']");
+			console.log(filterApp.selectedShape);
 
 		/**
 		*
-		* Uses user's selection within variable to store choice
+		* Variable (filterApp.selectedShapeData): 
 		*
-		**/
-		
-			filterApp.selectedShape = ".filterable section[data-shape='" + filterApp.sortChoiceShape + "']";
-
-		/**
-		*
-		* Gets the data-shape's value from user's selection
+		* 	- grabs the data-attribute value from any items in the DOM that match the user's selection 
 		*
 		**/
 
 			filterApp.selectedShapeData = $(filterApp.selectedShape).attr('data-shape');
+			console.log("filterApp.selectedShapeData = " + filterApp.selectedShapeData);
+
 
 		/**
 		*
-		* If statement to evaluate data & compare
+		* If Statement to evaluate results
 		*
 		**/
 
 		if (filterApp.selectedShapeData === "circle" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "hexagon") {
 			$(".filterable section.filterableItem[data-shape='circle']").show(); // active item
 			$(".filterable section.filterableItem[data-shape='square']").hide(); 
-			$(".filterable section.filterableItem[data-shape='hexagon']").hide(); 
+			$(".filterable section.filterableItem[data-shape='hexagon']").hide();
 		} else if (filterApp.selectedShapeData === "square" && filterApp.selectedShapeData != "circle" && filterApp.selectedShapeData != "hexagon") {
 			$(".filterable section.filterableItem[data-shape='square']").show(); // active item
 			$(".filterable section.filterableItem[data-shape='circle']").hide(); 
@@ -212,10 +216,16 @@ filterApp.init = function() { // this function holds everything to start the app
 			$(".filterable section.filterableItem[data-shape='hexagon']").show();
 			$(".filterable section.filterableItem[data-shape='square']").show(); 
 			$(".filterable section.filterableItem[data-shape='circle']").show();
-			console.log("all selected"); 
 		}
 
-		$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
+
+		if (filterApp.sortChoiceShape === "all") {
+			$("section.filterResultsCurrent").hide();
+		} else {
+			$("section.filterResultsCurrent").show();
+			$("li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
+		}
+
 	}); // end function on shapes select
 
 

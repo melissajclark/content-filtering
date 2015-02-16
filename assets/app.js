@@ -126,7 +126,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		 	console.log(filterApp.selectedFilterData);
 		 } else if (filterApp.selectedFilterData === "type5" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4"){
 		 	// hides item without the type3 data-type attribute
-		 	$(".filterable section.filterableItem[data-type='type4']").show(); // active item
+		 	$(".filterable section.filterableItem[data-type='type5']").show(); // active item
 		 	$(".filterable section.filterableItem[data-type='type1']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type2']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type3']").hide(); 

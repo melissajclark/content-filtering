@@ -160,7 +160,12 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	 }); // end on click function: types
 
+	$("#filterOptionsShapes").on("change",function(){
 
+
+
+
+	}); // end function on shapes select
 
 }; // end filterApp.init
 

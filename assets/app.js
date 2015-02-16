@@ -148,7 +148,8 @@ filterApp.init = function() { // this function holds everything to start the app
 		if (filterApp.sortChoice === "all") {
 			$("section.filterResultsCurrent").hide();
 		} else {
-			$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Type: " + filterApp.sortChoiceShape);
+			$("section.filterResultsCurrent").show();
+			$("li span.currentChoice").html("Type: " + filterApp.selectedFilterData);
 		}
 
 	 }); // end on click function: types
@@ -212,11 +213,12 @@ filterApp.init = function() { // this function holds everything to start the app
 			$(".filterable section.filterableItem[data-shape='circle']").show();
 		}
 
-		
+
 		if (filterApp.sortChoiceShape === "all") {
 			$("section.filterResultsCurrent").hide();
 		} else {
-			$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
+			$("section.filterResultsCurrent").show();
+			$("li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
 		}
 
 	}); // end function on shapes select

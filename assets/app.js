@@ -191,7 +191,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 
 
-		filterApp.filteredItems = $( "section.filterableItem" ).filter( $("[data-shape='square']" ).toggleClass("active") );
+		filterApp.filteredItems = $( "section.filterableItem" ).filter( $('[data-shape='square']' ).toggleClass("active") );
 
 		console.log(filterApp.filteredItems);
 

@@ -2,8 +2,8 @@
 // Empty object for all code to live on
 
 var filterApp = {};
-filterApp.sortTypes = ["All", "type1", "type2", "type3", "type4", "type5"]; // object to hold options for filtering
-filterApp.sortShapes = ["All", "circle", "hexagon", "square"]; // object to hold options for filtering
+filterApp.sortTypes = ["all", "type1", "type2", "type3", "type4", "type5"]; // object to hold options for filtering
+filterApp.sortShapes = ["all", "circle", "hexagon", "square"]; // object to hold options for filtering
 filterApp.eachItem = "";
 
 // ------------------------------------
@@ -142,7 +142,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		 	$(".filterable section.filterableItem[data-type='type4']").hide();
 
 		 	}
-		 else if (filterApp.selectedFilterData === "All" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5") {
+		 else if (filterApp.selectedFilterData === "all" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5") {
  		 	// hides item without the type3 data-type attribute
  		 	$(".filterable section.filterableItem[data-type='type5']").show(); // active item
  		 	$(".filterable section.filterableItem[data-type='type1']").show(); 
@@ -187,8 +187,6 @@ filterApp.init = function() { // this function holds everything to start the app
 		*
 		**/
 
-		$("#filterOptionsCurrent.filterNav li span.currentChoice").html(filterApp.selectedShapeData);
-
 		if (filterApp.selectedShapeData === "circle" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "hexagon") {
 			$(".filterable section.filterableItem[data-shape='circle']").show(); // active item
 			$(".filterable section.filterableItem[data-shape='square']").hide(); 
@@ -201,11 +199,13 @@ filterApp.init = function() { // this function holds everything to start the app
 			$(".filterable section.filterableItem[data-shape='hexagon']").show(); // active item
 			$(".filterable section.filterableItem[data-shape='square']").hide(); 
 			$(".filterable section.filterableItem[data-shape='circle']").hide(); 
-		} else if (filterApp.selectedShapeData === "All"){
+		} else if (filterApp.selectedShapeData === "all" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "circle" && filterApp.selectedShapeData != "hexagon"){
 			$(".filterable section.filterableItem[data-shape='hexagon']").show();
 			$(".filterable section.filterableItem[data-shape='square']").show(); 
 			$(".filterable section.filterableItem[data-shape='circle']").show(); 
 		}
+
+		$("#filterOptionsCurrent.filterNav li span.currentChoice").html(filterApp.selectedShapeData);
 	}); // end function on shapes select
 
 

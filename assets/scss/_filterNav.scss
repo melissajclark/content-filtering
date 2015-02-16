@@ -14,19 +14,16 @@
 ul.filterNav li {
 	list-style-type: none;
 	display:inline-block;
-} 
-
-ul.filterNav li a {
 	float:left;
 	text-align:center;
 	margin:5px;
-}
-
-a.filterControl{
 	font-size:24px;
 	text-transform:uppercase;
 	text-decoration:none;
 	padding:3px;
+} 
+
+a.filterControl{
 	// color:lighten(purple,3%);
 	&:hover {
 		background: lighten(teal,10%);

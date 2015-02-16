@@ -59,8 +59,6 @@ filterApp.init = function() { // this function holds everything to start the app
 		console.log(filterApp.sortChoice);
 
 
-		// $("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
-
 		/**
 		*
 		* Variable (filterApp.selectedFilter): 
@@ -85,16 +83,6 @@ filterApp.init = function() { // this function holds everything to start the app
 
 			filterApp.selectedFilterData = $(filterApp.selectedFilter).attr('data-type');
 			console.log("filterApp.selectedFilterData = " + filterApp.selectedFilterData);
- 
-
-		/**
-		*
-		* Updates span with current filter choice
-		*
-		**/
-
-		
-			// $("#filterOptionsCurrent.filterNav li span.currentChoice").html("Type: " + filterApp.sortChoice);
 
 
 		/**
@@ -198,15 +186,6 @@ filterApp.init = function() { // this function holds everything to start the app
 
 			filterApp.selectedShapeData = $(filterApp.selectedShape).attr('data-shape');
 			console.log("filterApp.selectedShapeData = " + filterApp.selectedShapeData);
-		
-
-		/**
-		*
-		* Updates span with current filter choice: shape
-		*
-		**/
-		
-			// $("#filterOptionsCurrent.filterNav li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
 
 
 		/**

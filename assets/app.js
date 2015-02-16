@@ -24,7 +24,7 @@ filterApp.init = function() { // this function holds everything to start the app
 	*
 	**/
 
-	$("#filterOptions").append(
+	$("#filterOptionsTypes").append(
 		"<option value='"+ filterApp.sort[0] + "'>" +  filterApp.sort[0] + "</option>" + 
 		"<option value='"+ filterApp.sort[1] + "'>" +  filterApp.sort[1] + "</option>" +
 		"<option value='"+ filterApp.sort[2] + "'>" +  filterApp.sort[2] + "</option>" +

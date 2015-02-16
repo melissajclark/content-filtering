@@ -177,7 +177,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		*
 		**/
 		
-			filterApp.selectedFilterShape = ".filterable section[data-shape='" + filterApp.sortChoiceShape + "']";
+			filterApp.selectedShape = ".filterable section[data-shape='" + filterApp.sortChoiceShape + "']";
 
 		/**
 		*
@@ -185,7 +185,9 @@ filterApp.init = function() { // this function holds everything to start the app
 		*
 		**/
 
-			filterApp.selectedFilterShapeData = $(filterApp.selectedFilterShape).attr('data-shape');
+			filterApp.selectedShapeData = $(filterApp.selectedFilterShape).attr('data-shape');
+
+
 
 
 

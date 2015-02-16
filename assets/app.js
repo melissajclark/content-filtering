@@ -232,23 +232,23 @@ filterApp.init = function() { // this function holds everything to start the app
 		*
 		**/
 
-		if (filterApp.selectedShapeData === "circle" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "hexagon") {
-			$(".filterable section.filterableItem[data-shape='circle']").show(); // active item
-			$(".filterable section.filterableItem[data-shape='square']").hide(); 
-			$(".filterable section.filterableItem[data-shape='hexagon']").hide();
-		} else if (filterApp.selectedShapeData === "square" && filterApp.selectedShapeData != "circle" && filterApp.selectedShapeData != "hexagon") {
-			$(".filterable section.filterableItem[data-shape='square']").show(); // active item
-			$(".filterable section.filterableItem[data-shape='circle']").hide(); 
-			$(".filterable section.filterableItem[data-shape='hexagon']").hide(); 
-		} else if (filterApp.selectedShapeData === "hexagon" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "circle") {
-			$(".filterable section.filterableItem[data-shape='hexagon']").show(); // active item
-			$(".filterable section.filterableItem[data-shape='square']").hide(); 
-			$(".filterable section.filterableItem[data-shape='circle']").hide(); 
-		} else if (filterApp.sortChoiceShape === "all" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "circle" && filterApp.selectedShapeData != "hexagon"){
-			$(".filterable section.filterableItem[data-shape='hexagon']").show();
-			$(".filterable section.filterableItem[data-shape='square']").show(); 
-			$(".filterable section.filterableItem[data-shape='circle']").show();
-		}
+		// if (filterApp.selectedShapeData === "circle" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "hexagon") {
+		// 	$(".filterable section.filterableItem[data-shape='circle']").show(); // active item
+		// 	$(".filterable section.filterableItem[data-shape='square']").hide(); 
+		// 	$(".filterable section.filterableItem[data-shape='hexagon']").hide();
+		// } else if (filterApp.selectedShapeData === "square" && filterApp.selectedShapeData != "circle" && filterApp.selectedShapeData != "hexagon") {
+		// 	$(".filterable section.filterableItem[data-shape='square']").show(); // active item
+		// 	$(".filterable section.filterableItem[data-shape='circle']").hide(); 
+		// 	$(".filterable section.filterableItem[data-shape='hexagon']").hide(); 
+		// } else if (filterApp.selectedShapeData === "hexagon" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "circle") {
+		// 	$(".filterable section.filterableItem[data-shape='hexagon']").show(); // active item
+		// 	$(".filterable section.filterableItem[data-shape='square']").hide(); 
+		// 	$(".filterable section.filterableItem[data-shape='circle']").hide(); 
+		// } else if (filterApp.sortChoiceShape === "all" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "circle" && filterApp.selectedShapeData != "hexagon"){
+		// 	$(".filterable section.filterableItem[data-shape='hexagon']").show();
+		// 	$(".filterable section.filterableItem[data-shape='square']").show(); 
+		// 	$(".filterable section.filterableItem[data-shape='circle']").show();
+		// }
 
 
 		if (filterApp.sortChoiceShape === "all") {

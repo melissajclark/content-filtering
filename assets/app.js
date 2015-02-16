@@ -20,7 +20,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	$("section.filterResultsCurrent").hide();
 
-	// $("section.filterableItem").addClass("active");
+	$("section.filterableItem").addClass("active");
 	
 	/**
 	*
@@ -200,17 +200,24 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
 
-		filterApp.filteredItems = $( "section.filterableItem" ).filter( $('[data-shape="' + filterApp.sortChoiceShape + '"]' ));
+		// filters through items to find the ones that match user's selection
+		filterApp.filterSelection = $( "section.filterableItem" ).filter( $('[data-shape="' + filterApp.sortChoiceShape + '"]' ));
 
-		console.log("filtered items: " + filterApp.filteredItems);
+		// filterApp.filteredResults = filterApp.filterSelection.addClass("active");
 
-		filterApp.filterActiveItem = $("section.filterableItem").hasClass("active");
+		$(filterApp.filterSelection).addClass("active");
 
-		if ($("section.filterableItem").hasClass("active") === false) {
-			$("section.filterableItem").show();
-			console.log("hello");
-		} else {
-			$("section.filterableItem").show();
+		// console.log("filtered items: " + filterApp.filteredResults);
+
+		filterApp.filterActiveItemActive = $("section.filterableItem").hasClass("active");
+		filterApp.filterActiveItemActive = $("section.filterableItem").hasClass("inactive");
+
+		if (filterApp.filterActiveItemActive === true) {
+			$("section.filterableItem").toggleClass("active");
+			console.log("true");
+		} else if (filterApp.filterActiveItem != false) {
+			$("section.filterableItem").toggleClass("inactive");
+			console.log("!= true")
 		}
 
 		// console.log(filterApp.filteredItems);

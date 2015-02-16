@@ -75,6 +75,12 @@ filterApp.init = function() { // this function holds everything to start the app
 		
 			filterApp.selectedFilter = ".filterable section.filterableItem[data-type='" + filterApp.sortChoice + "']";
 
+		
+
+			filterApp.userChoice = $(".filterable").find("section.filterableItem[data-type='" + filterApp.sortChoice + "']");
+
+			console.log(filterApp.userChoice);
+
 		/**
 		*
 		* Variable (filterApp.selectedFilterData): 

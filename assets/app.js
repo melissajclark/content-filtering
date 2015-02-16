@@ -8,6 +8,8 @@ filterApp.eachItem = "";
 
 // ------------------------------------
 
+
+
 filterApp.init = function() { // this function holds everything to start the app
 
 	// ======== functions that need to occur on page load ============
@@ -20,7 +22,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	$("section.filterResultsCurrent").hide();
 
-	$("section.filterableItem").addClass("active");
+	// $("section.filterableItem").addClass("active");
 	
 	/**
 	*
@@ -225,20 +227,27 @@ filterApp.init = function() { // this function holds everything to start the app
 			filterApp.selectedShapeData = $(filterApp.selectedShape).attr('data-shape');
 			console.log("filterApp.selectedShapeData = " + filterApp.selectedShapeData);
 
-
 		
 		// filters through items to find the ones that match user's selection
-		filterApp.filterSelection = $( "section.filterableItem" ).filter( $('[data-shape="' + filterApp.sortChoiceShape + '"]' ));
+		// filterApp.filterSelection = $( "section.filterableItem" ).filter( $('[data-shape="' + filterApp.sortChoiceShape + '"]' ));
+		// console.log(filterApp.filterSelection);
 
-		filterApp.filterActiveItemActive = $("section.filterableItem").hasClass("active");
+
+		// filterApp.filterActiveItemActive = $("section.filterableItem").not(".active");
 		// filterApp.filterActiveItemActive = $("section.filterableItem").hasClass("inactive");
 
-		if (filterApp.filterActiveItemActive === true) {
-			console.log("true");
-		} else if (filterApp.filterActiveItem === false) {
-			$("section.filterableItem").removeClass("active");
-			console.log("!= true")
-		}
+		// if (filterApp.filterActiveItemActive === true) {
+		// 	console.log("true");
+		// } else if (filterApp.filterActiveItem === false) {
+		// 	$("section.filterableItem").removeClass("active");
+		// 	console.log("!= true")
+		// }
+
+		// $("section.filterableItem").not(filterApp.filterSelection);
+		$("section.filterableItem").not('[data-type="' + filterApp.sortChoiceShape  + '"]').toggleClass("inactive");
+
+		// $(filterApp.notSelected).hide();
+
 		/**
 		*
 		* If Statement to evaluate results

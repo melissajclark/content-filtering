@@ -143,7 +143,7 @@ body {
   font-family: sans-serif;
   padding: 2em; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .intro {
   text-transform: uppercase;
   text-align: center;
   color: #666; }

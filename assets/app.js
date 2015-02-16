@@ -45,19 +45,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		"<li value='"+ filterApp.sortShapes[1] + "'><a class='filterControl' href='#'>" +  filterApp.sortShapes[1] + "</a></li>" +
 		"<li value='"+ filterApp.sortShapes[2] + "'><a class='filterControl' href='#'>" +  filterApp.sortShapes[2] + "</a></li>" +
 		"<li value='"+ filterApp.sortShapes[3] + "'><a class='filterControl' href='#'>" +  filterApp.sortShapes[3] + "</a></li>"
-	);
-
-
-	/**
-	*
-	* Controls form from refreshing
-	*
-	**/
-
-	$("fieldset.filterResults").on("submit",function(event){
-		event.preventDefault();	
-	});
-	
+	);	
 
 	/**
 	*

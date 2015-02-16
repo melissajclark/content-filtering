@@ -26,12 +26,12 @@ filterApp.init = function() { // this function holds everything to start the app
 	**/
 
 	$("#filterOptionsTypes").append(
-		"<option value='"+ filterApp.sortTypes[0] + "'>" +  filterApp.sortTypes[0] + "</option>" + 
-		"<option value='"+ filterApp.sortTypes[1] + "'>" +  filterApp.sortTypes[1] + "</option>" +
-		"<option value='"+ filterApp.sortTypes[2] + "'>" +  filterApp.sortTypes[2] + "</option>" +
-		"<option value='"+ filterApp.sortTypes[3] + "'>" +  filterApp.sortTypes[3] + "</option>" +
-		"<option value='"+ filterApp.sortTypes[4] + "'>" +  filterApp.sortTypes[4] + "</option>" +
-		"<option value='"+ filterApp.sortTypes[5] + "'>" +  filterApp.sortTypes[5] + "</option>"
+		"<li value='"+ filterApp.sortTypes[0] + "'><a href='#'>" +  filterApp.sortTypes[0] + "</a></li>" + 
+		"<li value='"+ filterApp.sortTypes[1] + "'><a href='#'>" +  filterApp.sortTypes[1] + "</a></li>" +
+		"<li value='"+ filterApp.sortTypes[2] + "'><a href='#'>" +  filterApp.sortTypes[2] + "</a></li>" +
+		"<li value='"+ filterApp.sortTypes[3] + "'><a href='#'>" +  filterApp.sortTypes[3] + "</a></li>" +
+		"<li value='"+ filterApp.sortTypes[4] + "'><a href='#'>" +  filterApp.sortTypes[4] + "</a></li>" +
+		"<li value='"+ filterApp.sortTypes[5] + "'><a href='#'>" +  filterApp.sortTypes[5] + "</a></li>"
 	);
 
 	/**

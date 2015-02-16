@@ -77,7 +77,7 @@
 	position: relative;
 	width: 150px; 
 	height: 86.60px;
-	background-color: #64C7CC;
+	background-color: yellow;
 	margin: 43.30px 0;
 }
 
@@ -92,13 +92,13 @@
 
 [data-shape~="hexagon"]:before {
   bottom: 100%;
-  border-bottom: 43.30px solid #64C7CC;
+  border-bottom: 43.30px solid yellow;
 }
 
 [data-shape~="hexagon"]:after {
   top: 100%;
   width: 0;
-  border-top: 43.30px solid #64C7CC;
+  border-top: 43.30px solid yellow;
 }
 
 /*-----  End of Styles for filterable content (items) shapes  ------*/

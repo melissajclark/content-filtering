@@ -17,7 +17,6 @@ filterApp.init = function() { // this function holds everything to start the app
 	**/
 
 	$("section.filterResultsCurrent").hide();
-	// add class of active to all items on page load
 	
 	/**
 	*

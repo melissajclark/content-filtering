@@ -188,14 +188,6 @@ filterApp.init = function() { // this function holds everything to start the app
 			filterApp.allShapes = $(".filterable").find(".filterableItem[data-shape]");
 
 			console.log(filterApp.allShapes);
-
-
-
-		filterApp.filteredItems = $( "section.filterableItem" ).filter( $('[data-shape='square']' ).toggleClass("active") );
-
-		console.log(filterApp.filteredItems);
-
-
 	
 	// ============ Function that listens on click & evaluates shape data
 
@@ -205,6 +197,10 @@ filterApp.init = function() { // this function holds everything to start the app
 		filterApp.sortChoiceShape = $(this).text();
 
 		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
+
+		filterApp.filteredItems = $( "section.filterableItem" ).filter( $('[data-shape="' + filterApp.sortChoiceShape + '"]' ).toggleClass("active") );
+
+		console.log(filterApp.filteredItems);
 
 		/**
 		*

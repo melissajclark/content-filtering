@@ -215,7 +215,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			console.log("all selected"); 
 		}
 
-		$("#filterOptionsCurrent.filterNav li span.currentChoice").html(filterApp.sortChoiceShape);
+		$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
 	}); // end function on shapes select
 
 

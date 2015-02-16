@@ -142,7 +142,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		 	$(".filterable section.filterableItem[data-type='type4']").hide();
 		 	$("#filterOptionsCurrent").append("<li>" + filterApp.selectedFilterData + "</li>"); 
 		 	}
-		 else {
+		 else if (filterApp.selectedFilterData === "All" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5") {
  		 	// hides item without the type3 data-type attribute
  		 	$(".filterable section.filterableItem[data-type='type5']").show(); // active item
  		 	$(".filterable section.filterableItem[data-type='type1']").show(); 

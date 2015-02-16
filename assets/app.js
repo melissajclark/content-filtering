@@ -105,7 +105,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			$(".filterable section.filterableItem[data-type='type4']").hide(); 
 			$(".filterable section.filterableItem[data-type='type5']").hide();
 			$("#filterOptionsCurrent").append("<li>" + filterApp.selectedFilterData + "</li>"); 
-			console.log(filterApp.selectedFilterData);
+			
 		 } else if (filterApp.selectedFilterData === "type2" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5"){
 		 	// hides item without the type2 data-type attribute
 		 	$(".filterable section.filterableItem[data-type='type2']").show(); // active item
@@ -114,7 +114,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		 	$(".filterable section.filterableItem[data-type='type4']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type5']").hide();
 		 	$("#filterOptionsCurrent").append("<li>" + filterApp.selectedFilterData + "</li>");  
-		 	console.log(filterApp.selectedFilterData);
+		 	
 		 } else if (filterApp.selectedFilterData === "type3" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5"){
 		 	// hides item without the type3 data-type attribute
 		 	$(".filterable section.filterableItem[data-type='type3']").show(); // active item
@@ -123,7 +123,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		 	$(".filterable section.filterableItem[data-type='type4']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type5']").hide();
 		 	$("#filterOptionsCurrent").append("<li>" + filterApp.selectedFilterData + "</li>");  
-		 	console.log(filterApp.selectedFilterData);
+		 	
 		} else if (filterApp.selectedFilterData === "type4" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type5"){
 		 	// hides item without the type3 data-type attribute
 		 	$(".filterable section.filterableItem[data-type='type4']").show(); // active item
@@ -132,7 +132,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		 	$(".filterable section.filterableItem[data-type='type3']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type5']").hide();
 		 	$("#filterOptionsCurrent").append("<li>" + filterApp.selectedFilterData + "</li>");  
-		 	console.log(filterApp.selectedFilterData);
+		 	
 		 } else if (filterApp.selectedFilterData === "type5" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4"){
 		 	// hides item without the type3 data-type attribute
 		 	$(".filterable section.filterableItem[data-type='type5']").show(); // active item
@@ -141,7 +141,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		 	$(".filterable section.filterableItem[data-type='type3']").hide(); 
 		 	$(".filterable section.filterableItem[data-type='type4']").hide();
 		 	$("#filterOptionsCurrent").append("<li>" + filterApp.selectedFilterData + "</li>"); 
-		 	console.log(filterApp.selectedFilterData);}
+		 	}
 		 else {
  		 	// hides item without the type3 data-type attribute
  		 	$(".filterable section.filterableItem[data-type='type5']").show(); // active item
@@ -150,7 +150,7 @@ filterApp.init = function() { // this function holds everything to start the app
  		 	$(".filterable section.filterableItem[data-type='type3']").show(); 
  		 	$(".filterable section.filterableItem[data-type='type4']").show(); 
  		 	$("#filterOptionsCurrent").append("<li>" + filterApp.selectedFilterData + "</li>"); 
- 		 	console.log(filterApp.selectedFilterData);}
+ 		 	}
 
 	 }); // end on click function: types
 

@@ -203,11 +203,6 @@ filterApp.init = function() { // this function holds everything to start the app
 		// filters through items to find the ones that match user's selection
 		filterApp.filterSelection = $( "section.filterableItem" ).filter( $('[data-shape="' + filterApp.sortChoiceShape + '"]' ));
 
-		// filterApp.filteredResults = filterApp.filterSelection.addClass("active");
-
-		$(filterApp.filterSelection).addClass("active");
-
-		// console.log("filtered items: " + filterApp.filteredResults);
 
 		filterApp.filterActiveItemActive = $("section.filterableItem").hasClass("active");
 		filterApp.filterActiveItemActive = $("section.filterableItem").hasClass("inactive");
@@ -219,9 +214,6 @@ filterApp.init = function() { // this function holds everything to start the app
 			$("section.filterableItem").toggleClass("inactive");
 			console.log("!= true")
 		}
-
-		// console.log(filterApp.filteredItems);
-		// console.log(filterApp.filterActiveItem);
 
 		/**
 		*

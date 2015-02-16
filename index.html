@@ -13,116 +13,132 @@
 
 		<h1>Filter These Items</h1>
 
-	<section class="filterControls">
-		<ul class="filterNav clearfix">
-			<li><a class="filterControl typeOneFilter" href="#">type1</a></li>
-			<li><a class="filterControl typeTwoFilter" href="#">type2</a></li>
-			<li><a class="filterControl typeThreeFilter" href="#">type3</a></li>
-			<li><a class="filterControl typeFourFilter" href="#">type4</a></li>
-			<li><a class="filterControl typeFiveFilter" href="#">type5</a></li>
-			<li><a class="filterControl typeAll" href="#">View All</a></li>
-		</ul>
-	</section>
+	<div class="filterControls clearfix">
+
+		<section class="filterResults">
+
+			<ul id="filterOptionsTypes" class="filterNav">
+			<li><strong>View By Type:</strong></li>
+				<!-- li items appended with jQuery -->
+			</ul>
+		 </section>
+
+		<section class="filterResults">
+
+			<ul id="filterOptionsShapes" class="filterNav">
+				<li><strong>View By Shape:</strong></li>
+				<!-- li items appended with jQuery -->
+			</ul>
+		</section>
+
+		<section class="filterResults filterResultsCurrent">
+
+			<ul id="filterOptionsCurrent" class="filterNav">
+				<li><strong>Current Filter:</strong>
+				<li><span class="currentChoice"><!-- content appended with jQuery --></span></li>
+			</ul>
+		</section>
+	</div><!-- / section.filterControls -->
 
 		<div class="filterable">
 
-			<section class="filterableItem type1">
+			<section class="filterableItem" data-color="teal" data-type="type1" data-shape="square">
 				<p>type1</p>
 			</section>
 
-			<section class="filterableItem type2">
+			<section class="filterableItem" data-color="pink" data-type="type2" data-shape="hexagon">
 				<p>type2</p>
 			</section>
 
-			<section class="filterableItem type3">
+			<section class="filterableItem" data-color="purple" data-type="type3" data-shape="circle">
 				<p>type3</p>
 			</section>
 
-			<section class="filterableItem type4">
+			<section class="filterableItem" data-color="red" data-type="type4" data-shape="square">
 				<p>type4</p>
 			</section>
 
-			<section class="filterableItem type5">
+			<section class="filterableItem" data-color="blue" data-type="type5" data-shape="hexagon">
 				<p>type5</p>
 			</section>
 
-			<section class="filterableItem type1">
+			<section class="filterableItem" data-color="teal" data-type="type1" data-shape="circle">
 				<p>type1</p>
 			</section>
 
-			<section class="filterableItem type2">
+			<section class="filterableItem" data-color="pink" data-type="type2" data-shape="square">
 				<p>type2</p>
 			</section>
 
-			<section class="filterableItem type3">
+			<section class="filterableItem" data-color="purple" data-type="type3" data-shape="circle">
 				<p>type3</p>
 			</section>
 
-			<section class="filterableItem type4">
+			<section class="filterableItem" data-color="red" data-type="type4" data-shape="hexagon">
 				<p>type4</p>
 			</section>
 
-			<section class="filterableItem type5">
+			<section class="filterableItem" data-color="blue" data-type="type5" data-shape="square">
 				<p>type5</p>
 			</section>
 
-			<section class="filterableItem type1">
+			<section class="filterableItem" data-color="teal" data-type="type1" data-shape="circle">
 				<p>type1</p>
 			</section>
 
-			<section class="filterableItem type2">
+			<section class="filterableItem" data-color="pink" data-type="type2" data-shape="hexagon">
 				<p>type2</p>
 			</section>
 
-			<section class="filterableItem type3">
+			<section class="filterableItem" data-color="purple" data-type="type3" data-shape="circle">
 				<p>type3</p>
 			</section>
 
-			<section class="filterableItem type4">
+			<section class="filterableItem" data-color="red" data-type="type4" data-shape="square">
 				<p>type4</p>
 			</section>
 
-			<section class="filterableItem type5">
+			<section class="filterableItem" data-color="blue" data-type="type5" data-shape="circle">
 				<p>type5</p>
 			</section>
 
-			<section class="filterableItem type1">
+			<section class="filterableItem" data-color="teal" data-type="type1" data-shape="hexagon">
 				<p>type1</p>
 			</section>
 
-			<section class="filterableItem type2">
+			<section class="filterableItem" data-color="pink" data-type="type2" data-shape="circle">
 				<p>type2</p>
 			</section>
 
-			<section class="filterableItem type3">
+			<section class="filterableItem" data-color="purple" data-type="type3" data-shape="square">
 				<p>type3</p>
 			</section>
 
-			<section class="filterableItem type4">
+			<section class="filterableItem" data-color="red" data-type="type4" data-shape="circle">
 				<p>type4</p>
 			</section>
 
-			<section class="filterableItem type5">
+			<section class="filterableItem" data-color="blue" data-type="type5" data-shape="square">
 				<p>type5</p>
 			</section>
 
-			<section class="filterableItem type1">
+			<section class="filterableItem" data-color="teal" data-type="type1" data-shape="circle">
 				<p>type1</p>
 			</section>
 
-			<section class="filterableItem type2">
+			<section class="filterableItem" data-color="pink" data-type="type2" data-shape="hexagon">
 				<p>type2</p>
 			</section>
 
-			<section class="filterableItem type3">
+			<section class="filterableItem" data-color="purple" data-type="type3" data-shape="square">
 				<p>type3</p>
 			</section>
 
-			<section class="filterableItem type4">
+			<section class="filterableItem" data-color="red" data-type="type4" data-shape="circle">
 				<p>type4</p>
 			</section>
 
-			<section class="filterableItem type5">
+			<section class="filterableItem" data-color="blue" data-type="type5" data-shape="hexagon">
 				<p>type5</p>
 			</section>
 

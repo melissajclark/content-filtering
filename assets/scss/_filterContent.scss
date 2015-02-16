@@ -10,18 +10,16 @@
 
 // individual items (sections)
 .filterableItem {
-	height:175px;
-	width:175px;
+	height:150px;
+	width:150px;
+	margin:5px;
+	padding:10px;
+
 	display:inline-block;
 	float:left;
-	margin:5px;
 	// vertical centering technique:
 	position:relative; // relative because it is the parent of the <p> element inside it
-}
 
-// individual item hidden
-.filterableItemHidden {
-	display:none;
 }
 
 // item content 
@@ -33,33 +31,75 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	background:lighten(black,15%);
+	padding:1em;
 }
 
 /*======================================================
-=        Styles for filterable content (items)    	=
+=     Styles for filterable content (items): colours   =
 ======================================================*/
 
-.type1 {
+[data-color~="teal"] {
 	background:lighten(teal,14%);
 }
 
-.type2 {
+[data-color~="pink"] {
 	background:darken(pink,20%);
 }
 
-.type3 {
+[data-color~="purple"] {
 	background:lighten(purple,5%);
 }
 
-.type4 {
+[data-color~="red"] {
 	background:lighten(red,10%);
 }
 
-.type5 {
+[data-color~="blue"] {
 	background:lighten(blue,30%);
 }
 
-/*-----  End of Styles for filterable content (items)  ------*/
+/*-----  End of Styles for filterable content (items): colours  ------*/
+
+/*======================================================
+=      Styles for filterable content (items) shapes  =
+======================================================*/
+
+[data-shape~="circle"]{
+	border-radius:50%;
+}
+
+[data-shape~="hexagon"]{
+	position: relative;
+	width: 150px; 
+	height: 86.60px;
+	background-color: yellow;
+	margin: 43.30px 0;
+}
+
+[data-shape~="hexagon"]:before,
+[data-shape~="hexagon"]:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+}
+
+[data-shape~="hexagon"]:before {
+  bottom: 100%;
+  border-bottom: 43.30px solid yellow;
+}
+
+[data-shape~="hexagon"]:after {
+  top: 100%;
+  width: 0;
+  border-top: 43.30px solid yellow;
+}
+
+/*-----  End of Styles for filterable content (items) shapes  ------*/
+
+
 
 
 

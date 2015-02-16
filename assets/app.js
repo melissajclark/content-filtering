@@ -65,10 +65,11 @@ filterApp.init = function() { // this function holds everything to start the app
 	*
 	**/
 
-	$("#filterOptionsTypes").on("change", function(){ // runs when dropdown of items changes
+	$("#filterOptionsTypes a.filterControl").on("click", function(){ // runs when dropdown of items changes
 
 		// finds the value of the user's selection (aka the desired type to view)
-		filterApp.sortChoice = $(this).find(":selected").val();	
+		filterApp.sortChoice = $(this).text();
+		console.log(filterApp.sortChoice);	
 
 		/**
 		*

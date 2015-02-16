@@ -20,7 +20,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	$("section.filterResultsCurrent").hide();
 
-	$("section.filterableItem").addClass("active");
+	// $("section.filterableItem").addClass("active");
 	
 	/**
 	*
@@ -200,7 +200,8 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
 
-		filterApp.filteredItems = $( "section.filterableItem" ).filter( $('[data-shape="' + filterApp.sortChoiceShape + '"]' ).toggleClass("active") );
+		
+		filterApp.filteredItems = $( "section.filterableItem" ).filter( !$('[data-shape="' + filterApp.sortChoiceShape + '"]' ).addClass("active") );
 
 		console.log(filterApp.filteredItems);
 

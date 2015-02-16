@@ -10,6 +10,8 @@ filterApp.eachItem = "";
 
 filterApp.init = function() { // this function holds everything to start the app
 
+	// ======== functions that need to occur on page load ============
+
 	/**
 	*
 	* Hide legend of results on page load
@@ -45,6 +47,9 @@ filterApp.init = function() { // this function holds everything to start the app
 		"<li value='"+ filterApp.sortShapes[2] + "'><a class='filterControl' href='#'>" +  filterApp.sortShapes[2] + "</a></li>" +
 		"<li value='"+ filterApp.sortShapes[3] + "'><a class='filterControl' href='#'>" +  filterApp.sortShapes[3] + "</a></li>"
 	);	
+
+
+	// ======== End functions that need to occur on page load ===========
 
 	/**
 	*

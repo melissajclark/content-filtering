@@ -8,6 +8,10 @@
 	// margin:0 auto;
 }
 
+.filterResults {
+	float:left;
+}
+
 ul.filterNav {
 	list-style-type: none;
 	// margin: 0 auto;
@@ -15,7 +19,7 @@ ul.filterNav {
 
 ul.filterNav li a {
 	display:inline-block;
-	// float:left;
+	float:left;
 	text-align:center;
 	padding:15px;
 	margin:0 10px 0 10px;

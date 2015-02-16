@@ -62,7 +62,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 			filterApp.allDataTypes = $(".filterable").find(".filterableItem[data-type]");
 
-			console.log(filterApp.allDataTypes);
+			// console.log(filterApp.allDataTypes);
 
 	// ======== Function that listens on click & type data ==============
 
@@ -187,7 +187,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 			filterApp.allShapes = $(".filterable").find(".filterableItem[data-shape]");
 
-			console.log(filterApp.allShapes);
+			// console.log(filterApp.allShapes);
 	
 	// ============ Function that listens on click & evaluates shape data
 

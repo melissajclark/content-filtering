@@ -97,14 +97,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		
 		$("#filterOptionsCurrent.filterNav li span.currentChoice").html(filterApp.selectedFilterData);
 
-		// I want to
-		// - check what values are present
-		// - compare the present values to the user's selection
-		// - hide items that do not match the user's selection
 
-		// filterApp.eachItem = $("").attr('data-type');
-
-		// $(".filterable section.filterableItem[data-type='type1']");
 		filterApp.itemData = $(".filterable section.filterableItem").attr('data-type');
 
 		if (filterApp.selectedFilterData === "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5") {

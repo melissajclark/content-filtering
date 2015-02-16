@@ -52,14 +52,17 @@ filterApp.init = function() { // this function holds everything to start the app
 	*
 	**/
 
+
 	$("#filterOptionsTypes a.filterControl").on("click", function(){ // runs when dropdown of items changes
 
 		// finds the value of the user's selection (aka the desired type to view)
 		filterApp.sortChoice = $(this).text();
 		console.log(filterApp.sortChoice);
 
+
 		$("section.filterResultsCurrent").show();
 
+	
 		/**
 		*
 		* Variable (filterApp.selectedFilter): 
@@ -156,6 +159,9 @@ filterApp.init = function() { // this function holds everything to start the app
 	
 
 	$("#filterOptionsShapes a.filterControl").on("click",function(){ 
+
+		$("section.filterResultsCurrent").show();
+
 
 		/**
 		*

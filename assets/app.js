@@ -87,12 +87,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 			filterApp.selectedFilterData = $(filterApp.selectedFilter).attr('data-type');
 			console.log("filterApp.selectedFilterData = " + filterApp.selectedFilterData);
-
-		/**
-		*
-		* If Statement to evaluate results
-		*
-		**/ 
+ 
 
 		/**
 		*
@@ -100,13 +95,17 @@ filterApp.init = function() { // this function holds everything to start the app
 		*
 		**/
 		
-
-
-		// $("#filterOptionsCurrent.filterNav li span.currentChoice").before("Type: ");
-		$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Type: " + filterApp.sortChoice);
+			$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Type: " + filterApp.sortChoice);
 
 
 		filterApp.itemData = $(".filterable section.filterableItem").attr('data-type');
+
+
+		/**
+		*
+		* If Statement to evaluate results
+		*
+		**/
 
 		if (filterApp.sortChoice === "all") {
 			// Important: above uses different variable than rest of if statement

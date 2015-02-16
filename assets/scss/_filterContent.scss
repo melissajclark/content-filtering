@@ -13,20 +13,13 @@
 	height:150px;
 	width:150px;
 	margin:5px;
+	padding:10px;
 
-}
-
-// positioning here because this class controls movement
-.activeItem {
 	display:inline-block;
 	float:left;
 	// vertical centering technique:
 	position:relative; // relative because it is the parent of the <p> element inside it
-}
 
-.hiddenItem {
-	display:none;
-	// clear:both;
 }
 
 // item content 

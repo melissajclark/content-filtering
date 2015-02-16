@@ -10,15 +10,16 @@
 
 // individual items (sections)
 .filterableItem {
-	height:175px;
-	width:175px;
+	height:150px;
+	width:150px;
+	margin:5px;
+
 }
 
 // positioning here because this class controls movement
 .activeItem {
 	display:inline-block;
 	float:left;
-	margin:5px;
 	// vertical centering technique:
 	position:relative; // relative because it is the parent of the <p> element inside it
 }
@@ -37,6 +38,8 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	background:lighten(black,15%);
+	padding:1em;
 }
 
 /*======================================================

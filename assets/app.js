@@ -158,9 +158,9 @@ filterApp.init = function() { // this function holds everything to start the app
  		 	$(".filterable section.filterableItem[data-type='type4']").show(); 
  		 	console.log(filterApp.selectedFilterData);}
 
+	 }); // end on click function: types
 
 
-	 }); // end on click function
 
 }; // end filterApp.init
 

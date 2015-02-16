@@ -73,7 +73,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		*
 		**/
 		
-			filterApp.selectedFilter = ".filterable section[data-type='" + filterApp.sortChoice + "']";
+			filterApp.selectedFilter = ".filterable section.filterableItem[data-type='" + filterApp.sortChoice + "']";
 
 		/**
 		*
@@ -97,6 +97,8 @@ filterApp.init = function() { // this function holds everything to start the app
 		*
 		**/
 		
+
+
 		// $("#filterOptionsCurrent.filterNav li span.currentChoice").before("Type: ");
 		$("#filterOptionsCurrent.filterNav li span.currentChoice").html("Type: " + filterApp.sortChoice);
 

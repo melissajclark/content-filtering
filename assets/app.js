@@ -229,11 +229,8 @@ filterApp.init = function() { // this function holds everything to start the app
 
 
 		// $("section.filterableItem").not(filterApp.filterSelection);
-		$("section.filterableItem").not('[data-shape="' + filterApp.selectedShapeData + '"]').css("display", "none");
-		$("section.filterableItem").filter('[data-shape="' + filterApp.selectedShapeData + '"]').css("display", "inline-block");
-
-
-		// $('section.filterableItem[data-shape="' + filterApp.selectedShapeData + "']'").removeClass("inactive").toggleClass("active");	
+		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').css("display", "none");
+		$("section.filterableItem").filter('[data-shape="' + filterApp.sortChoiceShape + '"]').css("display", "inline-block");
 
 
 		if (filterApp.sortChoiceShape === "all") {

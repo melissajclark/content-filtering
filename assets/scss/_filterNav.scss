@@ -16,18 +16,18 @@ ul.filterNav li {
 	display:inline-block;
 	float:left;
 	text-align:center;
-	margin:5px;
+	margin:3px;
 	font-size:24px;
 	text-transform:uppercase;
-	text-decoration:none;
-	padding:3px;
+	padding:2px;
 } 
 
-a.filterControl{
-	// color:lighten(purple,3%);
+a, a.filterControl{
+	text-transform:uppercase;
+	color:purple;
+	text-decoration:none;
 	&:hover {
-		background: lighten(teal,10%);
-		color:white; 
+		border-bottom: 3px solid #333;
 	}
 } // li a.filterControl
 

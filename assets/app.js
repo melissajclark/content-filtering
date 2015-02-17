@@ -274,12 +274,12 @@ filterApp.init = function() { // this function holds everything to start the app
 		// }
 
 
-		if (filterApp.sortChoiceShape === "all") {
-			$("section.filterResultsCurrent").hide();
-		} else {
-			$("section.filterResultsCurrent").show();
-			$("li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
-		}
+		// if (filterApp.sortChoiceShape === "all") {
+		// 	$("section.filterResultsCurrent").hide();
+		// } else {
+		// 	$("section.filterResultsCurrent").show();
+		// 	$("li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
+		// }
 
 	}); // end function on shapes select
 	

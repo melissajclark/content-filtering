@@ -202,33 +202,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
 
-		/**
-		*
-		* Variable (filterApp.selectedShape): 
-		*
-		*	- searches the div with a class of "filterable"
-		*	- locates any elements with the data-attribute "data-shape"
-		*	- checks the data-shape attributes for the value matching the user's selection
-		*	- when console logged it returns HTML from the DOM for each item 
-		*
-		**/
 
-			filterApp.selectedShape = $(".filterable").find("[data-shape='" + filterApp.sortChoiceShape + "']");
-			console.log(filterApp.selectedShape);
-
-		/**
-		*
-		* Variable (filterApp.selectedShapeData): 
-		*
-		* 	- grabs the data-attribute value from any items in the DOM that match the user's selection 
-		*
-		**/
-
-			filterApp.selectedShapeData = $(filterApp.selectedShape).attr('data-shape');
-			console.log("filterApp.selectedShapeData = " + filterApp.selectedShapeData);
-
-
-		// $("section.filterableItem").not(filterApp.filterSelection);
 		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').css("display", "none");
 		$("section.filterableItem").filter('[data-shape="' + filterApp.sortChoiceShape + '"]').css("display", "inline-block");
 

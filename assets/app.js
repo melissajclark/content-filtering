@@ -55,18 +55,6 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	// ======== End functions that need to occur on page load ===========
 
-		/**
-		*
-		* Variable (filterApp.alDataTypes): 
-		*
-		* 	- finds all items in the DOM with the attribute of 'data-type'
-		*	- returns HTML of all items
-		*
-		**/
-
-			filterApp.allDataTypes = $(".filterable").find(".filterableItem[data-type]");
-
-			// console.log(filterApp.allDataTypes);
 
 	// ============ Function that listens on click & evaluates type data
 

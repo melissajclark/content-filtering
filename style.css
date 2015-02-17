@@ -178,13 +178,8 @@ a.filterControl:hover {
   color: white;
   margin: 0 auto; }
 
-.inactive {
-  display: none; }
-
-.active {
-  display: inline-block; }
-
 .filterableItem {
+  display: inline-block;
   float: left;
   position: relative;
   height: 150px;

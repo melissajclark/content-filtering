@@ -178,14 +178,19 @@ a.filterControl:hover {
   color: white;
   margin: 0 auto; }
 
+.inactive {
+  display: none; }
+
+.active {
+  display: inline-block; }
+
 .filterableItem {
+  float: left;
+  position: relative;
   height: 150px;
   width: 150px;
   margin: 5px;
-  padding: 10px;
-  display: inline-block;
-  float: left;
-  position: relative; }
+  padding: 10px; }
 
 .filterableItem p {
   text-transform: capitalize;

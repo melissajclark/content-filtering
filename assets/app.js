@@ -73,21 +73,21 @@ filterApp.init = function() { // this function holds everything to start the app
 	$("#filterOptionsShapes a.filterControl").on("click",function(){ 
 
 		// finds the value of the user's selection (aka the desired shape to view)
-		filterApp.sortChoiceShape = $(this).text();
+		filterApp.sortChoiceType = $(this).text();
 
 		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
 
 
-		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').css("display", "none");
-		$("section.filterableItem").filter('[data-shape="' + filterApp.sortChoiceShape + '"]').css("display", "inline-block");
+		$("section.filterableItem").not('[data-type="' + filterApp.sortChoiceType + '"]').css("display", "none");
+		$("section.filterableItem").filter('[data-type="' + filterApp.sortChoiceType + '"]').css("display", "inline-block");
 
 
-		if (filterApp.sortChoiceShape === "all") {
+		if (filterApp.sortChoiceType === "all") {
 			$("section.filterResultsCurrent").hide();
 			$("section.filterableItem").css("display", "inline-block");
 		} else {
 			$("section.filterResultsCurrent").show();
-			$("li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
+			$("li span.currentChoice").html("Type: " + filterApp.sortChoiceType);
 		}
 
 	}); // end function on shapes select

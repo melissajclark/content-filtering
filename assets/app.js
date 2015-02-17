@@ -8,17 +8,21 @@ filterApp.eachItem = "";
 
 // ------------------------------------
 
+
+
 filterApp.init = function() { // this function holds everything to start the app
 
 	// ======== functions that need to occur on page load ============
 
 	/**
 	*
-	* Hide legend of results on page load
+	* Hide legend of results on page load + add active class to all items
 	*
 	**/
 
 	$("section.filterResultsCurrent").hide();
+
+	$("section.filterableItem").addClass("active");
 	
 	/**
 	*
@@ -51,115 +55,37 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	// ======== End functions that need to occur on page load ===========
 
-	/**
-	*
-	* Filters Content: Types
-	*
-	**/
 
-	$("#filterOptionsTypes a.filterControl").on("click", function(){ // runs when dropdown of items changes
+	// ============ Function that listens on click & evaluates type data
 
-		// finds the value of the user's selection (aka the desired type to view)
-		filterApp.sortChoice = $(this).text();
-		console.log(filterApp.sortChoice);
+	$("#filterOptionsTypes a.filterControl").on("click",function(){ 
 
+		// finds the value of the user's selection (aka the desired shape to view)
+		filterApp.sortChoiceType = $(this).text();
 
-		/**
-		*
-		* Variable (filterApp.selectedFilter): 
-		*
-		*	- searches the div with a class of "filterable"
-		*	- locates any elements with the data-attribute "data-type"
-		*	- checks the data-type attributes for the value matching the user's selection
-		*	- when console logged it returns HTML from the DOM for each item 
-		*
-		**/
+		// displays legend after user clicks on a filter link
+		$("section.filterResultsCurrent").show(); 
 
-			filterApp.selectedFilter = $(".filterable").find("[data-type='" + filterApp.sortChoice + "']");
-			console.log(filterApp.selectedFilter);
+		// finds items NOT matching user's selection and hides them
+		$("section.filterableItem").not('[data-type="' + filterApp.sortChoiceType + '"]').css("display", "none");
 
-		/**
-		*
-		* Variable (filterApp.selectedFilterData): 
-		*
-		* 	- grabs the data-attribute value from any items in the DOM that match the user's selection 
-		*
-		**/
+		//finds items matching user's selection and shows them
+		$("section.filterableItem").filter('[data-type="' + filterApp.sortChoiceType + '"]').css("display", "inline-block");
 
-			filterApp.selectedFilterData = $(filterApp.selectedFilter).attr('data-type');
-			console.log("filterApp.selectedFilterData = " + filterApp.selectedFilterData);
-
-
-		/**
-		*
-		* If Statement to evaluate results
-		*
-		**/
-
-		if (filterApp.sortChoice === "all") {
-			// Important: above uses different variable than rest of if statement
-			// this is because "all" is not a data-attribute, but simply an item in the list of options (text)
-			$(".filterable section.filterableItem[data-type='type1']").show(); // active item
-			$(".filterable section.filterableItem[data-type='type2']").show(); 
-			$(".filterable section.filterableItem[data-type='type3']").show(); 
-			$(".filterable section.filterableItem[data-type='type4']").show(); 
-			$(".filterable section.filterableItem[data-type='type5']").show();
-			console.log("all selected"); 
-
-		} else if (filterApp.selectedFilterData === "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5") {
-			// hides items without the type1 data-type attribute
-			$(".filterable section.filterableItem[data-type='type1']").show(); // active item
-			$(".filterable section.filterableItem[data-type='type2']").hide(); 
-			$(".filterable section.filterableItem[data-type='type3']").hide(); 
-			$(".filterable section.filterableItem[data-type='type4']").hide(); 
-			$(".filterable section.filterableItem[data-type='type5']").hide(); 
-			
-		 } else if (filterApp.selectedFilterData === "type2" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5"){
-		 	// hides item without the type2 data-type attribute
-		 	$(".filterable section.filterableItem[data-type='type2']").show(); // active item
-		 	$(".filterable section.filterableItem[data-type='type1']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type3']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type4']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type5']").hide();	  
-		 	
-		 } else if (filterApp.selectedFilterData === "type3" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5"){
-		 	// hides item without the type3 data-type attribute
-		 	$(".filterable section.filterableItem[data-type='type3']").show(); // active item
-		 	$(".filterable section.filterableItem[data-type='type1']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type2']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type4']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type5']").hide();
-
-		 	
-		} else if (filterApp.selectedFilterData === "type4" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type5"){
-		 	// hides item without the type3 data-type attribute
-		 	$(".filterable section.filterableItem[data-type='type4']").show(); // active item
-		 	$(".filterable section.filterableItem[data-type='type1']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type2']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type3']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type5']").hide();
-
-		 	
-		 } else if (filterApp.selectedFilterData === "type5" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4"){
-		 	// hides item without the type3 data-type attribute
-		 	$(".filterable section.filterableItem[data-type='type5']").show(); // active item
-		 	$(".filterable section.filterableItem[data-type='type1']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type2']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type3']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type4']").hide();
-
-		 	}
-
-		if (filterApp.sortChoice === "all") {
+		// hides legend if "all" is selected + shows all items when all is selected
+		if (filterApp.sortChoiceType === "all") {
 			$("section.filterResultsCurrent").hide();
+			$("section.filterableItem").css("display", "inline-block");
 		} else {
 			$("section.filterResultsCurrent").show();
-			$("li span.currentChoice").html("Type: " + filterApp.selectedFilterData);
+			$("li span.currentChoice").html("Type: " + filterApp.sortChoiceType);
 		}
 
-	 }); // end on click function: types
-
+	}); // end function on shapes select
 	
+	// ============ End function that listens on click & evaluates type data
+	
+	// ============ Function that listens on click & evaluates shape data
 
 	$("#filterOptionsShapes a.filterControl").on("click",function(){ 
 
@@ -168,66 +94,25 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
 
-		/**
-		*
-		* Variable (filterApp.selectedShape): 
-		*
-		*	- searches the div with a class of "filterable"
-		*	- locates any elements with the data-attribute "data-shape"
-		*	- checks the data-shape attributes for the value matching the user's selection
-		*	- when console logged it returns HTML from the DOM for each item 
-		*
-		**/
+		// finds items NOT matching user's selection and hides them
+		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').css("display", "none");
 
-			filterApp.selectedShape = $(".filterable").find("[data-shape='" + filterApp.sortChoiceShape + "']");
-			console.log(filterApp.selectedShape);
-
-		/**
-		*
-		* Variable (filterApp.selectedShapeData): 
-		*
-		* 	- grabs the data-attribute value from any items in the DOM that match the user's selection 
-		*
-		**/
-
-			filterApp.selectedShapeData = $(filterApp.selectedShape).attr('data-shape');
-			console.log("filterApp.selectedShapeData = " + filterApp.selectedShapeData);
+		//finds items matching user's selection and shows them
+		$("section.filterableItem").filter('[data-shape="' + filterApp.sortChoiceShape + '"]').css("display", "inline-block");
 
 
-		/**
-		*
-		* If Statement to evaluate results
-		*
-		**/
-
-		if (filterApp.selectedShapeData === "circle" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "hexagon") {
-			$(".filterable section.filterableItem[data-shape='circle']").show(); // active item
-			$(".filterable section.filterableItem[data-shape='square']").hide(); 
-			$(".filterable section.filterableItem[data-shape='hexagon']").hide();
-		} else if (filterApp.selectedShapeData === "square" && filterApp.selectedShapeData != "circle" && filterApp.selectedShapeData != "hexagon") {
-			$(".filterable section.filterableItem[data-shape='square']").show(); // active item
-			$(".filterable section.filterableItem[data-shape='circle']").hide(); 
-			$(".filterable section.filterableItem[data-shape='hexagon']").hide(); 
-		} else if (filterApp.selectedShapeData === "hexagon" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "circle") {
-			$(".filterable section.filterableItem[data-shape='hexagon']").show(); // active item
-			$(".filterable section.filterableItem[data-shape='square']").hide(); 
-			$(".filterable section.filterableItem[data-shape='circle']").hide(); 
-		} else if (filterApp.sortChoiceShape === "all" && filterApp.selectedShapeData != "square" && filterApp.selectedShapeData != "circle" && filterApp.selectedShapeData != "hexagon"){
-			$(".filterable section.filterableItem[data-shape='hexagon']").show();
-			$(".filterable section.filterableItem[data-shape='square']").show(); 
-			$(".filterable section.filterableItem[data-shape='circle']").show();
-		}
-
-
+		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.sortChoiceShape === "all") {
 			$("section.filterResultsCurrent").hide();
+			$("section.filterableItem").css("display", "inline-block");
 		} else {
 			$("section.filterResultsCurrent").show();
 			$("li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
 		}
 
 	}); // end function on shapes select
-
+	
+	// ============ End function that listens on click & evaluates shape data
 
 }; // end filterApp.init
 

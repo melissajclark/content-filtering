@@ -8,18 +8,23 @@
 	margin: 0 auto;	
 }
 
+.inactive {	
+	display:none;
+}
+
+.active {
+	display:inline-block;
+}
+
 // individual items (sections)
 .filterableItem {
+	float:left;
+	// vertical centering technique:
+	position:relative; // relative because it is the parent of the <p> element inside it
 	height:150px;
 	width:150px;
 	margin:5px;
 	padding:10px;
-
-	display:inline-block;
-	float:left;
-	// vertical centering technique:
-	position:relative; // relative because it is the parent of the <p> element inside it
-
 }
 
 // item content 

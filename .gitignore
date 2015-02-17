@@ -6,4 +6,8 @@ npm-debug.log
 ### sass ###
 
 .sass-cache
-style.css
+
+### ignore resources ###
+
+relevant-resources/
+

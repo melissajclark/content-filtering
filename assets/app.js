@@ -214,7 +214,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		**/
 
 			filterApp.selectedShape = $(".filterable").find("[data-shape='" + filterApp.sortChoiceShape + "']");
-			// console.log(filterApp.selectedShape);
+			console.log(filterApp.selectedShape);
 
 		/**
 		*
@@ -244,7 +244,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		// }
 
 		// $("section.filterableItem").not(filterApp.filterSelection);
-		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').toggleClass("inactive").toggleClass("active");
+		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').toggleClass("inactive active");
 		// $("section.filterableItem").filter('[data-shape="' + filterApp.sortChoiceShape + '"]').toggleClass("active");
 
 		// $(filterApp.notSelected).hide();
@@ -274,12 +274,12 @@ filterApp.init = function() { // this function holds everything to start the app
 		// }
 
 
-		// if (filterApp.sortChoiceShape === "all") {
-		// 	$("section.filterResultsCurrent").hide();
-		// } else {
-		// 	$("section.filterResultsCurrent").show();
-		// 	$("li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
-		// }
+		if (filterApp.sortChoiceShape === "all") {
+			$("section.filterResultsCurrent").hide();
+		} else {
+			$("section.filterResultsCurrent").show();
+			$("li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
+		}
 
 	}); // end function on shapes select
 	

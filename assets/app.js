@@ -178,20 +178,6 @@ filterApp.init = function() { // this function holds everything to start the app
 	 }); // end on click function: types
 
 	// ======== End function that listens on click & type data ==============
-
-	
-		/**
-		*
-		* Variable (filterApp.allShapes): 
-		*
-		* 	- finds all items in the DOM with the attribute of 'data-type'
-		*	- returns HTML of all items
-		*
-		**/
-
-			filterApp.allShapes = $(".filterable").find(".filterableItem[data-shape]");
-
-			// console.log(filterApp.allShapes);
 	
 	// ============ Function that listens on click & evaluates shape data
 

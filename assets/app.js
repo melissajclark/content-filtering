@@ -68,116 +68,31 @@ filterApp.init = function() { // this function holds everything to start the app
 
 			// console.log(filterApp.allDataTypes);
 
-	// ======== Function that listens on click & type data ==============
+	// ============ Function that listens on click & evaluates type data
 
-	/**
-	*
-	* Filters Content: Types
-	*
-	**/
+	$("#filterOptionsShapes a.filterControl").on("click",function(){ 
 
-	$("#filterOptionsTypes a.filterControl").on("click", function(){ // runs when dropdown of items changes
+		// finds the value of the user's selection (aka the desired shape to view)
+		filterApp.sortChoiceShape = $(this).text();
 
-		// finds the value of the user's selection (aka the desired type to view)
-		filterApp.sortChoice = $(this).text();
-		console.log(filterApp.sortChoice);
+		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
 
 
-		/**
-		*
-		* Variable (filterApp.selectedFilter): 
-		*
-		*	- searches the div with a class of "filterable"
-		*	- locates any elements with the data-attribute "data-type"
-		*	- checks the data-type attributes for the value matching the user's selection
-		*	- when console logged it returns HTML from the DOM for each item 
-		*
-		**/
+		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').css("display", "none");
+		$("section.filterableItem").filter('[data-shape="' + filterApp.sortChoiceShape + '"]').css("display", "inline-block");
 
-			filterApp.selectedFilter = $(".filterable").find("[data-type='" + filterApp.sortChoice + "']");
-			// console.log(filterApp.selectedFilter);
 
-		/**
-		*
-		* Variable (filterApp.selectedFilterData): 
-		*
-		* 	- grabs the data-attribute value from any items in the DOM that match the user's selection 
-		*
-		**/
-
-			filterApp.selectedFilterData = $(filterApp.selectedFilter).attr('data-type');
-			console.log("filterApp.selectedFilterData = " + filterApp.selectedFilterData);
-
-		/**
-		*
-		* If Statement to evaluate results
-		*
-		**/
-
-		if (filterApp.sortChoice === "all") {
-			// Important: above uses different variable than rest of if statement
-			// this is because "all" is not a data-attribute, but simply an item in the list of options (text)
-			$(".filterable section.filterableItem[data-type='type1']").show(); // active item
-			$(".filterable section.filterableItem[data-type='type2']").show(); 
-			$(".filterable section.filterableItem[data-type='type3']").show(); 
-			$(".filterable section.filterableItem[data-type='type4']").show(); 
-			$(".filterable section.filterableItem[data-type='type5']").show();
-			console.log("all selected"); 
-
-		} else if (filterApp.selectedFilterData === "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5") {
-			// hides items without the type1 data-type attribute
-			$(".filterable section.filterableItem[data-type='type1']").show(); // active item
-			$(".filterable section.filterableItem[data-type='type2']").hide(); 
-			$(".filterable section.filterableItem[data-type='type3']").hide(); 
-			$(".filterable section.filterableItem[data-type='type4']").hide(); 
-			$(".filterable section.filterableItem[data-type='type5']").hide(); 
-			
-		 } else if (filterApp.selectedFilterData === "type2" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5"){
-		 	// hides item without the type2 data-type attribute
-		 	$(".filterable section.filterableItem[data-type='type2']").show(); // active item
-		 	$(".filterable section.filterableItem[data-type='type1']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type3']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type4']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type5']").hide();	  
-		 	
-		 } else if (filterApp.selectedFilterData === "type3" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type4" && filterApp.selectedFilterData != "type5"){
-		 	// hides item without the type3 data-type attribute
-		 	$(".filterable section.filterableItem[data-type='type3']").show(); // active item
-		 	$(".filterable section.filterableItem[data-type='type1']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type2']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type4']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type5']").hide();
-
-		 	
-		} else if (filterApp.selectedFilterData === "type4" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type5"){
-		 	// hides item without the type3 data-type attribute
-		 	$(".filterable section.filterableItem[data-type='type4']").show(); // active item
-		 	$(".filterable section.filterableItem[data-type='type1']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type2']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type3']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type5']").hide();
-
-		 	
-		 } else if (filterApp.selectedFilterData === "type5" && filterApp.selectedFilterData != "type1" && filterApp.selectedFilterData != "type2" && filterApp.selectedFilterData != "type3" && filterApp.selectedFilterData != "type4"){
-		 	// hides item without the type3 data-type attribute
-		 	$(".filterable section.filterableItem[data-type='type5']").show(); // active item
-		 	$(".filterable section.filterableItem[data-type='type1']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type2']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type3']").hide(); 
-		 	$(".filterable section.filterableItem[data-type='type4']").hide();
-
-		 	}
-
-		if (filterApp.sortChoice === "all") {
+		if (filterApp.sortChoiceShape === "all") {
 			$("section.filterResultsCurrent").hide();
+			$("section.filterableItem").css("display", "inline-block");
 		} else {
 			$("section.filterResultsCurrent").show();
-			$("li span.currentChoice").html("Type: " + filterApp.selectedFilterData);
+			$("li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);
 		}
 
-	 }); // end on click function: types
-
-	// ======== End function that listens on click & type data ==============
+	}); // end function on shapes select
+	
+	// ============ End function that listens on click & evaluates type data
 	
 	// ============ Function that listens on click & evaluates shape data
 

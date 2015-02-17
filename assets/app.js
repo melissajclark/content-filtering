@@ -232,16 +232,13 @@ filterApp.init = function() { // this function holds everything to start the app
 		$("section.filterableItem").not('[data-shape="' + filterApp.selectedShapeData + '"]').css("display", "none");
 		$("section.filterableItem").filter('[data-shape="' + filterApp.selectedShapeData + '"]').css("display", "inline-block");
 
-		
-		
-		$("a.filterControl").val("all").css("display", "inline-block");
-		
 
 		// $('section.filterableItem[data-shape="' + filterApp.selectedShapeData + "']'").removeClass("inactive").toggleClass("active");	
 
 
 		if (filterApp.sortChoiceShape === "all") {
 			$("section.filterResultsCurrent").hide();
+			$("section.filterableItem").css("display", "inline-block");
 		} else {
 			$("section.filterResultsCurrent").show();
 			$("li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);

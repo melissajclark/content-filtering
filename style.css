@@ -163,15 +163,16 @@ ul.filterNav li {
   display: inline-block;
   float: left;
   text-align: center;
-  margin: 5px;
+  margin: 3px;
   font-size: 24px;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 3px; }
+  padding: 2px; }
 
-a.filterControl:hover {
-  background: #00b3b3;
-  color: white; }
+a, a.filterControl {
+  text-transform: uppercase;
+  color: purple;
+  text-decoration: none; }
+  a:hover, a.filterControl:hover {
+    border-bottom: 3px solid #333; }
 
 /*-----  End of Filter Nav  ------*/
 .filterable {

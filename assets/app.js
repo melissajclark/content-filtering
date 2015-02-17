@@ -1,13 +1,3 @@
-$.fn.filterMe = function(options){
-
-	// options configurable per project / user
-	var settings = $.extend({
-		dataAttr: "data-type"
-
-	}, options); 
-
-}; // end filterMe function
-
 // Empty object for all code to live on
 
 var filterApp = {};

@@ -17,9 +17,9 @@ Eventually I want to implement this in custom WordPress themes. I like to get th
 
 ## Some Questions & Topics I Need To Figure Out
 
-1. How to setup the jQuery selectors when I may not know what the content is? ie. for a client adding tags / info to works
+1. How to setup the jQuery selectors when I may not know what the content is? ie. for a client adding tags / info to works  
 - Is it better to use data attributes or classes for the relevant classifications?
-- How to properly implement this in a custom WordPress theme?
+- How to properly implement this in a custom WordPress theme?  
 
 ------
 

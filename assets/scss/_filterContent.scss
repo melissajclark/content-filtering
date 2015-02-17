@@ -12,9 +12,9 @@
 	display:none;
 }
 
-// .active {
-	
-// }
+.active {
+	display:inline-block;
+}
 
 // individual items (sections)
 .filterableItem {
@@ -25,7 +25,6 @@
 	width:150px;
 	margin:5px;
 	padding:10px;
-	display:inline-block;
 }
 
 // item content 

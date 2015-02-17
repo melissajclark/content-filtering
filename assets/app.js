@@ -244,7 +244,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		// }
 
 		// $("section.filterableItem").not(filterApp.filterSelection);
-		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').toggleClass("active inactive");
+		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').toggleClass("inactive").toggleClass("active");
 		// $("section.filterableItem").filter('[data-shape="' + filterApp.sortChoiceShape + '"]').toggleClass("active");
 
 		// $(filterApp.notSelected).hide();

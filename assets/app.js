@@ -20,8 +20,6 @@ filterApp.init = function() { // this function holds everything to start the app
 	**/
 
 	$("section.filterResultsCurrent").hide();
-
-	$("section.filterableItem").addClass("active");
 	
 	/**
 	*

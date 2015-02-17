@@ -22,7 +22,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	$("section.filterResultsCurrent").hide();
 
-	// $("section.filterableItem").addClass("active");
+	$("section.filterableItem").addClass("active");
 	
 	/**
 	*
@@ -244,8 +244,8 @@ filterApp.init = function() { // this function holds everything to start the app
 		// }
 
 		// $("section.filterableItem").not(filterApp.filterSelection);
-		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').addClass("inactive");
-		// $("section.filterableItem").filter('[data-shape="' + filterApp.sortChoiceShape + '"]').toggleClass("active");
+		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').toggleClass("active inactive");
+		$('section.filterableItem[data-shape="' + filterApp.sortChoiceShape + "']'").toggleClass("active inactive");
 
 		// $(filterApp.notSelected).hide();
 

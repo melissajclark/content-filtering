@@ -75,13 +75,16 @@ filterApp.init = function() { // this function holds everything to start the app
 		// finds the value of the user's selection (aka the desired shape to view)
 		filterApp.sortChoiceType = $(this).text();
 
-		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
+		// displays legend after user clicks on a filter link
+		$("section.filterResultsCurrent").show(); 
 
-
+		// finds items NOT matching user's selection and hides them
 		$("section.filterableItem").not('[data-type="' + filterApp.sortChoiceType + '"]').css("display", "none");
+
+		//finds items matching user's selection and shows them
 		$("section.filterableItem").filter('[data-type="' + filterApp.sortChoiceType + '"]').css("display", "inline-block");
 
-
+		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.sortChoiceType === "all") {
 			$("section.filterResultsCurrent").hide();
 			$("section.filterableItem").css("display", "inline-block");
@@ -103,11 +106,14 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
 
-
+		// finds items NOT matching user's selection and hides them
 		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').css("display", "none");
+
+		//finds items matching user's selection and shows them
 		$("section.filterableItem").filter('[data-shape="' + filterApp.sortChoiceShape + '"]').css("display", "inline-block");
 
 
+		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.sortChoiceShape === "all") {
 			$("section.filterResultsCurrent").hide();
 			$("section.filterableItem").css("display", "inline-block");

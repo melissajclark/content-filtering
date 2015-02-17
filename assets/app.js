@@ -70,7 +70,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	// ============ Function that listens on click & evaluates type data
 
-	$("#filterOptionsShapes a.filterControl").on("click",function(){ 
+	$("#filterOptionsTypes a.filterControl").on("click",function(){ 
 
 		// finds the value of the user's selection (aka the desired shape to view)
 		filterApp.sortChoiceType = $(this).text();

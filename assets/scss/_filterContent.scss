@@ -7,6 +7,12 @@
 	color:white;
 	margin: 0 auto;	
 }
+.filterableItemWrapper {
+	width:180px;
+	height:180px;
+	float:left;
+	display:inline-block;
+}
 
 // individual items (sections)
 .filterableItem {
@@ -16,8 +22,6 @@
 	position:relative; // relative because it is the parent of the <p> element inside it
 	height:150px;
 	width:150px;
-	margin:5px;
-	padding:10px;
 }
 
 // item content 
@@ -67,12 +71,12 @@
 	border-radius:50%;
 }
 
-[data-shape~="hexagon"]{
-	position: relative;
-	width: 150px; 
-	height: 86.60px;
-	background-color: yellow;
-	margin: 43.30px 0;
+[data-shape~="hexagon"] {
+  position: relative;
+  width: 125px; 
+  height: 72.17px;
+  background-color: #f7df46;
+  margin: 36.08px 0;
 }
 
 [data-shape~="hexagon"]:before,
@@ -80,19 +84,19 @@
   content: "";
   position: absolute;
   width: 0;
-  border-left: 75px solid transparent;
-  border-right: 75px solid transparent;
+  border-left: 62.5px solid transparent;
+  border-right: 62.5px solid transparent;
 }
 
 [data-shape~="hexagon"]:before {
   bottom: 100%;
-  border-bottom: 43.30px solid yellow;
+  border-bottom: 36.08px solid #f7df46;
 }
 
 [data-shape~="hexagon"]:after {
   top: 100%;
   width: 0;
-  border-top: 43.30px solid yellow;
+  border-top: 36.08px solid #f7df46;
 }
 
 /*-----  End of Styles for filterable content (items) shapes  ------*/

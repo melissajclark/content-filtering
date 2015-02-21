@@ -10,7 +10,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	/**
 	*
-	* Hide legend of results on page load + add active class to all items
+	* Hide legend of results on page load
 	*
 	**/
 

@@ -60,7 +60,6 @@ filterApp.init = function() { // this function holds everything to start the app
 		//finds items matching user's selection and shows them
 		$("section.filterableItem").filter('[data-shape="' + filterApp.sortChoiceShape + '"]').css("display", "inline-block");
 
-
 		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.sortChoiceShape === "all") {
 			$("section.filterResultsCurrent").hide();

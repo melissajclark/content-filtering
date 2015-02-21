@@ -11,6 +11,10 @@
 	min-height:50px;
 }
 
+span.currentChoice {
+	text-transform:uppercase;
+}
+
 ul.filterNav li {
 	list-style-type: none;
 	display:inline-block;

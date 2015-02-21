@@ -30,12 +30,12 @@ filterApp.init = function() { // this function holds everything to start the app
 		$("section.filterableItem").not('[data-type="' + filterApp.sortChoiceType + '"]').remove();
 
 		//finds items matching user's selection and shows them
-		$("section.filterableItem").filter('[data-type="' + filterApp.sortChoiceType + '"]').css("display", "inline-block");
+		$("section.filterableItem").filter('[data-type="' + filterApp.sortChoiceType + '"]').add();
 
 		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.sortChoiceType === "all") {
 			$("section.filterResultsCurrent").hide();
-			$("section.filterableItem").css("display", "inline-block");
+			$("section.filterableItem").add();
 		} else {
 			$("section.filterResultsCurrent").show();
 			$("li span.currentChoice").html("Type: " + filterApp.sortChoiceType);
@@ -58,12 +58,12 @@ filterApp.init = function() { // this function holds everything to start the app
 		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').remove();
 
 		//finds items matching user's selection and shows them
-		$("section.filterableItem").filter('[data-shape="' + filterApp.sortChoiceShape + '"]').css("display", "inline-block");
+		$("section.filterableItem").filter('[data-shape="' + filterApp.sortChoiceShape + '"]').add();
 
 		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.sortChoiceShape === "all") {
 			$("section.filterResultsCurrent").hide();
-			$("section.filterableItem").css("display", "inline-block");
+			$("section.filterableItem").add();
 		} else {
 			$("section.filterResultsCurrent").show();
 			$("li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);

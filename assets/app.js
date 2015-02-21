@@ -16,6 +16,8 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	$("section.filterResultsCurrent").hide();
 
+	$("section.filterableItem").addClass("animated");
+
 	// ============ Function that listens on click & evaluates type data
 
 	$("#filterOptionsTypes a.filterControl").on("click",function(){ 

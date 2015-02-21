@@ -1,5 +1,5 @@
-// Empty object for all code to live on
 
+// empty object for code to live on
 var filterApp = {};
 
 // ------------------------------------

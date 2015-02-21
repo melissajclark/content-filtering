@@ -27,15 +27,15 @@ filterApp.init = function() { // this function holds everything to start the app
 		$("section.filterResultsCurrent").show(); 
 
 		// finds items NOT matching user's selection and hides them
-		$("section.filterableItem").not('[data-type="' + filterApp.sortChoiceType + '"]').hide();
+		$(".filterableItemWrapper section.filterableItem").not('[data-type="' + filterApp.sortChoiceType + '"]').hide();
 
 		//finds items matching user's selection and shows them
-		$("section.filterableItem").filter('[data-type="' + filterApp.sortChoiceType + '"]').show();
+		$(".filterableItemWrapper section.filterableItem").filter('[data-type="' + filterApp.sortChoiceType + '"]').show();
 
 		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.sortChoiceType === "all") {
 			$("section.filterResultsCurrent").hide();
-			$("section.filterableItem").show();
+			$(".filterableItemWrapper section.filterableItem").show();
 		} else {
 			$("section.filterResultsCurrent").show();
 			$("li span.currentChoice").html("Type: " + filterApp.sortChoiceType);
@@ -55,15 +55,15 @@ filterApp.init = function() { // this function holds everything to start the app
 		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
 
 		// finds items NOT matching user's selection and hides them
-		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').hide();
+		$(".filterableItemWrapper section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').hide();
 
 		//finds items matching user's selection and shows them
-		$("section.filterableItem").filter('[data-shape="' + filterApp.sortChoiceShape + '"]').show();
+		$(".filterableItemWrapper section.filterableItem").filter('[data-shape="' + filterApp.sortChoiceShape + '"]').show();
 
 		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.sortChoiceShape === "all") {
 			$("section.filterResultsCurrent").hide();
-			$("section.filterableItem").show();
+			$(".filterableItemWrapper section.filterableItem").show();
 		} else {
 			$("section.filterResultsCurrent").show();
 			$("li span.currentChoice").html("Shape: " + filterApp.sortChoiceShape);

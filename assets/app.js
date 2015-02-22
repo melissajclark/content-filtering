@@ -20,7 +20,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	// ============ Function that listens on click & evaluates type data
 
-	$("#filterOptionsTypes a.filterControl").on("click",function(){ 
+	$("a.filterControl").on("click",function(){ 
 
 		// finds the value of the user's selection (aka the desired shape to view)
 		filterApp.sortChoiceType = $(this).text();
@@ -50,7 +50,7 @@ filterApp.init = function() { // this function holds everything to start the app
 	
 	// ============ Function that listens on click & evaluates shape data
 
-	$("#filterOptionsShapes a.filterControl").on("click",function(){ 
+	$("a.filterControl").on("click",function(){ 
 
 		// finds the value of the user's selection (aka the desired shape to view)
 		filterApp.sortChoiceShape = $(this).text();
@@ -79,7 +79,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	// ============ Function that listens on click & evaluates Colour data
 
-	$("#filterOptionsColors a.filterControl").on("click",function(){ 
+	$("a.filterControl").on("click",function(){ 
 
 		// finds the value of the user's selection (aka the desired Color to view)
 		filterApp.sortChoice = $(this).text();

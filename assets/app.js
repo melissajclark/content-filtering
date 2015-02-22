@@ -30,44 +30,13 @@ filterApp.init = function() { // this function holds everything to start the app
 		// displays legend after user clicks on a filter link
 		$('section.filterResultsCurrent').show(); 
 
-		/**
-		*
-		* Checks Data-Attr 0 - Types
-		*
-		**/
+		// finds items NOT matching user's selection and hides them
+		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').css('background', 'grey');
+		console.log('hiding: [' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"] !');
 
-			// finds items NOT matching user's selection and hides them
-			$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').css('background', 'grey');
-			console.log('hiding: [' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"] !');
+		//finds items matching user's selection and shows them
+		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').css('background', 'yellow');
 
-			//finds items matching user's selection and shows them
-			$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').css('background', 'yellow');
-
-		/**
-		*
-		* Checks Data-Attr 1 - Shapes
-		*
-		**/
-
-			// // finds items NOT matching user's selection and hides them
-			// $('.filterableItem' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').css('background', 'grey');
-			// console.log('hiding: [' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"] !');
-
-			// //finds items matching user's selection and shows them
-			// $('.filterableItem' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').css('background', 'yellow');
-
-		// /**
-		// *
-		// * Checks Data-Attr 2 - Color
-		// *
-		// **/
-
-		// 	// finds items NOT matching user's selection and hides them
-		// 	$('.filterableItem').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').toggleClass('fadeInRight').hide();
-		// 	console.log('hiding: [' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"] !');
-
-		// 	//finds items matching user's selection and shows them
-		// 	$('section.filterableItem').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').toggleClass('fadeInLeft').show();
 
 		// hides legend if "all" is selected + shows all items when all is selected
 		// if (filterApp.userSelection === 'all') {

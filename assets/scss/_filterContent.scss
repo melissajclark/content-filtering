@@ -47,17 +47,37 @@
 =      Styles for specific items  =
 ======================================================*/
 
-.filterableItem[data-shape~="circle"], .filterableItem[data-shape~="circle"] img{
+// .filterableItem[data-shape~="circle"], .filterableItem[data-shape~="circle"] img{
+// 	border-radius:50%;
+// }
+
+.filterableItem[data-shape~="square"] {
+
+	&[data-content~="text"] {
+		padding:0 5px 0 5px;
+	} // square + text selector
+
+	&img { 
+		opacity:0.5;
+	} // data-content=image
+
+} // data-shape=square
+
+
+.filterableItem[data-shape~="circle"]{
 	border-radius:50%;
+	&img {
+		border-radius:50%;
+		opacity:0.5;
+	}
+	
 }
 
-.filterableItem[data-shape~="square"][data-content~="text"] {
-	padding:0 5px 0 5px;
-}
+// .filterableItem[data-shape~="circle"][data-content~="image"] img, .filterableItem[data-shape~="square"][data-content~="image"] img{
+// 	opacity:0.5;
+// }
 
-.filterableItem[data-shape~="circle"][data-content~="image"] img{
-	opacity:0.5;
-}
+
 
 /*-----  End of Styles for specific items  ------*/
 

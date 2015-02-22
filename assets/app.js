@@ -1,8 +1,8 @@
 
 // empty object for code to live on
 var filterApp = {};
-filterApp.dataAttr = ['data-type', 'data-shape', 'data-color'];
-filterApp.dataName = ['Type', 'Shape', 'Color'];
+filterApp.dataAttr = ['data-content', 'data-shape', 'data-color'];
+filterApp.dataName = ['Content', 'Shape', 'Color'];
 
 // ------------------------------------
 
@@ -18,7 +18,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	// ============ Function that listens on click & evaluates filterApp.dataAttr[0] (Types)
 
-	$('ul.filterNavTypes a.filterControl').on('click',function(){ 
+	$('ul.filterNavContent a.filterControl').on('click',function(){ 
 
 		// finds the value of the user's selection (aka the desired shape to view)
 		filterApp.userSelection = $(this).text();

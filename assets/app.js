@@ -29,7 +29,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		$("section.filterResultsCurrent").show(); 
 
 		// finds items NOT matching user's selection and hides them
-		$(".filterableItem").not('[data-type="' + filterApp.sortChoiceType + '"]').addClass("fadeOutRight").hide();
+		$(".filterableItem").not('[data-type="' + filterApp.sortChoiceType + '"]').addClass("fadeInRight").hide();
 
 		//finds items matching user's selection and shows them
 		$("section.filterableItem").filter('[data-type="' + filterApp.sortChoiceType + '"]').show();
@@ -57,7 +57,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
 
 		// finds items NOT matching user's selection and hides them
-		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').addClass("fadeOutRight").hide();
+		$("section.filterableItem").not('[data-shape="' + filterApp.sortChoiceShape + '"]').addClass("fadeInRight").hide();
 
 		//finds items matching user's selection and shows them
 		$("section.filterableItem").filter('[data-shape="' + filterApp.sortChoiceShape + '"]').show();
@@ -85,7 +85,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
 
 		// finds items NOT matching user's selection and hides them
-		$("section.filterableItem").not('[data-color="' + filterApp.sortChoice + '"]').addClass("fadeOutRight").hide();
+		$("section.filterableItem").not('[data-color="' + filterApp.sortChoice + '"]').addClass("fadeInRight").hide();
 
 		//finds items matching user's selection and shows them
 		$("section.filterableItem").filter('[data-color="' + filterApp.sortChoice + '"]').show();

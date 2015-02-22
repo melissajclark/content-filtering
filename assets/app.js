@@ -16,7 +16,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	// =================================================
 
-	// ============ Function that listens on click & evaluates type data
+	// ============ Function that listens on click & evaluates filterApp.dataAttr[0] (Types)
 
 	$('ul.filterNavTypes a.filterControl').on('click',function(){ 
 
@@ -33,7 +33,6 @@ filterApp.init = function() { // this function holds everything to start the app
 		//finds items matching user's selection and shows them
 		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').css('background', 'yellow');
 
-
 		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.userSelection === 'all') {
 			$('section.filterResultsCurrent').hide();
@@ -43,8 +42,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			$('li span.currentChoice').html(filterApp.dataName[0] + ': ' + filterApp.userSelection);
 		}
 
-	});  
-	// ============ End function that listens on click & evaluates type data
+	});  // ============ End function that listens on click & evaluates filterApp.dataAttr[0] (Types)
 
 }; // end filterApp.init
 

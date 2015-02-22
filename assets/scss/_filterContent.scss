@@ -14,9 +14,9 @@
 	float:left;
 	// vertical centering technique:
 	position:relative; // relative because it is the parent of the <p> element inside it
-	height:250px;
-	width:250px;
-	padding:20px;
+	height:125px;
+	width:125px;
+	// padding:20px;
 	margin:15px;
 }
 
@@ -30,7 +30,7 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background:lighten(black,15%);
-	padding:1em;
+	padding:10px;
 }
 
 /*======================================================

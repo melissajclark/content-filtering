@@ -12,15 +12,13 @@
 .filterableItem {
 	display:inline-block;
 	float:left;
-	// vertical centering technique:
-	// position:relative; // relative because it is the parent of the <p> element inside it
-	height:auto;
-	max-width:250px;
+	height:250px;
+	width:250px;
 	margin:10px;
 }
 
 /*======================================================
-=     Styles for filterable content (items): colours   =
+=     				Color Settings   				=
 ======================================================*/
 
 [data-color~="dark-berry"] {
@@ -43,20 +41,25 @@
 	background:#83b5d1;
 }
 
-/*-----  End of Styles for filterable content (items): colours  ------*/
+/*-----  End of Color Settings  ------*/
 
 /*======================================================
-=      Styles for filterable content (items) shapes  =
+=      Styles for specific items  =
 ======================================================*/
 
 .filterableItem[data-shape~="circle"], .filterableItem[data-shape~="circle"] img{
 	border-radius:50%;
 }
 
-/*-----  End of Styles for filterable content (items) shapes  ------*/
+.filterableItem[data-shape~="square"][data-content~="text"] {
+	padding:0 5px 0 5px;
+}
 
+.filterableItem[data-shape~="circle"][data-content~="image"] img{
+	opacity:0.5;
+}
 
-
+/*-----  End of Styles for specific items  ------*/
 
 
 /*-----  End of Filter Content Styles  ------*/

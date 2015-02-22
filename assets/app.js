@@ -32,7 +32,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		$(".filterableItem").not('[data-type="' + filterApp.sortChoiceType + '"]').hide();
 
 		//finds items matching user's selection and shows them
-		$("section.filterableItem").filter('[data-type="' + filterApp.sortChoiceType + '"]').addClass("fadeInUp").show();
+		$("section.filterableItem").filter('[data-type="' + filterApp.sortChoiceType + '"]').show();
 
 		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.sortChoiceType === "all") {

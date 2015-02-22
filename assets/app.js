@@ -8,17 +8,13 @@ filterApp.dataName = ['Type', 'Shape', 'Color'];
 
 filterApp.init = function() { // this function holds everything to start the app
 
-
-	/**
-	*
-	* Functions that need to occur on page load
-	*
-	**/
+	// =========== Functions to occur on page load:
 
 		$('section.filterResultsCurrent').hide();
 
 		$('section.filterableItem').addClass('animated');
 
+	// =================================================
 
 	// ============ Function that listens on click & evaluates type data
 
@@ -39,13 +35,13 @@ filterApp.init = function() { // this function holds everything to start the app
 
 
 		// hides legend if "all" is selected + shows all items when all is selected
-		// if (filterApp.userSelection === 'all') {
-		// 	$('section.filterResultsCurrent').hide();
-		// 	$('section.filterableItem').show();
-		// } else {
-		// 	$('section.filterResultsCurrent').show();
-		// 	$('li span.currentChoice').html(filterApp.dataName[0] + ': ' + filterApp.userSelection);
-		// }
+		if (filterApp.userSelection === 'all') {
+			$('section.filterResultsCurrent').hide();
+			$('section.filterableItem').show();
+		} else {
+			$('section.filterResultsCurrent').show();
+			$('li span.currentChoice').html(filterApp.dataName[0] + ': ' + filterApp.userSelection);
+		}
 
 	});  
 	// ============ End function that listens on click & evaluates type data

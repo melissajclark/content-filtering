@@ -23,25 +23,25 @@ filterApp.init = function() { // this function holds everything to start the app
 	$("a.filterControl").on("click",function(){ 
 
 		// finds the value of the user's selection (aka the desired shape to view)
-		filterApp.sortChoiceType = $(this).text();
+		filterApp.sortChoice = $(this).text();
 
 		// displays legend after user clicks on a filter link
 		$("section.filterResultsCurrent").show(); 
 
 		// finds items NOT matching user's selection and hides them
-		filterApp.hidingItems = $(".filterableItem").not('[data-type="' + filterApp.sortChoiceType + '"]').toggleClass("fadeInRight").hide();
+		filterApp.hidingItems = $(".filterableItem").not('[data-type="' + filterApp.sortChoice + '"]').toggleClass("fadeInRight").hide();
 		console.log("hiding!");
 
 		//finds items matching user's selection and shows them
-		$("section.filterableItem").filter('[data-type="' + filterApp.sortChoiceType + '"]').toggleClass("fadeInLeft").show();
+		$("section.filterableItem").filter('[data-type="' + filterApp.sortChoice + '"]').toggleClass("fadeInLeft").show();
 
 		// hides legend if "all" is selected + shows all items when all is selected
-		if (filterApp.sortChoiceType === "all") {
+		if (filterApp.sortChoice === "all") {
 			$("section.filterResultsCurrent").hide();
 			$("section.filterableItem").show();
 		} else {
 			$("section.filterResultsCurrent").show();
-			$("li span.currentChoice").html("Type: " + filterApp.sortChoiceType);
+			$("li span.currentChoice").html("Type: " + filterApp.sortChoice);
 		}
 
 	}); // end function on shapes select

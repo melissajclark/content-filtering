@@ -37,11 +37,11 @@ filterApp.init = function() { // this function holds everything to start the app
 		**/
 
 			// finds items NOT matching user's selection and hides them
-			$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').css('background', 'grey')
+			$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').css('background', 'grey');
 			console.log('hiding: [' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"] !');
 
 			//finds items matching user's selection and shows them
-			$('section.filterableItem').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').toggleClass('fadeInLeft').show();
+			$('section.filterableItem').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').css('background', 'yellow');
 
 		// /**
 		// *

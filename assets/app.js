@@ -28,7 +28,6 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		// finds items NOT matching user's selection and hides them
 		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').css('background', 'grey');
-		console.log('hiding: [' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"] !');
 
 		//finds items matching user's selection and shows them
 		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').css('background', 'yellow');
@@ -57,7 +56,6 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		// finds items NOT matching user's selection and hides them
 		$('.filterableItem' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').css('background', 'grey');
-		console.log('hiding: [' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"] !');
 
 		//finds items matching user's selection and shows them
 		$('.filterableItem' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').css('background', 'yellow');
@@ -86,7 +84,6 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		// finds items NOT matching user's selection and hides them
 		$('.filterableItem' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').css('background', 'grey');
-		console.log('hiding: [' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"] !');
 
 		//finds items matching user's selection and shows them
 		$('.filterableItem' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').css('background', 'yellow');

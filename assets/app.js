@@ -26,6 +26,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		// finds the value of the user's selection (aka the desired shape to view)
 		filterApp.userSelection = $(this).text();
+		console.log(filterApp.userSelection);
 
 		// displays legend after user clicks on a filter link
 		$("section.filterResultsCurrent").show(); 

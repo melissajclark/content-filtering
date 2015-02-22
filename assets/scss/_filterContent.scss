@@ -16,6 +16,7 @@
 	position:relative; // relative because it is the parent of the <p> element inside it
 	height:150px;
 	width:150px;
+	padding:20px;
 }
 
 // item content 
@@ -63,34 +64,6 @@
 
 [data-shape~="circle"]{
 	border-radius:50%;
-}
-
-[data-shape~="hexagon"] {
-  position: relative;
-  width: 125px; 
-  height: 72.17px;
-  background-color: #f7df46;
-  margin: 36.08px 0;
-}
-
-[data-shape~="hexagon"]:before,
-[data-shape~="hexagon"]:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 62.5px solid transparent;
-  border-right: 62.5px solid transparent;
-}
-
-[data-shape~="hexagon"]:before {
-  bottom: 100%;
-  border-bottom: 36.08px solid #f7df46;
-}
-
-[data-shape~="hexagon"]:after {
-  top: 100%;
-  width: 0;
-  border-top: 36.08px solid #f7df46;
 }
 
 /*-----  End of Styles for filterable content (items) shapes  ------*/

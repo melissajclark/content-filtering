@@ -1,7 +1,7 @@
 
 // empty object for code to live on
 var filterApp = {};
-filterApp.dataOptions = ['[data-type="', '[data-shape="', '[data-color="'];
+filterApp.dataAttr = ['[data-type="', '[data-shape="', '[data-color="'];
 
 // ------------------------------------
 

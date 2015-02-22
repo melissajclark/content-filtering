@@ -2,6 +2,7 @@
 // empty object for code to live on
 var filterApp = {};
 filterApp.dataAttr = ['[data-type="', '[data-shape="', '[data-color="'];
+filterApp.dataName = ['Type', 'Shape', 'Color'];
 
 // ------------------------------------
 

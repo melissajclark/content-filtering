@@ -8,17 +8,17 @@ filterApp.dataName = ['Type', 'Shape', 'Color'];
 
 filterApp.init = function() { // this function holds everything to start the app
 
-	// ======== functions that need to occur on page load ============
 
 	/**
 	*
-	* Hide legend of results on page load
+	* Functions that need to occur on page load
 	*
 	**/
 
-	$('section.filterResultsCurrent').hide();
+		$('section.filterResultsCurrent').hide();
 
-	$('section.filterableItem').addClass('animated');
+		$('section.filterableItem').addClass('animated');
+
 
 	// ============ Function that listens on click & evaluates type data
 

@@ -41,7 +41,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			console.log('hiding: [' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"] !');
 
 			//finds items matching user's selection and shows them
-			$('section.filterableItem').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').css('background', 'yellow');
+			$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').css('background', 'yellow');
 
 		// /**
 		// *
@@ -49,12 +49,12 @@ filterApp.init = function() { // this function holds everything to start the app
 		// *
 		// **/
 
-		// 	// finds items NOT matching user's selection and hides them
-		// 	$('.filterableItem').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').toggleClass('fadeInRight').hide();
-		// 	console.log('hiding: [' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"] !');
+		// 	// // finds items NOT matching user's selection and hides them
+		// 	// $('.filterableItem').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').toggleClass('fadeInRight').hide();
+		// 	// console.log('hiding: [' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"] !');
 
-		// 	//finds items matching user's selection and shows them
-		// 	$('section.filterableItem').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').toggleClass('fadeInLeft').show();
+		// 	// //finds items matching user's selection and shows them
+		// 	// $('section.filterableItem').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').toggleClass('fadeInLeft').show();
 
 		// /**
 		// *

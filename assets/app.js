@@ -1,7 +1,7 @@
 
 // empty object for code to live on
 var filterApp = {};
-filterApp.settings = ["type", "shape", "color"];
+filterApp.dataOptions = ["type", "shape", "color"];
 
 // ------------------------------------
 

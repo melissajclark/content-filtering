@@ -14,8 +14,8 @@
 	float:left;
 	// vertical centering technique:
 	position:relative; // relative because it is the parent of the <p> element inside it
-	height:125px;
-	width:125px;
+	height:300px;
+	width:300px;
 	// padding:20px;
 	margin:15px;
 }
@@ -38,24 +38,24 @@
 =     Styles for filterable content (items): colours   =
 ======================================================*/
 
-[data-color~="teal"] {
-	background:lighten(teal,14%);
+[data-color~="dark-berry"] {
+	background:#673c4f;
 }
 
-[data-color~="pink"] {
-	background:darken(pink,20%);
+[data-color~="light-berry"] {
+	background:#7f557d;
 }
 
-[data-color~="purple"] {
-	background:lighten(purple,5%);
+[data-color~="moody-berry"] {
+	background:#726e97;
 }
 
-[data-color~="red"] {
-	background:lighten(red,10%);
+[data-color~="subtle-blue"] {
+	background:#7698b3;
 }
 
-[data-color~="yellow"] {
-	background:lighten(yellow,10%);
+[data-color~="baby-blue"] {
+	background:#83b5d1;
 }
 
 /*-----  End of Styles for filterable content (items): colours  ------*/

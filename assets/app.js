@@ -43,6 +43,19 @@ filterApp.init = function() { // this function holds everything to start the app
 			//finds items matching user's selection and shows them
 			$("section.filterableItem").filter(filterApp.dataAttr[0] + filterApp.userSelection + '"]').toggleClass("fadeInLeft").show();
 
+		/**
+		*
+		* Checks Data-Attr 1 - Shapes
+		*
+		**/
+
+			// finds items NOT matching user's selection and hides them
+			filterApp.hidingItems = $(".filterableItem").not(filterApp.dataAttr[1] + filterApp.userSelection + '"]').toggleClass("fadeInRight").hide();
+			console.log("hiding: " + filterApp.dataAttr[1] + filterApp.userSelection + "] !");
+
+			//finds items matching user's selection and shows them
+			$("section.filterableItem").filter(filterApp.dataAttr[1] + filterApp.userSelection + '"]').toggleClass("fadeInLeft").show();
+
 		
 
 		// hides legend if "all" is selected + shows all items when all is selected

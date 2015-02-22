@@ -16,19 +16,19 @@ filterApp.init = function() { // this function holds everything to start the app
 	*
 	**/
 
-	$("section.filterResultsCurrent").hide();
+	$('section.filterResultsCurrent').hide();
 
-	$("section.filterableItem").addClass("animated");
+	$('section.filterableItem').addClass('animated');
 
 	// ============ Function that listens on click & evaluates type data
 
-	$("a.filterControl").on("click",function(){ 
+	$('a.filterControl').on('click',function(){ 
 
 		// finds the value of the user's selection (aka the desired shape to view)
 		filterApp.userSelection = $(this).text();
 
 		// displays legend after user clicks on a filter link
-		$("section.filterResultsCurrent").show(); 
+		$('section.filterResultsCurrent').show(); 
 
 		/**
 		*
@@ -37,11 +37,11 @@ filterApp.init = function() { // this function holds everything to start the app
 		**/
 
 			// finds items NOT matching user's selection and hides them
-			$(".filterableItem").not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').toggleClass("fadeInRight").hide();
+			$('.filterableItem').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').toggleClass('fadeInRight').hide();
 			console.log('hiding: [' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"] !');
 
 			//finds items matching user's selection and shows them
-			$("section.filterableItem").filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').toggleClass("fadeInLeft").show();
+			$('section.filterableItem').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').toggleClass('fadeInLeft').show();
 
 		/**
 		*
@@ -50,11 +50,11 @@ filterApp.init = function() { // this function holds everything to start the app
 		**/
 
 			// finds items NOT matching user's selection and hides them
-			$(".filterableItem").not('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').toggleClass("fadeInRight").hide();
+			$('.filterableItem').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').toggleClass('fadeInRight').hide();
 			console.log('hiding: [' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"] !');
 
 			//finds items matching user's selection and shows them
-			$("section.filterableItem").filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').toggleClass("fadeInLeft").show();
+			$('section.filterableItem').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').toggleClass('fadeInLeft').show();
 
 		/**
 		*
@@ -63,20 +63,20 @@ filterApp.init = function() { // this function holds everything to start the app
 		**/
 
 			// finds items NOT matching user's selection and hides them
-			$(".filterableItem").not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').toggleClass("fadeInRight").hide();
+			$('.filterableItem').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').toggleClass('fadeInRight').hide();
 			console.log('hiding: [' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"] !');
 
 			//finds items matching user's selection and shows them
-			$("section.filterableItem").filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').toggleClass("fadeInLeft").show();
+			$('section.filterableItem').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').toggleClass('fadeInLeft').show();
 
 		// hides legend if "all" is selected + shows all items when all is selected
-		if (filterApp.userSelection === "all") {
-			$("section.filterResultsCurrent").hide();
-			$("section.filterableItem").show();
-		} else {
-			$("section.filterResultsCurrent").show();
-			$("li span.currentChoice").html(filterApp.dataName[0] + ": " + filterApp.userSelection);
-		}
+		// if (filterApp.userSelection === 'all') {
+		// 	$('section.filterResultsCurrent').hide();
+		// 	$('section.filterableItem').show();
+		// } else {
+		// 	$('section.filterResultsCurrent').show();
+		// 	$('li span.currentChoice').html(filterApp.dataName[0] + ': ' + filterApp.userSelection);
+		// }
 
 	}); // end function on shapes select
 	
@@ -84,27 +84,27 @@ filterApp.init = function() { // this function holds everything to start the app
 	
 	// // ============ Function that listens on click & evaluates shape data
 
-	// $("a.filterControl").on("click",function(){ 
+	// $('a.filterControl').on('click',function(){ 
 
 	// 	// finds the value of the user's selection (aka the desired shape to view)
 	// 	filterApp.userSelection = $(this).text();
 
-	// 	$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
+	// 	$('section.filterResultsCurrent').show(); // displays legend after user clicks on a filter link
 
 	// 	// finds items NOT matching user's selection and hides them
-	// 	filterApp.hidingItems = $("section.filterableItem").not('[data-shape="' + filterApp.userSelection + '"]').toggleClass("fadeInRight").hide();
-	// 	console.log("hiding!");
+	// 	filterApp.hidingItems = $('section.filterableItem').not('[data-shape="' + filterApp.userSelection + '"]').toggleClass('fadeInRight').hide();
+	// 	console.log('hiding!');
 
 	// 	//finds items matching user's selection and shows them
-	// 	$("section.filterableItem").filter('[data-shape="' + filterApp.userSelection + '"]').toggleClass("fadeInLeft").show();
+	// 	$('section.filterableItem').filter('[data-shape="' + filterApp.userSelection + '"]').toggleClass('fadeInLeft').show();
 
 	// 	// hides legend if "all" is selected + shows all items when all is selected
-	// 	if (filterApp.userSelection === "all") {
-	// 		$("section.filterResultsCurrent").hide();
-	// 		$("section.filterableItem").show();
+	// 	if (filterApp.userSelection === "all') {
+	// 		$('section.filterResultsCurrent').hide();
+	// 		$('section.filterableItem').show();
 	// 	} else {
-	// 		$("section.filterResultsCurrent").show();
-	// 		$("li span.currentChoice").html("Shape: " + filterApp.userSelection);
+	// 		$('section.filterResultsCurrent').show();
+	// 		$('li span.currentChoice').html('Shape: " + filterApp.userSelection);
 	// 	}
 
 	// }); // end function on shapes select
@@ -113,27 +113,27 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	// // ============ Function that listens on click & evaluates Colour data
 
-	// $("a.filterControl").on("click",function(){ 
+	// $('a.filterControl').on('click',function(){ 
 
 	// 	// finds the value of the user's selection (aka the desired Color to view)
 	// 	filterApp.userSelection = $(this).text();
 
-	// 	$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
+	// 	$('section.filterResultsCurrent').show(); // displays legend after user clicks on a filter link
 
 	// 	// finds items NOT matching user's selection and hides them
-	// 	filterApp.hidingItems = $("section.filterableItem").not('[data-color="' + filterApp.userSelection + '"]').toggleClass("fadeInRight").hide();
-	// 	console.log("hiding!");
+	// 	filterApp.hidingItems = $('section.filterableItem').not('[data-color="' + filterApp.userSelection + '"]').toggleClass('fadeInRight').hide();
+	// 	console.log('hiding!');
 
 	// 	//finds items matching user's selection and shows them
-	// 	$("section.filterableItem").filter('[data-color="' + filterApp.userSelection + '"]').toggleClass("fadeInLeft").show();
+	// 	$('section.filterableItem').filter('[data-color="' + filterApp.userSelection + '"]').toggleClass('fadeInLeft').show();
 
 	// 	// hides legend if "all" is selected + shows all items when all is selected
-	// 	if (filterApp.userSelection === "all") {
-	// 		$("section.filterResultsCurrent").hide();
-	// 		$("section.filterableItem").show();
+	// 	if (filterApp.userSelection === "all') {
+	// 		$('section.filterResultsCurrent').hide();
+	// 		$('section.filterableItem').show();
 	// 	} else {
-	// 		$("section.filterResultsCurrent").show();
-	// 		$("li span.currentChoice").html("Color: " + filterApp.userSelection);
+	// 		$('section.filterResultsCurrent').show();
+	// 		$('li span.currentChoice').html('Color: " + filterApp.userSelection);
 	// 	}
 
 	// }); // end function on shapes select

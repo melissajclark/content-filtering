@@ -32,7 +32,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		// finds items NOT matching user's selection and hides them
 		filterApp.hidingItems = $(".filterableItem").not(filterApp.dataAttr[0] + filterApp.userSelection + '"]').toggleClass("fadeInRight").hide();
-		console.log("hiding: " + filterApp.dataAttr[0] + filterApp.userSelection + "!");
+		console.log("hiding: " + filterApp.dataAttr[0] + filterApp.userSelection + "] !");
 
 		//finds items matching user's selection and shows them
 		$("section.filterableItem").filter(filterApp.dataAttr[0] + filterApp.userSelection + '"]').toggleClass("fadeInLeft").show();

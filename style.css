@@ -233,8 +233,8 @@ a, a.filterControl {
   position: relative;
   height: 150px;
   width: 150px;
-  margin: 5px;
-  padding: 10px; }
+  padding: 20px;
+  margin: 15px; }
 
 /* line 24, /Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterContent */
 .filterableItem p {
@@ -268,8 +268,8 @@ a, a.filterControl {
   background: #ff3333; }
 
 /* line 56, /Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterContent */
-[data-color~="blue"] {
-  background: #9999ff; }
+[data-color~="yellow"] {
+  background: #ffff99; }
 
 /*-----  End of Styles for filterable content (items): colours  ------*/
 /*======================================================
@@ -278,33 +278,6 @@ a, a.filterControl {
 /* line 66, /Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterContent */
 [data-shape~="circle"] {
   border-radius: 50%; }
-
-/* line 70, /Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterContent */
-[data-shape~="hexagon"] {
-  position: relative;
-  width: 150px;
-  height: 86.6px;
-  background-color: yellow;
-  margin: 43.3px 0; }
-
-/* line 79, /Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterContent */
-[data-shape~="hexagon"]:before, [data-shape~="hexagon"]:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 75px solid transparent;
-  border-right: 75px solid transparent; }
-
-/* line 87, /Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterContent */
-[data-shape~="hexagon"]:before {
-  bottom: 100%;
-  border-bottom: 43.3px solid yellow; }
-
-/* line 92, /Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterContent */
-[data-shape~="hexagon"]:after {
-  top: 100%;
-  width: 0;
-  border-top: 43.3px solid yellow; }
 
 /*-----  End of Styles for filterable content (items) shapes  ------*/
 /*-----  End of Filter Content Styles  ------*/

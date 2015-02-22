@@ -44,7 +44,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			$("section.filterableItem").show();
 		} else {
 			$("section.filterResultsCurrent").show();
-			$("li span.currentChoice").html(filterApp.dataName + filterApp.userSelection);
+			$("li span.currentChoice").html(filterApp.dataName[0] + ": " + filterApp.userSelection);
 		}
 
 	}); // end function on shapes select

@@ -231,8 +231,8 @@ a, a.filterControl {
   display: inline-block;
   float: left;
   position: relative;
-  height: 150px;
-  width: 150px;
+  height: 250px;
+  width: 250px;
   padding: 20px;
   margin: 15px; }
 
@@ -269,7 +269,7 @@ a, a.filterControl {
 
 /* line 56, /Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterContent */
 [data-color~="yellow"] {
-  background: #ffff99; }
+  background: #ffff33; }
 
 /*-----  End of Styles for filterable content (items): colours  ------*/
 /*======================================================
@@ -281,6 +281,31 @@ a, a.filterControl {
 
 /*-----  End of Styles for filterable content (items) shapes  ------*/
 /*-----  End of Filter Content Styles  ------*/
+/*==================================
+=            Animations            =
+==================================*/
+/**
+*
+* Fade Out Right
+*
+**/
+@keyframes fadeOutRight {
+  /* line 12, /Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterAnimations */
+  0% {
+    opacity: 1; }
+
+  /* line 16, /Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterAnimations */
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); } }
+
+/* line 23, /Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterAnimations */
+.fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight; }
+
+/*-----  End of Animations  ------*/
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT

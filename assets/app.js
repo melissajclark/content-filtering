@@ -32,7 +32,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		$(".filterableItem").not('[data-type="' + filterApp.sortChoiceType + '"]').hide();
 
 		//finds items matching user's selection and shows them
-		$("section.filterableItem").filter('[data-type="' + filterApp.sortChoiceType + '"]').addClass("fadeIn").show();
+		$("section.filterableItem").filter('[data-type="' + filterApp.sortChoiceType + '"]').addClass("fadeInUp").show();
 
 		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.sortChoiceType === "all") {
@@ -74,6 +74,34 @@ filterApp.init = function() { // this function holds everything to start the app
 	}); // end function on shapes select
 	
 	// ============ End function that listens on click & evaluates shape data
+
+	// ============ Function that listens on click & evaluates Colour data
+
+	$("#filterOptionsColors a.filterControl").on("click",function(){ 
+
+		// finds the value of the user's selection (aka the desired Color to view)
+		filterApp.sortChoice = $(this).text();
+
+		$("section.filterResultsCurrent").show(); // displays legend after user clicks on a filter link
+
+		// finds items NOT matching user's selection and hides them
+		$("section.filterableItem").not('[data-color="' + filterApp.sortChoice + '"]').hide();
+
+		//finds items matching user's selection and shows them
+		$("section.filterableItem").filter('[data-color="' + filterApp.sortChoice + '"]').show();
+
+		// hides legend if "all" is selected + shows all items when all is selected
+		if (filterApp.sortChoice === "all") {
+			$("section.filterResultsCurrent").hide();
+			$("section.filterableItem").show();
+		} else {
+			$("section.filterResultsCurrent").show();
+			$("li span.currentChoice").html("Color: " + filterApp.sortChoice);
+		}
+
+	}); // end function on shapes select
+	
+	// ============ End function that listens on click & evaluates color data
 
 }; // end filterApp.init
 

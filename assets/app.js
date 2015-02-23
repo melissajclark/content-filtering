@@ -34,7 +34,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		$('section.filterResultsCurrent').show(); 
 
 		// finds items NOT matching user's selection and hides them
-		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').addClass('fadeOutRight').hide();
+		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').addClass(filterApp.transition[0]).hide();
 
 		//finds items matching user's selection and shows them
 		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').addClass('fadeInLeft').show();
@@ -71,7 +71,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		$('section.filterResultsCurrent').show(); 
 
 		// finds items NOT matching user's selection and hides them
-		$('.filterableItem' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').addClass('fadeOutRight').hide();
+		$('.filterableItem' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').addClass(filterApp.transition[0]).hide();
 
 		//finds items matching user's selection and shows them
 		$('.filterableItem' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').addClass('fadeInLeft').show();
@@ -108,7 +108,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		$('section.filterResultsCurrent').show(); 
 
 		// finds items NOT matching user's selection and hides them
-		$('.filterableItem' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').addClass('fadeOutRight').hide();
+		$('.filterableItem' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').addClass(filterApp.transition[0]).hide();
 
 		//finds items matching user's selection and shows them
 		$('.filterableItem' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').addClass('fadeInLeft').show();

@@ -14,18 +14,6 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		$('section.filterableItem').addClass('animated');
 
-	// =================================================
-
-		// color background on links to filter colours
-
-		$('a.filterControl:contains(dark-berry)').css('background', '#673c4f');
-		$('a.filterControl:contains(light-berry)').css('background', '#7f557d');
-		$('a.filterControl:contains(moody-berry)').css('background', '#726e97');
-		$('a.filterControl:contains(subtle-blue)').css('background', '#7698b3');
-		$('a.filterControl:contains(baby-blue)').css('background', '#83b5d1');
-
-		$("ul.filterNavColors a.filterControl:hover").css('background', '#444');
-
 	// ============ Function that listens on click & evaluates filterApp.dataAttr[0] (Types)
 
 	$('ul.filterNavContent a.filterControl').on('click',function(event){

@@ -24,6 +24,10 @@ filterApp.init = function() { // this function holds everything to start the app
 		filterApp.userSelection = $(this).text();
 		console.log("Content Filter = " + filterApp.userSelection);
 
+		// remove "active" class from any items	
+		$('a.filterControl.active').removeClass('active');
+
+		// add active class to user's selection
 		$('a.filterControl:contains("' + filterApp.userSelection + '")').addClass('active');
 
 		// displays legend after user clicks on a filter link

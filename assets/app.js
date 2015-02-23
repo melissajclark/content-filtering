@@ -36,7 +36,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').hide();
 
 		//finds items matching user's selection and shows them
-		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').addClass('fadeInRight').show();
+		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').addClass('fadeOutRight').show();
 
 		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.userSelection === 'all') {
@@ -73,7 +73,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		$('.filterableItem' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').hide();
 
 		//finds items matching user's selection and shows them
-		$('.filterableItem' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').addClass('fadeInRight').show();
+		$('.filterableItem' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').addClass('fadeOutRight').show();
 
 		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.userSelection === 'all') {
@@ -110,7 +110,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		$('.filterableItem' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').hide();
 
 		//finds items matching user's selection and shows them
-		$('.filterableItem' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').addClass('fadeInRight').show();
+		$('.filterableItem' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').addClass('fadeOutRight').show();
 
 		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.userSelection === 'all') {

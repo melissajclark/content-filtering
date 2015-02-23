@@ -3,7 +3,7 @@
 var filterApp = {};
 filterApp.dataAttr = ['data-content', 'data-shape', 'data-color'];
 filterApp.dataName = ['Content', 'Shape', 'Color'];
-filterApp.navSelectors = ['ul.filterNavContent', 'ul.filterNavShapes', 'ul.filterNavColors'];
+filterApp.navUl  = ['ul.filterNavContent a.filterControl', 'ul.filterNavShapes a.filterControl', 'ul.filterNavColors a.filterControl'];
 
 // ------------------------------------
 
@@ -17,7 +17,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	// ============ Function that listens on click & evaluates filterApp.dataAttr[0] (Types)
 
-	$('ul.filterNavContent a.filterControl').on('click',function(event){
+	$(filterApp.navUl[0]).on('click',function(event){
 
 		event.preventDefault(); 
 

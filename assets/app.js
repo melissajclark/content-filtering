@@ -24,6 +24,8 @@ filterApp.init = function() { // this function holds everything to start the app
 		filterApp.userSelection = $(this).text();
 		console.log("Content Filter = " + filterApp.userSelection);
 
+		$('ul.filterNavContent a.filterControl:contains("' + filterApp.userSelection + '")').addClass('active');
+
 		// displays legend after user clicks on a filter link
 		$('section.filterResultsCurrent').show(); 
 

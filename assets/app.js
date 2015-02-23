@@ -3,7 +3,7 @@
 var filterApp = {};
 filterApp.dataAttr = ['data-content', 'data-shape', 'data-color'];
 filterApp.dataName = ['Content', 'Shape', 'Color'];
-filterApp.navUl  = ['ul.filterNavContent a.filterControl', 'ul.filterNavShapes a.filterControl', 'ul.filterNavColors a.filterControl'];
+filterApp.navSelector  = ['ul.filterNavContent a.filterControl', 'ul.filterNavShapes a.filterControl', 'ul.filterNavColors a.filterControl'];
 
 // ------------------------------------
 
@@ -17,7 +17,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	// ============ Function that listens on click & evaluates filterApp.dataAttr[0] (Types)
 
-	$(filterApp.navUl[0]).on('click',function(event){
+	$(filterApp.navSelector[0]).on('click',function(event){
 
 		event.preventDefault(); 
 
@@ -52,7 +52,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	// ============ Function that listens on click & evaluates filterApp.dataAttr[1] (Shapes)
 
-	$('ul.filterNavShapes a.filterControl').on('click',function(event){
+	$(filterApp.navSelector[1]).on('click',function(event){
 
 		event.preventDefault(); 
 
@@ -87,7 +87,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	// ============ Function that listens on click & evaluates filterApp.dataAttr[2] (Colors)
 
-	$('ul.filterNavColors a.filterControl').on('click',function(event){
+	$(filterApp.navSelector[2]).on('click',function(event){
 
 		event.preventDefault(); 
 

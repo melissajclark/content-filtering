@@ -29,14 +29,16 @@ ul.filterNav li {
 	padding:2px;
 } 
 
-a, a.filterControl{
+a {
 	text-transform:capitalize;
-	color:purple;
 	text-decoration:none;
+	background:gray;
+	color:white;
+	padding:3px 6px 3px 6px;
+	margin:3px;
 	&:hover {
-		border-bottom: 3px solid #333;
+		background:#444;
 	}
-} // li a.filterControl
-
+}
 
 /*-----  End of Filter Nav  ------*/

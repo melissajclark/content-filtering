@@ -29,62 +29,21 @@
 
 /**
 *
-* FadeInUp
+* FadeInMelissa
 *
 **/
-@-webkit-keyframes fadeInUpMelissa { 
-  0% {
-    opacity: 0.2;
-    -webkit-transform: translate3d(5%, 0, 0);
-            transform: translate3d(5%, 0, 0);
-  }
 
-  50% {
-    opacity: 0.5;
-    -webkit-transform: translate3d(20%, 0, 0);
-            transform: translate3d(20%, 0, 0);
-  }
-
-  80% {
-    opacity: 0.7;
-    -webkit-transform: translate3d(30%, 0, 0);
-            transform: translate3d(30%, 0, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
+@-webkit-keyframes fadeInMelissa {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
-@keyframes fadeInUpMelissa {
-
-  0% {
-    opacity: 0.2;
-    -webkit-transform: translate3d(5%, 0, 0);
-            transform: translate3d(5%, 0, 0);
-  }
-  50% {
-    opacity: 0.5;
-    -webkit-transform: translate3d(20%, 0, 0);
-            transform: translate3d(20%, 0, 0);
-  }
-
-  80% {
-    opacity: 0.7;
-    -webkit-transform: translate3d(30%, 0, 0);
-            transform: translate3d(30%, 0, 0);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-            transform: none;
-  }
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
-.fadeInUpMelissa {
-  -webkit-animation-name: fadeInUpMelissa;
-          animation-name: fadeInUpMelissa;
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
 }

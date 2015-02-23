@@ -4,36 +4,11 @@
 
 /**
 *
-* Fade Out Right
+* Transition: Show
 *
 **/
 
-@keyframes fadeOutRight {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-  }
-}
-
-.fadeOutRight {
-  -webkit-animation-name: fadeOutRight;
-          animation-name: fadeOutRight;
-}
-
-/*-----  End of Animations  ------*/
-
-/**
-*
-* FadeMeIn
-*
-**/
-
-@-webkit-keyframes fadeMeIn {
+@-webkit-keyframes showItemTransition {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
@@ -43,7 +18,10 @@
   100% {opacity: 1;}
 }
 
-.fadeMeIn {
+.showItemTransition {
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
 }
+
+
+/*-----  End of Animations  ------*/

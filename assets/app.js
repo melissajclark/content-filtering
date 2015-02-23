@@ -28,7 +28,9 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	// ============ Function that listens on click & evaluates filterApp.dataAttr[0] (Types)
 
-	$('ul.filterNavContent a.filterControl').on('click',function(){ 
+	$('ul.filterNavContent a.filterControl').on('click',function(event){
+
+		event.preventDefault(); 
 
 		// finds the value of the user's selection (aka the desired shape to view)
 		filterApp.userSelection = $(this).text();
@@ -56,7 +58,9 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	// ============ Function that listens on click & evaluates filterApp.dataAttr[1] (Shapes)
 
-	$('ul.filterNavShapes a.filterControl').on('click',function(){ 
+	$('ul.filterNavShapes a.filterControl').on('click',function(event){
+
+		event.preventDefault(); 
 
 		// finds the value of the user's selection (aka the desired shape to view)
 		filterApp.userSelection = $(this).text();
@@ -84,7 +88,9 @@ filterApp.init = function() { // this function holds everything to start the app
 
 	// ============ Function that listens on click & evaluates filterApp.dataAttr[2] (Colors)
 
-	$('ul.filterNavColors a.filterControl').on('click',function(){ 
+	$('ul.filterNavColors a.filterControl').on('click',function(event){
+
+		event.preventDefault(); 
 
 		// finds the value of the user's selection (aka the desired shape to view)
 		filterApp.userSelection = $(this).text();

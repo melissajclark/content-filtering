@@ -39,6 +39,10 @@ a {
 	&:hover {
 		background:#444;
 	}
-}
+	&.active {
+	background:#444;
+	}
+
+} // end a
 
 /*-----  End of Filter Nav  ------*/

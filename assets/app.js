@@ -33,10 +33,10 @@ filterApp.init = function() { // this function holds everything to start the app
 		$('section.filterResultsCurrent').show(); 
 
 		// finds items NOT matching user's selection and hides them
-		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').addClass('fadeInUpMelissa').hide();
+		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').addClass('fadeInMelissa').hide();
 
 		//finds items matching user's selection and shows them
-		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').addClass('fadeInUpMelissa').show();
+		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').addClass('fadeInMelissa').show();
 
 		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.userSelection === 'all') {
@@ -71,7 +71,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		$('.filterableItem' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').hide();
 
 		//finds items matching user's selection and shows them
-		$('.filterableItem' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').addClass('fadeInUpMelissa').show();
+		$('.filterableItem' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').addClass('fadeInMelissa').show();
 
 		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.userSelection === 'all') {
@@ -106,7 +106,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		$('.filterableItem' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').hide();
 
 		//finds items matching user's selection and shows them
-		$('.filterableItem' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').addClass('fadeInUpMelissa').show();
+		$('.filterableItem' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').addClass('fadeInMelissa').show();
 
 		// hides legend if "all" is selected + shows all items when all is selected
 		if (filterApp.userSelection === 'all') {

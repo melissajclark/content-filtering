@@ -47,6 +47,8 @@ filterApp.init = function() { // this function holds everything to start the app
 			$('li span.currentChoice').html(filterApp.dataName[0] + ': ' + filterApp.userSelection);
 		}
 
+		console.log(filterApp.userSelection);
+
 	});  // ============ End function that listens on click & evaluates filterApp.dataAttr[0] (Types)
 
 
@@ -81,6 +83,8 @@ filterApp.init = function() { // this function holds everything to start the app
 			$('section.filterResultsCurrent').show();
 			$('li span.currentChoice').html(filterApp.dataName[1] + ': ' + filterApp.userSelection);
 		}
+
+		console.log(filterApp.userSelection);
 
 	});  // ============ End function that listens on click & evaluates filterApp.dataAttr[1] (Shapes)	
 
@@ -117,6 +121,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			$('li span.currentChoice').html(filterApp.dataName[2] + ': ' + filterApp.userSelection);
 		}
 
+		console.log(filterApp.userSelection);
 	});  // ============ End function that listens on click & evaluates filterApp.dataAttr[2] (Colors)
 
 }; // end filterApp.init

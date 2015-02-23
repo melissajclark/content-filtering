@@ -3,6 +3,7 @@
 var filterApp = {};
 filterApp.dataAttr = ['data-content', 'data-shape', 'data-color'];
 filterApp.dataName = ['Content', 'Shape', 'Color'];
+filterApp.navSelectors = ['ul.filterNavContent', 'ul.filterNavShapes', 'ul.filterNavColors'];
 
 // ------------------------------------
 

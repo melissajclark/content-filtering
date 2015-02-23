@@ -24,6 +24,8 @@ filterApp.init = function() { // this function holds everything to start the app
 		$('a.filterControl:contains(subtle-blue)').css('background', '#7698b3');
 		$('a.filterControl:contains(baby-blue)').css('background', '#83b5d1');
 
+		$("ul.filterNavColors a.filterControl:hover").css('background', '#444');
+
 	// ============ Function that listens on click & evaluates filterApp.dataAttr[0] (Types)
 
 	$('ul.filterNavContent a.filterControl').on('click',function(){ 

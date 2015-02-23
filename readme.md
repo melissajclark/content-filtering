@@ -13,7 +13,7 @@ Ultimately I'll use this setup on custom WordPress themes for clients, but I lik
 
 ## Some Questions & Topics I Need To Figure Out
 
-
+1. How to filter for multiple attributes? (ie. user wants to view all circles that are blue)
   
 
 ------

@@ -7,15 +7,12 @@
 
 ## About Content-Filtering
 
-Filtering content is a common web design pattern. There's tons of jQuery plugins out there, but I want to set it up on my own. 
+This repo is an exploration of how to filter data using HTML, CSS (SCSS) and JavaScript / jQuery. There's lots of plugins out there to accomplish this, but I felt like doing it myself. 
 
-I learn best by doing, so this small project is an experiment of the best way to filter content using jquery. 
-
-This project uses HTML & CSS (SCSS) and data-attributes to store the data.
-
-Eventually I want to implement this in custom WordPress themes. I like to get the setup down in HTML before moving to setting up the PHP for WordPress.
+Ultimately I'll use this setup on custom WordPress themes for clients, but I like getting the basics right before switching to PHP.
 
 ## Some Questions & Topics I Need To Figure Out
+
 
   
 

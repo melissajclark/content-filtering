@@ -4,6 +4,7 @@ var filterApp = {};
 filterApp.dataAttr = ['data-content', 'data-shape', 'data-color'];
 filterApp.dataName = ['Content', 'Shape', 'Color'];
 filterApp.navSelector  = ['ul.filterNavContent a.filterControl', 'ul.filterNavShapes a.filterControl', 'ul.filterNavColors a.filterControl', '.active'];
+filterApp.transition = ['fadeOutRight', 'fadeInLeft'];
 
 // ------------------------------------
 

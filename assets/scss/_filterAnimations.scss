@@ -29,11 +29,11 @@
 
 /**
 *
-* FadeInMelissa
+* FadeMeIn
 *
 **/
 
-@-webkit-keyframes fadeInMelissa {
+@-webkit-keyframes fadeMeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
@@ -43,7 +43,7 @@
   100% {opacity: 1;}
 }
 
-.fadeInMelissa {
+.fadeMeUn {
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
 }

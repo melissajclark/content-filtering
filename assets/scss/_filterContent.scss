@@ -21,23 +21,23 @@
 =     				Color Settings   				=
 ======================================================*/
 
-[data-color~="dark-berry"] {
+[data-color~="dark-berry"], span.dark-berry {
 	background:$dark-berry;
 }
 
-[data-color~="light-berry"] {
+[data-color~="light-berry"], span.light-berry {
 	background:$light-berry;
 }
 
-[data-color~="moody-berry"] {
+[data-color~="moody-berry"], span.moody-berry {
 	background:$moody-berry;
 }
 
-[data-color~="subtle-blue"] {
+[data-color~="subtle-blue"], span.subtle-blue {
 	background:$subtle-blue;
 }
 
-[data-color~="baby-blue"] {
+[data-color~="baby-blue"], span.baby-blue {
 	background:$baby-blue;
 }
 

@@ -24,7 +24,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		filterApp.userSelection = $(this).text();
 
 		// remove "active" class from any items	
-		$('ul.filterNavContent a.filterControl.active').removeClass('active');
+		$(filterApp.navSelector[0] + filterApp.navSelector[3]).removeClass('active');
 
 		// add active class to user's selection
 		$('a.filterControl:contains("' + filterApp.userSelection + '")').addClass('active');
@@ -59,7 +59,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		filterApp.userSelection = $(this).text();
 
 		// remove "active" class from any items	
-		$('ul.filterNavShapes a.filterControl.active').removeClass('active');
+		$(filterApp.navSelector[1] + filterApp.navSelector[3]).removeClass('active');
 
 		// add active class to user's selection
 		$('a.filterControl:contains("' + filterApp.userSelection + '")').addClass('active');
@@ -94,7 +94,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		filterApp.userSelection = $(this).text();
 
 		// remove "active" class from any items	
-		$('ul.filterNavColors a.filterControl.active').removeClass('active');
+		$(filterApp.navSelector[2] + filterApp.navSelector[3]).removeClass('active');
 
 		// add active class to user's selection
 		$('a.filterControl:contains("' + filterApp.userSelection + '")').addClass('active');

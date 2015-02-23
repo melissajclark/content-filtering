@@ -320,6 +320,66 @@ a {
   animation-name: fadeOutRight; }
 
 /*-----  End of Animations  ------*/
+/**
+*
+* FadeInUp
+*
+**/
+@-webkit-keyframes fadeInUpMelissa {
+  /* line 36, /Users/MelissaJean/Documents/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterAnimations */
+  0% {
+    opacity: 0.2;
+    -webkit-transform: translate3d(5%, 0, 0);
+    transform: translate3d(5%, 0, 0); }
+
+  /* line 42, /Users/MelissaJean/Documents/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterAnimations */
+  50% {
+    opacity: 0.5;
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0); }
+
+  /* line 48, /Users/MelissaJean/Documents/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterAnimations */
+  80% {
+    opacity: 0.7;
+    -webkit-transform: translate3d(30%, 0, 0);
+    transform: translate3d(30%, 0, 0); }
+
+  /* line 54, /Users/MelissaJean/Documents/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterAnimations */
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInUpMelissa {
+  /* line 63, /Users/MelissaJean/Documents/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterAnimations */
+  0% {
+    opacity: 0.2;
+    -webkit-transform: translate3d(5%, 0, 0);
+    transform: translate3d(5%, 0, 0); }
+
+  /* line 68, /Users/MelissaJean/Documents/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterAnimations */
+  50% {
+    opacity: 0.5;
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0); }
+
+  /* line 74, /Users/MelissaJean/Documents/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterAnimations */
+  80% {
+    opacity: 0.7;
+    -webkit-transform: translate3d(30%, 0, 0);
+    transform: translate3d(30%, 0, 0); }
+
+  /* line 80, /Users/MelissaJean/Documents/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterAnimations */
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+/* line 87, /Users/MelissaJean/Documents/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/filterAnimations */
+.fadeInUpMelissa {
+  -webkit-animation-name: fadeInUpMelissa;
+  animation-name: fadeInUpMelissa; }
+
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT

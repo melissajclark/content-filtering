@@ -171,7 +171,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 ====================================*/
 /* line 20, /Users/Melissa/Dropbox/Projects/2-my-work-projects/content-filtering/assets/scss/base */
 body {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", "Georiga", sans-serif;
   padding: 2em;
   font-size: 1.2rem;
   line-height: 1.8rem; }

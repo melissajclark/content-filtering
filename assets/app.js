@@ -17,7 +17,7 @@ filterApp.selector  = ['select#sourceChoice',
 filterApp.transition = ['hideItemTransition', 
 						'showItemTransition'];
 
-filterApp.values 0 ['all'];
+filterApp.values = ['all'];
 						
 // ------------------------------------
 

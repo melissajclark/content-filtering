@@ -46,6 +46,19 @@ img {
 	height:auto;
 }
 
+.container {
+	width:65%;
+	margin:0 auto;
+
+	@media all and (max-width:800px){
+		width:75%;
+	}
+
+	@media all and (max-width:400px){
+		width:90%;
+	}
+} // .container
+
 
 // /*=================================================
 // =            Container & Media Queries            =

@@ -1,129 +1,94 @@
 
 // empty object for code to live on
 var filterApp = {};
-filterApp.dataAttr = ['data-content', 'data-shape', 'data-color'];
-filterApp.dataName = ['Content', 'Shape', 'Color'];
-filterApp.navSelector  = ['ul.filterNavContent a.filterControl', 'ul.filterNavShapes a.filterControl', 'ul.filterNavColors a.filterControl', '.active'];
-filterApp.transition = ['hideItemTransition', 'showItemTransition'];
 
+// array to store data-attributes on filterable items
+filterApp.dataAttr = ['data-types', 
+					'data-language'];
+
+// array to store selectors used throughout JS
+filterApp.selector  = ['select#audioChoice', 
+						'select#languageChoice', 
+						'article.filterableItem', 
+						'.filterableContent',
+						'form.filterNav'];
+
+// array to store classes added when hiding / showing items
+filterApp.transition = ['hideItemTransition', 
+						'showItemTransition'];
+
+filterApp.values = ['English: ',
+					'All',
+					'French: ',
+					'Tous'];
+						
 // ------------------------------------
 
 filterApp.init = function() { // this function holds everything to start the app
 
-	// =========== Functions to occur on page load:
+$(filterApp.selector[2]).addClass("animated");
 
-		$('section.filterResultsCurrent').hide();
+	// ============ Function that listens on click & evaluates type data
 
-		$('section.filterableItem').addClass('animated');
+	$(filterApp.selector[4]).on("submit",function(event){ 
 
-	// ============ Function that listens on click & evaluates filterApp.dataAttr[0] (Types)
+		event.preventDefault(); // prevents page from refreshing
 
-	$(filterApp.navSelector[0]).on('click',function(event){
+		// finds the value of the user's selection (aka the desired content to view)
+		filterApp.userAudioSelection = $(filterApp.selector[0]).val();
+		filterApp.userLanguageSelection = $(filterApp.selector[1]).val();
 
-		event.preventDefault(); 
+		/**
+		*
+		* If Statement: Evaluates English values on submit
+		*
+		**/
+		
+		// checks if Audio = all and language = all
+		if (filterApp.userAudioSelection === filterApp.values[1] && filterApp.userLanguageSelection === filterApp.values[1] || filterApp.userAudioSelection === filterApp.values[3] && filterApp.userLanguageSelection === filterApp.values[3]) {
+			console.log(filterApp.values[0] + 'or' + filterApp.values[2] + ' all audio & languages selected');
 
-		filterApp.userSelection = $(this).text();
+			$(filterApp.selector[2]).show();
 
-		// remove "active" class from any items	
-		$(filterApp.navSelector[0] + filterApp.navSelector[3]).removeClass('active');
+		// checks if audio = all but languages do not = all
+		} else if (filterApp.userAudioSelection === filterApp.values[1] && filterApp.userLanguageSelection != filterApp.values[1] || filterApp.userAudioSelection === filterApp.values[3] && filterApp.userLanguageSelection != filterApp.values[3]) {
+			console.log(filterApp.values[0] + 'or' + filterApp.values[2] + ' All audio selected But language != All');
 
-		// add active class to user's selection
-		$('a.filterControl:contains("' + filterApp.userSelection + '")').addClass('active');
+			// finds items NOT matching user's selection and hides them
+			// selection: Audio: all | Language != all
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userLanguageSelection + '"]').addClass(filterApp.transition[0]).hide();
+			
+			//finds items matching user's selection and shows them
+			// selection: Audio: all | Language != all
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userLanguageSelection + '"]').addClass(filterApp.transition[1]).show();
 
-		// displays legend after user clicks on a filter link
-		$('section.filterResultsCurrent').show(); 
+		// checks is languages = all, but audio does not equal all
+		} else if (filterApp.userAudioSelection != filterApp.values[1] && filterApp.userLanguageSelection === filterApp.values[1] || filterApp.userAudioSelection != filterApp.values[3] && filterApp.userLanguageSelection === filterApp.values[3]) {
+			console.log(filterApp.values[0] + 'or' + filterApp.values[2] + ' All languages selected But audio != All'); 
 
-		// finds items NOT matching user's selection and hides them
-		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').addClass(filterApp.transition[0]).hide();
+			// finds items NOT matching user's selection and hides them
+			// selection: Audio = !all | Language = all
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userAudioSelection + '"]').addClass(filterApp.transition[0]).hide();
+			
+			//finds items matching user's selection and shows them
+			// selection: Audio = !all | Language = all
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userAudioSelection + '"]').addClass(filterApp.transition[1]).show();
 
-		//finds items matching user's selection and shows them
-		$('.filterableItem' + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSelection + '"]').addClass(filterApp.transition[1]).show();
+		// checks is both audio & language do not equal all
+		}  else if (filterApp.userAudioSelection != filterApp.values[1] && filterApp.userLanguageSelection != filterApp.values[1] || filterApp.userAudioSelection != filterApp.values[3] && filterApp.userLanguageSelection != filterApp.values[3]) {
+			console.log(filterApp.values[0] + 'or' + filterApp.values[2] + ' audio & video both do not equal all'); 
 
-		// hides legend if "all" is selected + shows all items when all is selected
-		if (filterApp.userSelection === 'all') {
-			$('section.filterResultsCurrent').hide();
-			$('section.filterableItem').show();
-		} else {
-			$('section.filterResultsCurrent').show();
-			$('li span.currentChoice').html(filterApp.dataName[0] + ': ' + filterApp.userSelection);
-		}
+			// finds items NOT matching user's selection and hides them
+			// selection: Audio = !all | Language = !all
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userAudioSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userLanguageSelection + '"]').addClass(filterApp.transition[0]).hide();
+			
+			//finds items matching user's selection and shows them
+			// selection: Audio = !all | Language = !all
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userAudioSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userLanguageSelection + '"]').addClass(filterApp.transition[1]).show();
 
-		console.log(filterApp.userSelection);
+		} 
 
-	});  // ============ End function that listens on click & evaluates filterApp.dataAttr[0] (Types)
-
-
-	// ============ Function that listens on click & evaluates filterApp.dataAttr[1] (Shapes)
-
-	$(filterApp.navSelector[1]).on('click',function(event){
-
-		event.preventDefault(); 
-
-		filterApp.userSelection = $(this).text();
-
-		// remove "active" class from any items	
-		$(filterApp.navSelector[1] + filterApp.navSelector[3]).removeClass('active');
-
-		// add active class to user's selection
-		$('a.filterControl:contains("' + filterApp.userSelection + '")').addClass('active');
-
-		// displays legend after user clicks on a filter link
-		$('section.filterResultsCurrent').show(); 
-
-		// finds items NOT matching user's selection and hides them
-		$('.filterableItem' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').addClass(filterApp.transition[0]).hide();
-
-		//finds items matching user's selection and shows them
-		$('.filterableItem' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userSelection + '"]').addClass(filterApp.transition[1]).show();
-
-		// hides legend if "all" is selected + shows all items when all is selected
-		if (filterApp.userSelection === 'all') {
-			$('section.filterResultsCurrent').hide();
-			$('section.filterableItem').show();
-		} else {
-			$('section.filterResultsCurrent').show();
-			$('li span.currentChoice').html(filterApp.dataName[1] + ': ' + filterApp.userSelection);
-		}
-
-		console.log(filterApp.userSelection);
-
-	});  // ============ End function that listens on click & evaluates filterApp.dataAttr[1] (Shapes)	
-
-
-	// ============ Function that listens on click & evaluates filterApp.dataAttr[2] (Colors)
-
-	$(filterApp.navSelector[2]).on('click',function(event){
-
-		event.preventDefault(); 
-
-		filterApp.userSelection = $(this).text();
-
-		// remove "active" class from any items	
-		$(filterApp.navSelector[2] + filterApp.navSelector[3]).removeClass('active');
-
-		// add active class to user's selection
-		$('a.filterControl:contains("' + filterApp.userSelection + '")').addClass('active');
-
-		// displays legend after user clicks on a filter link
-		$('section.filterResultsCurrent').show(); 
-
-		// finds items NOT matching user's selection and hides them
-		$('.filterableItem' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').addClass(filterApp.transition[0]).hide();
-
-		//finds items matching user's selection and shows them
-		$('.filterableItem' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSelection + '"]').addClass(filterApp.transition[1]).show();
-
-		// hides legend if "all" is selected + shows all items when all is selected
-		if (filterApp.userSelection === 'all') {
-			$('section.filterResultsCurrent').hide();
-			$('section.filterableItem').show();
-		} else {
-			$('section.filterResultsCurrent').show();
-			$('li span.currentChoice').html(filterApp.dataName[2] + ': ' + filterApp.userSelection);
-		}
-
-		console.log(filterApp.userSelection);
-	});  // ============ End function that listens on click & evaluates filterApp.dataAttr[2] (Colors)
+	});  // ============ End function that listens on click & evaluates filterApp.dataAttr[1] 
 
 }; // end filterApp.init
 

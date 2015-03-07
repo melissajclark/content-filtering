@@ -17,7 +17,7 @@ filterApp.selector  = ['select#sourceChoice',
 filterApp.transition = ['hideItemTransition', 
 						'showItemTransition'];
 
-filterApp.values = ['all'];
+filterApp.values 0 ['all'];
 						
 // ------------------------------------
 
@@ -43,14 +43,14 @@ $(filterApp.selector[2]).addClass("animated");
 		**/
 		
 		// checks if Source = all and Work = all
-		if (filterApp.userSourceSelection === filterApp.values[1] && filterApp.userWorkSelection === filterApp.values[1] || filterApp.userSourceSelection === filterApp.values[3] && filterApp.userWorkSelection === filterApp.values[3]) {
-			console.log(filterApp.values[0] + 'or' + filterApp.values[2] + ' all Source & Works selected');
+		if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] || filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0]) {
+			console.log(filterApp.values[0] + 'or' + filterApp.values[0] + ' all Source & Works selected');
 
 			$(filterApp.selector[2]).show();
 
 		// checks if Source = all but Works do not = all
-		} else if (filterApp.userSourceSelection === filterApp.values[1] && filterApp.userWorkSelection != filterApp.values[1] || filterApp.userSourceSelection === filterApp.values[3] && filterApp.userWorkSelection != filterApp.values[3]) {
-			console.log(filterApp.values[0] + 'or' + filterApp.values[2] + ' All Source selected But Work != All');
+		} else if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0] || filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0]) {
+			console.log(filterApp.values[0] + 'or' + filterApp.values[0] + ' All Source selected But Work != All');
 
 			// finds items NOT matching user's selection and hides them
 			// selection: Source: all | Work != all
@@ -61,8 +61,8 @@ $(filterApp.selector[2]).addClass("animated");
 			$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[1]).show();
 
 		// checks is Works = all, but Source does not equal all
-		} else if (filterApp.userSourceSelection != filterApp.values[1] && filterApp.userWorkSelection === filterApp.values[1] || filterApp.userSourceSelection != filterApp.values[3] && filterApp.userWorkSelection === filterApp.values[3]) {
-			console.log(filterApp.values[0] + 'or' + filterApp.values[2] + ' All Works selected But Source != All'); 
+		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] || filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0]) {
+			console.log(filterApp.values[0] + 'or' + filterApp.values[0] + ' All Works selected But Source != All'); 
 
 			// finds items NOT matching user's selection and hides them
 			// selection: Source = !all | Work = all
@@ -73,8 +73,8 @@ $(filterApp.selector[2]).addClass("animated");
 			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').addClass(filterApp.transition[1]).show();
 
 		// checks is both Source & Work do not equal all
-		}  else if (filterApp.userSourceSelection != filterApp.values[1] && filterApp.userWorkSelection != filterApp.values[1] || filterApp.userSourceSelection != filterApp.values[3] && filterApp.userWorkSelection != filterApp.values[3]) {
-			console.log(filterApp.values[0] + 'or' + filterApp.values[2] + ' Source & video both do not equal all'); 
+		}  else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0] || filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0]) {
+			console.log(filterApp.values[0] + 'or' + filterApp.values[0] + ' Source & video both do not equal all'); 
 
 			// finds items NOT matching user's selection and hides them
 			// selection: Source = !all | Work = !all

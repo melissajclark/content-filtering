@@ -17,10 +17,7 @@ filterApp.selector  = ['select#sourceChoice',
 filterApp.transition = ['hideItemTransition', 
 						'showItemTransition'];
 
-filterApp.values = ['English: ',
-					'all',
-					'French: ',
-					'Tous'];
+filterApp.values = ['all'];
 						
 // ------------------------------------
 
@@ -37,6 +34,7 @@ $(filterApp.selector[2]).addClass("animated");
 		// finds the value of the user's selection (aka the desired content to view)
 		filterApp.userAudioSelection = $(filterApp.selector[0]).val();
 		filterApp.userLanguageSelection = $(filterApp.selector[1]).val();
+		console.log(filterApp.userLanguageSelection + filterApp.userAudioSelection);
 
 		/**
 		*

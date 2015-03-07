@@ -24,43 +24,40 @@
 
 		<div class="filterControls clearfix">
 
-			<section class="filterResults">
-				<ul class="filterNav filterNavContent">
-					<li><span class="legend">View By Content:</span></li>
-					<li><a href="#" class="filterControl active">all</a></li>
-					<li><a href="#" class="filterControl">image</a></li>
-					<li><a href="#" class="filterControl">text</a></li>
-				</ul><!-- / filterNav filterNavTypes -->
-			 </section>
+		<form class="filterNav">
 
-			<section class="filterResults">
-				<ul class="filterNav filterNavShapes">
-					<li><span class="legend">View By Shape:</span></li>
-					<li><a href="#" class="filterControl active">all</a></li>
-					<li><a href="#" class="filterControl">circle</a></li>
-					<li><a href="#" class="filterControl">square</a></li>
-				</ul><!-- / filterNav filterNavShapes -->
-			</section>
+		    <ul class="filterControls">
 
-			<section class="filterResults">
-				<ul class="filterNav filterNavColors">
-					<li><span class="legend">View By Colour:</span></li>
-					<li><a href="#" class="filterControl active">all</a></li>
-					<li><a href="#" class="filterControl">dark-berry</a></li>
-					<li><a href="#" class="filterControl">light-berry</a></li>
-					<li><a href="#" class="filterControl">moody-berry</a></li>
-					<li><a href="#" class="filterControl">baby-blue</a></li>
-					<li><a href="#" class="filterControl">subtle-blue</a></li>
-				</ul><!-- / filterNav filterNavColors -->
-			</section>
+		        <label>
+		        <li><span class="legend">Source</span></li>
+		            <li>
+		                <select name="source" id="sourceChoice">
+                          <option name="unsplash" value="unsplash">Unsplash</option>
+                          <option name="new old stock" value="new old stock">New Old Stock</option>
+                          <option name="gratisography" value="gratisography">Gratisography</option>
+		                </select><!-- / select source -->
+		            </li><!-- / li around audio select -->
+		        </label><!-- / source label  -->
 
-			<section class="filterResults filterResultsCurrent">
+		        <label>
+		        <li><span class="legend">Work</span></li>
+		            <li>
+		                <select name="work" id="workChoice">
+                          <option name="black and white" value="black and white">black and white</option>
+                          <option name="colour" value="colour">Colour</option>
+                          <option name="landscape" value="landscape">Landscape</option>
+                          <option name="animals" value="animals">animals</option>
+                          <option name="travel" value="travel">travel</option>
+                          <option name="people" value="people">people</option>
+		                </select><!-- / select source -->
+		            </li><!-- / li around audio select -->
+		        </label><!-- / source label  -->
 
-				<ul class="filterNav">
-					<li><span class="legend">Current Filter:</span>
-					<li><span class="currentChoice"><!-- content appended with jQuery --></span></li>
-				</ul>
-			</section>
+		        <li><button type="submit">Submit</button></li>
+		
+		    </ul><!-- / ul.FilterControls -->
+
+		</form><!-- / form.filterNav -->
 		</div><!-- / section.filterControls -->
 
 			<div class="filterable">

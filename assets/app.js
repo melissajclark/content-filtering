@@ -3,13 +3,13 @@
 var filterApp = {};
 
 // array to store data-attributes on filterable items
-filterApp.dataAttr = ['data-types', 
-					'data-language'];
+filterApp.dataAttr = ['data-source', 
+					'data-details'];
 
 // array to store selectors used throughout JS
 filterApp.selector  = ['select#audioChoice', 
 						'select#languageChoice', 
-						'article.filterableItem', 
+						'div.filterableItem', 
 						'.filterableContent',
 						'form.filterNav'];
 

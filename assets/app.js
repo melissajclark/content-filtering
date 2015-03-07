@@ -4,13 +4,14 @@ var filterApp = {};
 
 // array to store data-attributes on filterable items
 filterApp.dataAttr = ['data-source', 
-					'data-details'];
+					'data-details',
+					'data-subject'];
 
 // array to store selectors used throughout JS
 filterApp.selector  = ['select#sourceChoice', 
 						'select#workChoice', 
 						'div.filterableItem', 
-						'.filterableContent',
+						'select#subjectChoice',
 						'form.filterNav'];
 
 // array to store classes added when hiding / showing items

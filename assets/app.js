@@ -7,8 +7,8 @@ filterApp.dataAttr = ['data-source',
 					'data-details'];
 
 // array to store selectors used throughout JS
-filterApp.selector  = ['select#workChoice', 
-						'select#sourceChoice', 
+filterApp.selector  = ['select#sourceChoice', 
+						'select#workChoice', 
 						'div.filterableItem', 
 						'.filterableContent',
 						'form.filterNav'];
@@ -18,7 +18,7 @@ filterApp.transition = ['hideItemTransition',
 						'showItemTransition'];
 
 filterApp.values = ['English: ',
-					'All',
+					'all',
 					'French: ',
 					'Tous'];
 						

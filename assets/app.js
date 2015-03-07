@@ -17,10 +17,7 @@ filterApp.selector  = ['select#sourceChoice',
 filterApp.transition = ['hideItemTransition', 
 						'showItemTransition'];
 
-filterApp.values = ['English: ',
-					'all',
-					'French: ',
-					'Tous'];
+filterApp.values = ['all'];
 						
 // ------------------------------------
 

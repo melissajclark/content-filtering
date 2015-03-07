@@ -9,9 +9,5 @@ npm-debug.log
 
 ### ignore resources ###
 
-relevant-resources/
-
-prepros.cfg
-
-jquery.js
+assets/images/originals/
 

@@ -17,63 +17,8 @@
 
 	@media all and (max-width:800px){
 		width:100%;
-		padding:0.5em 0 0.5em 0;
+		padding:0.5em 0 0.5em 0;w
 	}
 }
-
-/*======================================================
-=     				Color Settings   				=
-======================================================*/
-
-[data-color~="dark-berry"], span.dark-berry {
-	background:$dark-berry;
-}
-
-[data-color~="light-berry"], span.light-berry {
-	background:$light-berry;
-}
-
-[data-color~="moody-berry"], span.moody-berry {
-	background:$moody-berry;
-}
-
-[data-color~="subtle-blue"], span.subtle-blue {
-	background:$subtle-blue;
-}
-
-[data-color~="baby-blue"], span.baby-blue {
-	background:$baby-blue;
-}
-
-/*-----  End of Color Settings  ------*/
-
-/*======================================================
-=      Styles for specific items  =
-======================================================*/
-
-.filterableItem[data-shape~="square"] {
-
-	&[data-content~="text"] {
-		padding:0 5px 0 5px;
-	} // square + text selector
-
-	img { 
-		opacity:0.5;
-	} // data-content=image
-
-} // data-shape=square
-
-
-.filterableItem[data-shape~="circle"]{
-	border-radius:50%;
-	img {
-		border-radius:50%;
-		opacity:0.5;
-	}
-	
-} // data shape = circle
-
-/*-----  End of Styles for specific items  ------*/
-
 
 /*-----  End of Filter Content Styles  ------*/

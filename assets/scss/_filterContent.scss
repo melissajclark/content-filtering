@@ -12,9 +12,13 @@
 .filterableItem {
 	display:inline-block;
 	float:left;
-	height:250px;
-	width:250px;
-	margin:10px;
+	width:50%;
+	padding:0.5em;
+
+	@media all and (max-width:800px){
+		width:100%;
+		padding:0.5em 0 0.5em 0;
+	}
 }
 
 /*======================================================

@@ -7,8 +7,8 @@ filterApp.dataAttr = ['data-source',
 					'data-details'];
 
 // array to store selectors used throughout JS
-filterApp.selector  = ['select#audioChoice', 
-						'select#languageChoice', 
+filterApp.selector  = ['select#workChoice', 
+						'select#sourceChoice', 
 						'div.filterableItem', 
 						'.filterableContent',
 						'form.filterNav'];

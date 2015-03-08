@@ -6,20 +6,18 @@
 .filterable {
 	color:white;
 	// margin: 0 auto;
-	column-count:2;
-
-	@media all and (max-width:1000px){
-		column-count:1;
-	}
+	width:100%;
 }
 
 // individual items (sections)
 .filterableItem {
 	display:inline-block;
-	width:100%;
-	padding:0.75em 0 0.75em 0;
+	float:left;
+	max-width:50%;
+	padding:0.5em;
 	@media all and (max-width:400px){
-		padding:0.25em 0 0.25em 0;
+		margin:0.25em 0 0.25em 0;
+		width:100%;
 	}
 }
 

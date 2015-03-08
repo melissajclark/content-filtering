@@ -56,7 +56,7 @@ console.log('# of Items: ' + filterApp.itemCount);
 		if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
 			console.log('All Source, Work & Subjects selected');
 
-			$(filterApp.selector[2]).show().addClass('isVisible');
+			$(filterApp.selector[2]).show();
 
 		// checks if Source is selected but Subject & Work === all
 		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {

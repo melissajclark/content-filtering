@@ -26,9 +26,10 @@ filterApp.init = function() { // this function holds everything to start the app
 
 $(filterApp.selector[2]).addClass("animated");
 
+
 	// ============ Function that listens on click & evaluates type data
 
-	$(filterApp.selector[4]).on("submit",function(event){ 
+	$(filterApp.selector[4]).on("change",function(event){ 
 
 		event.preventDefault(); // prevents page from refreshing
 

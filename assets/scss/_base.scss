@@ -63,6 +63,10 @@ img {
 	width:70%;
 	margin:0 auto;
 
+	@media all and (max-width:800px){
+		width:90%;
+	}
+
 	@media all and (max-width:400px){
 		width:100%;
 	}

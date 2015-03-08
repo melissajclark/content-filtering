@@ -47,7 +47,7 @@ console.log('# of Items: ' + filterApp.itemCount);
 
 		/**
 		*
-		* If Statement: Evaluates English values on submit
+		* If Statement: Evaluates values on submit
 		*
 		**/
 		
@@ -143,7 +143,7 @@ console.log('# of Items: ' + filterApp.itemCount);
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').toggleClass( filterApp.transition[0] + ' isVisible').show();
 
 		// checks if Work & Subject are selected | Source === all
-		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userSubjectelection != filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0]) {
+		} else if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userSubjectelection != filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0]) {
 			console.log('Work & Subject are selected | Source === all');
 
 			/**

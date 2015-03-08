@@ -54,13 +54,34 @@ $(filterApp.selector[2]).addClass("animated");
 		} else if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0] && filterApp.userSubjectSelection != filterApp.values[0]) {
 			console.log(filterApp.values[0]  + ' All Source selected But Work & subject != All');
 
+			/**
+			*
+			* Parameter 1 Filtering: Show & Hide --> Format of work
+			*
+			**/
+			
+				// finds items NOT matching user's selection and hides them
+				// selection: Source: all | Work != all
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[0]).hide();
+				
+				//finds items matching user's selection and shows them
+				// selection: Source: all | Work != all
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[1]).show();
+
+			/**
+			*
+			* Parameter 2 Filtering: Show & Hide --> Subject of work
+			*
+			**/
+
 			// finds items NOT matching user's selection and hides them
-			// selection: Source: all | Work != all
-			$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[0]).hide();
+			// selection: Source: all | Subject != all
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[0]).hide();
 			
 			//finds items matching user's selection and shows them
-			// selection: Source: all | Work != all
-			$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[1]).show();
+			// selection: Source: all | Subject != all
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[1]).show();
+			
 
 		// checks is Works = all, but Source does not equal all
 		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0]) {

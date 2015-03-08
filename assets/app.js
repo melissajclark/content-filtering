@@ -121,7 +121,7 @@ $(filterApp.selector[2]).addClass("animated");
 			$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[1]).show();
 
 		// checks is both Source, Subject & Work do not equal all
-		}  else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0]) {
+		}  else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0] && filterApp.userSubjectSelection != filterApp.values[0]) {
 			console.log(filterApp.values[0] + ' Source, Work, & Subject do not equal all'); 
 
 			// finds items NOT matching user's selection and hides them

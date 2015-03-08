@@ -73,7 +73,7 @@ $(filterApp.selector[2]).addClass("animated");
 
 			/**
 			*
-			*  Filters for selection of DataAttr0 | other parameters are === 'All'
+			*  Filters for selection of DataAttr1 | other parameters are === 'All'
 			*
 			**/
 			
@@ -83,6 +83,23 @@ $(filterApp.selector[2]).addClass("animated");
 				//finds items matching user's selection and shows them
 
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[1]).show();
+
+		// checks if Subject is selected but Work & Source === all
+		} else if (filterApp.userSubjectSelection != filterApp.values[0] && filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0]) {
+			console.log('Subject selected But Source & Work === All');
+
+			/**
+			*
+			*  Filters for selection of DataAttr2 | other parameters are === 'All'
+			*
+			**/
+			
+				// finds items NOT matching user's selection and hides them
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[0]).hide();
+				
+				//finds items matching user's selection and shows them
+
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[1]).show();
 
 
 		// checks is both Source, Subject & Work do not equal all

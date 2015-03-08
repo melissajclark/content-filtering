@@ -120,17 +120,17 @@ $(filterApp.selector[2]).addClass("animated");
 			// selection: Work = !all | Source & Subject = all
 			$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[1]).show();
 
-		// checks is both Source & Work do not equal all
+		// checks is both Source, Subject & Work do not equal all
 		}  else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0]) {
-			console.log(filterApp.values[0] + 'or' + filterApp.values[0] + ' Source & video both do not equal all'); 
+			console.log(filterApp.values[0] + ' Source, Work, & Subject do not equal all'); 
 
 			// finds items NOT matching user's selection and hides them
-			// selection: Source = !all | Work = !all
-			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[0]).hide();
+			// selection: Source = !all | Work = !all | Subject = !all
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userSubjectSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[0]).hide();
 			
 			//finds items matching user's selection and shows them
-			// selection: Source = !all | Work = !all
-			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[1]).show();
+			// selection: Source = !all | Work = !all | Subject = !all
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[1]).show();
 
 		} 
 

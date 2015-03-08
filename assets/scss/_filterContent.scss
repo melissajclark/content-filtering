@@ -5,7 +5,7 @@
 // div that holds items
 .filterable {
 	color:white;
-	margin: 0 auto;	
+	// margin: 0 auto;	
 }
 
 // individual items (sections)
@@ -17,8 +17,32 @@
 
 	@media all and (max-width:800px){
 		width:100%;
-		padding:0.5em 0 0.5em 0;w
+		padding:0.5em 0 0.5em 0;
 	}
 }
 
 /*-----  End of Filter Content Styles  ------*/
+
+
+// ==================================
+// =            Filter Nav            =
+// ==================================*/
+
+ul.filterControls {
+	margin:0 0 0 0;
+	list-style-type: none;
+	// override browser styling
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 0px;
+	padding: 0 0 0 0;
+
+	li {
+		display:inline-block;
+		float:left;
+		padding:1em;
+	}
+}
+/*-----  End of Filter Nav  ------*/

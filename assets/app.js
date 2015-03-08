@@ -24,7 +24,7 @@ filterApp.values = ['all'];
 
 filterApp.init = function() { // this function holds everything to start the app
 
-$(filterApp.selector[2]).addClass("animated isVisible");
+$(filterApp.selector[2]).addClass("isVisible animated");
 
 filterApp.itemCount = $(filterApp.selector[2]).length;
 console.log('# of Items: ' + filterApp.itemCount);

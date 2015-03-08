@@ -118,6 +118,23 @@ $(filterApp.selector[2]).addClass("animated");
 
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[1]).show();
 
+		// checks if Source & Subject are selected | Work === all
+		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userSubjectelection != filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0]) {
+			console.log('Source & Work selected | Subject === all');
+
+			/**
+			*
+			*  Filters for selection of DataAttr0 + 2 | 1 parameter  === 'All'
+			*
+			**/
+			
+				// finds items NOT matching user's selection and hides them
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[0]).hide();
+				
+				//finds items matching user's selection and shows them
+
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[1]).show();
+
 
 		// checks is both Source, Subject & Work do not equal all
 		}  else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0] && filterApp.userSubjectSelection != filterApp.values[0]) {

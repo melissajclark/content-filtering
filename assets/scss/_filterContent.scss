@@ -5,20 +5,19 @@
 // div that holds items
 .filterable {
 	color:white;
-	// margin: 0 auto;	
+	// margin: 0 auto;
+	column-count:2;
+
+	@media all and (max-width:1000px){
+		column-count:1;
+	}
 }
 
 // individual items (sections)
 .filterableItem {
 	display:inline-block;
-	float:left;
-	width:50%;
-	padding:0.5em;
-
-	@media all and (max-width:800px){
-		width:100%;
-		padding:0.5em 0 0.5em 0;
-	}
+	width:100%;
+	padding:0.75em 0 0.75em 0;
 }
 
 /*-----  End of Filter Content Styles  ------*/

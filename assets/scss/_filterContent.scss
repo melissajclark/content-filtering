@@ -2,20 +2,13 @@
 // =            Filter Content Styles            =
 // =============================================*/
 
-// div that holds items
-.filterable {
-	color:white;
-	// margin: 0 auto;
-	width:100%;
-}
-
 // individual items (sections)
 .filterableItem {
 	display:inline-block;
 	float:left;
 	max-width:50%;
-	padding:0.5em;
-	@media all and (max-width:400px){
+	padding:0.7em;
+	@media all and (max-width:800px){
 		margin:0.25em 0 0.25em 0;
 		max-width:100%;
 	}

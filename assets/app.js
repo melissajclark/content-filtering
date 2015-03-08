@@ -46,13 +46,13 @@ $(filterApp.selector[2]).addClass("animated");
 		
 		// checks if Source = all and Work = all
 		if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
-			console.log(filterApp.values[0] + ' all Source, Work & Subjects selected');
+			console.log('All Source, Work & Subjects selected');
 
 			$(filterApp.selector[2]).show();
 
 		// checks if Source = all but Works & subject do not = all
 		} else if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0] && filterApp.userSubjectSelection != filterApp.values[0]) {
-			console.log(filterApp.values[0]  + ' All Source selected But Work & subject != All');
+			console.log('All Source selected But Work & subject != All');
 
 			/**
 			*
@@ -85,7 +85,7 @@ $(filterApp.selector[2]).addClass("animated");
 
 		// checks is Works & Subject = all, but Source does not equal all
 		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
-			console.log(filterApp.values[0] + ' All Works & Subject selected But Source != All'); 
+			console.log('All Works & Subject selected But Source != All'); 
 
 			/**
 			*
@@ -104,7 +104,7 @@ $(filterApp.selector[2]).addClass("animated");
 
 		// checks is Subject & Source = all, but Work does not equal all
 		} else if (filterApp.userWorkSelection =! filterApp.values[0] && filterApp.userSourceSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
-			console.log(filterApp.values[0] +' All Source & Subject selected But Work != All'); 
+			console.log('All Source & Subject selected But Work != All'); 
 
 			/**
 			*

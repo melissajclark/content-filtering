@@ -56,31 +56,17 @@ $(filterApp.selector[2]).addClass("animated");
 
 			/**
 			*
-			* Part 1 of Filtering: Show & Hide --> Format of work (data-details)
+			*  Filters for DataAttr 1 & 2: Work + Subject
 			*
 			**/
 			
 				// finds items NOT matching user's selection and hides them
 				// selection: Source: all | Work != all
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[0]).hide();
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[0]).hide();
 				
 				//finds items matching user's selection and shows them
 				// selection: Source: all | Work != all
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[1]).show();
-
-			/**
-			*
-			* Part 2 of Filtering: Show & Hide --> Subject of work
-			*
-			**/
-
-			// finds items NOT matching user's selection and hides them
-			// selection: Source: all | Subject != all
-			$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[0]).hide();
-			
-			//finds items matching user's selection and shows them
-			// selection: Source: all | Subject != all
-			$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[1]).show();
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[1]).show();
 			
 
 		// checks is both Source, Subject & Work do not equal all

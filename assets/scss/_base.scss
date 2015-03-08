@@ -26,26 +26,37 @@ body {
 	background:rgba(224, 214, 227, 0.21);
 }
 
-h1,h2,h3,h4,h5,h6, .intro {
+h1,h2,h3,h4,h5,h6 {
 	text-transform:uppercase;
 	text-align:center;
-	color:#673c4f;
+	color:#222;
 	font-weight:400;
 }
 
 h1 {
-	font-size: 3rem;
-	line-height: 3.8rem;
+	font-size: 2rem;
+	line-height: 2.8rem;
 }
 
-.wrapper {
-	width:100%;
-	margin:0 0 10% 0;
+.intro {
+	text-align:center;
+}
+
+a {
+	text-decoration:none;
+	border-bottom:2px solid $hover;
+	&:hover {
+		background:rgba($hover,0.6);
+	}
 }
 
 img {
 	max-width:100%;
 	height:auto;
+}
+
+.wrapper {
+	width:100%;
 }
 
 .container {

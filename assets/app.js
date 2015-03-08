@@ -44,7 +44,7 @@ console.log('# of Items: ' + filterApp.itemCount);
 		console.log('Selection: Format= ' + filterApp.userWorkSelection + '. Source= ' + filterApp.userSourceSelection + '. Subject= ' + filterApp.userSubjectSelection);
 
 		filterApp.currentItems = $(filterApp.selector[5]).length;
-		console.log('Current # of Items ' + filterApp.currentItems);
+		console.log('Current # of Items ' + filterApp.currentItems)
 
 		/**
 		*
@@ -56,7 +56,7 @@ console.log('# of Items: ' + filterApp.itemCount);
 		if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
 			console.log('All Source, Work & Subjects selected');
 
-			$(filterApp.selector[2]).show();
+			$(filterApp.selector[2]).show().addClass('isVisible');
 
 		// checks if Source is selected but Subject & Work === all
 		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {

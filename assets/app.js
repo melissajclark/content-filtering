@@ -36,7 +36,7 @@ $(filterApp.selector[2]).addClass("animated");
 		filterApp.userSourceSelection = $(filterApp.selector[0]).val();
 		filterApp.userWorkSelection = $(filterApp.selector[1]).val();
 		filterApp.userSubjectSelection = $(filterApp.selector[3]).val();
-		console.log(filterApp.userWorkSelection + filterApp.userSourceSelection + filterApp.userSubjectSelection);
+		console.log('Selection: Format= ' + filterApp.userWorkSelection + '. Source= ' + filterApp.userSourceSelection + '. Subject= ' + filterApp.userSubjectSelection);
 
 		/**
 		*

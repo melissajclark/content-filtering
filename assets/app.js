@@ -45,8 +45,8 @@ $(filterApp.selector[2]).addClass("animated");
 		**/
 		
 		// checks if Source = all and Work = all
-		if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0]) {
-			console.log(filterApp.values[0] + 'or' + filterApp.values[0] + ' all Source & Works selected');
+		if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
+			console.log(filterApp.values[0] + ' all Source, Work & Subjects selected');
 
 			$(filterApp.selector[2]).show();
 

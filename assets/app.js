@@ -12,7 +12,8 @@ filterApp.selector  = ['select#sourceChoice',
 						'select#workChoice', 
 						'div.filterableItem', 
 						'select#subjectChoice',
-						'form.filterNav'];
+						'form.filterNav',
+						'div.filterableItem.isVisible'];
 
 // array to store classes added when hiding / showing items
 filterApp.transition = ['hideItemTransition', 
@@ -41,6 +42,9 @@ console.log('# of Items: ' + filterApp.itemCount);
 		filterApp.userWorkSelection = $(filterApp.selector[1]).val();
 		filterApp.userSubjectSelection = $(filterApp.selector[3]).val();
 		console.log('Selection: Format= ' + filterApp.userWorkSelection + '. Source= ' + filterApp.userSourceSelection + '. Subject= ' + filterApp.userSubjectSelection);
+
+		filterApp.currentItems = $(filterApp.selector[5]).length;
+		console.log('Current # of Items ' + filterApp.currentItems);
 
 		/**
 		*

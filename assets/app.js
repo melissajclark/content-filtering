@@ -120,7 +120,7 @@ $(filterApp.selector[2]).addClass("animated");
 
 		// checks if Source & Subject are selected | Work === all
 		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userSubjectelection != filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0]) {
-			console.log('Source & Work selected | Subject === all');
+			console.log('Source & Subject selected | Work === all');
 
 			/**
 			*
@@ -134,6 +134,23 @@ $(filterApp.selector[2]).addClass("animated");
 				//finds items matching user's selection and shows them
 
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[1]).show();
+
+		// checks if Work & Subject are selected | Source === all
+		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userSubjectelection != filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0]) {
+			console.log('Work & Subject are selected | Source === all');
+
+			/**
+			*
+			*  Filters for selection of DataAttr1 + 2 | 0 parameter  === 'All'
+			*
+			**/
+			
+				// finds items NOT matching user's selection and hides them
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[0]).hide();
+				
+				//finds items matching user's selection and shows them
+
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[1]).show();
 
 
 		// checks is both Source, Subject & Work do not equal all

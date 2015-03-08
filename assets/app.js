@@ -16,8 +16,7 @@ filterApp.selector  = ['select#sourceChoice',
 						'div.filterableItem.isVisible'];
 
 // array to store classes added when hiding / showing items
-filterApp.transition = ['hideItemTransition', 
-						'showItemTransition'];
+filterApp.transition = ['itemTransition'];
 
 filterApp.values = ['all'];
 						

@@ -135,15 +135,17 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 =            Basic Styles            =
 ====================================*/
 body {
-  font-family: "Playfair Display", "Georiga", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   padding: 2em;
   font-size: 1.2rem;
-  line-height: 1.8rem; }
+  line-height: 1.8rem;
+  font-weight: 300; }
 
 h1, h2, h3, h4, h5, h6, .intro {
   text-transform: uppercase;
   text-align: center;
-  color: #673c4f; }
+  color: #673c4f;
+  font-weight: 400; }
 
 h1 {
   font-size: 3rem;
@@ -151,6 +153,20 @@ h1 {
 
 .wrapper {
   width: 100%; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.container {
+  width: 70%;
+  margin: 0 auto; }
+  @media all and (max-width: 800px) {
+    .container {
+      width: 80%; } }
+  @media all and (max-width: 400px) {
+    .container {
+      width: 90%; } }
 
 /*-----  End of Basic Styles  ------*/
 /*==================================
@@ -192,51 +208,34 @@ a {
 
 /*-----  End of Filter Nav  ------*/
 .filterable {
-  color: white;
-  margin: 0 auto; }
+  color: white; }
 
 .filterableItem {
   display: inline-block;
   float: left;
-  height: 250px;
-  width: 250px;
-  margin: 10px; }
+  width: 50%;
+  padding: 0.5em; }
+  @media all and (max-width: 800px) {
+    .filterableItem {
+      width: 100%;
+      padding: 0.5em 0 0.5em 0; } }
 
-/*======================================================
-=     				Color Settings   				=
-======================================================*/
-[data-color~="dark-berry"], span.dark-berry {
-  background: #673c4f; }
-
-[data-color~="light-berry"], span.light-berry {
-  background: #7f557d; }
-
-[data-color~="moody-berry"], span.moody-berry {
-  background: #726e97; }
-
-[data-color~="subtle-blue"], span.subtle-blue {
-  background: #7698b3; }
-
-[data-color~="baby-blue"], span.baby-blue {
-  background: #83b5d1; }
-
-/*-----  End of Color Settings  ------*/
-/*======================================================
-=      Styles for specific items  =
-======================================================*/
-.filterableItem[data-shape~="square"][data-content~="text"] {
-  padding: 0 5px 0 5px; }
-.filterableItem[data-shape~="square"] img {
-  opacity: 0.5; }
-
-.filterableItem[data-shape~="circle"] {
-  border-radius: 50%; }
-  .filterableItem[data-shape~="circle"] img {
-    border-radius: 50%;
-    opacity: 0.5; }
-
-/*-----  End of Styles for specific items  ------*/
 /*-----  End of Filter Content Styles  ------*/
+ul.filterControls {
+  margin: 0 0 0 0;
+  list-style-type: none;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+  padding: 0 0 0 0; }
+  ul.filterControls li {
+    display: inline-block;
+    float: left;
+    padding: 1em; }
+
+/*-----  End of Filter Nav  ------*/
 /*==================================
 =            Animations            =
 ==================================*/

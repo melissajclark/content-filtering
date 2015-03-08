@@ -67,6 +67,23 @@ $(filterApp.selector[2]).addClass("animated");
 
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').addClass(filterApp.transition[1]).show();
 
+		// checks if Work Format is selected but Subject & Source === all
+		} else if (filterApp.userWorkSelection != filterApp.values[0] && filterApp.userSourceSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
+			console.log('Work selected But Source & subject === All');
+
+			/**
+			*
+			*  Filters for selection of DataAttr0 | other parameters are === 'All'
+			*
+			**/
+			
+				// finds items NOT matching user's selection and hides them
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[0]).hide();
+				
+				//finds items matching user's selection and shows them
+
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[1]).show();
+
 
 		// checks is both Source, Subject & Work do not equal all
 		}  else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0] && filterApp.userSubjectSelection != filterApp.values[0]) {

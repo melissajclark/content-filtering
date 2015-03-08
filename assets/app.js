@@ -69,7 +69,7 @@ console.log('# of Items: ' + filterApp.itemCount);
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').addClass(filterApp.transition[0]).hide().removeClass('isVisible');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').addClass(filterApp.transition[0]).hide().toggleClass('isVisible');
 				
 				//finds items matching user's selection and shows them
 
@@ -86,7 +86,7 @@ console.log('# of Items: ' + filterApp.itemCount);
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[0]).hide().removeClass('isVisible');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[0]).hide().toggleClass('isVisible');
 				
 				//finds items matching user's selection and shows them
 
@@ -103,7 +103,7 @@ console.log('# of Items: ' + filterApp.itemCount);
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[0]).hide().removeClass('isVisible');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[0]).hide().toggleClass('isVisible');
 				
 				//finds items matching user's selection and shows them
 
@@ -120,7 +120,7 @@ console.log('# of Items: ' + filterApp.itemCount);
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[0]).hide().removeClass('isVisible');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').addClass(filterApp.transition[0]).hide().toggleClass('isVisible');
 				
 				//finds items matching user's selection and shows them
 
@@ -137,7 +137,7 @@ console.log('# of Items: ' + filterApp.itemCount);
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[0]).hide().removeClass('isVisible');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[0]).hide().toggleClass('isVisible');
 				
 				//finds items matching user's selection and shows them
 
@@ -154,7 +154,7 @@ console.log('# of Items: ' + filterApp.itemCount);
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[0]).hide().removeClass('isVisible');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[0]).hide().toggleClass('isVisible');
 				
 				//finds items matching user's selection and shows them
 
@@ -167,7 +167,7 @@ console.log('# of Items: ' + filterApp.itemCount);
 
 
 			// finds items NOT matching user's selection and hides them
-			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[0]).hide().removeClass('isVisible');
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[0]).hide().toggleClass('isVisible');
 			
 			//finds items matching user's selection and shows them
 

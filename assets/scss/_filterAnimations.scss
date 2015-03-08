@@ -1,6 +1,6 @@
-/*==================================
-=            Animations            =
-==================================*/
+/*===================================
+=            Animate.css            =
+===================================*/
 
 @charset "UTF-8";
 /*!
@@ -22,6 +22,19 @@ Copyright (c) 2014 Daniel Eden
           animation-iteration-count: infinite;
 }
 
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+
+
+/*-----  End of Animate.css  ------*/
+
+/*==================================
+=            Animations            =
+==================================*/
+
 /**
 *
 * Transition: Show
@@ -42,28 +55,6 @@ Copyright (c) 2014 Daniel Eden
   -webkit-animation-name: itemTransition;
           animation-name: itemTransition;
 }
-
-
-/**
-*
-* Transition: Hide
-*
-**/
-
-// @-webkit-keyframes hideItemTransition {
-//   0% {opacity: 0;}
-//   100% {opacity: 1;}
-// }
-
-// @keyframes hideItemTransition {
-//   0% {opacity: 0;}
-//   100% {opacity: 1;}
-// }
-
-// .hideItemTransition {
-//   -webkit-animation-name: fadeIn;
-//           animation-name: fadeIn;
-// }
 
 
 /*-----  End of Animations  ------*/

@@ -153,7 +153,7 @@ $(filterApp.selector[2]).addClass("animated");
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').addClass(filterApp.transition[1]).show();
 
 
-		// checks is both Source, Subject & Work do not equal all
+		// checks if all options are selected (none === all)
 		}  else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0] && filterApp.userSubjectSelection != filterApp.values[0]) {
 			console.log(filterApp.values[0] + ' Source, Work, & Subject do not equal all'); 
 

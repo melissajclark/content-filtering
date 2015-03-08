@@ -35,7 +35,8 @@ $(filterApp.selector[2]).addClass("animated");
 		// finds the value of the user's selection (aka the desired content to view)
 		filterApp.userSourceSelection = $(filterApp.selector[0]).val();
 		filterApp.userWorkSelection = $(filterApp.selector[1]).val();
-		console.log(filterApp.userWorkSelection + filterApp.userSourceSelection);
+		filterApp.userSubjectSelection = $(filterApp.selector[3]).val();
+		console.log(filterApp.userWorkSelection + filterApp.userSourceSelection + filterApp.userSubjectSelection);
 
 		/**
 		*

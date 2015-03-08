@@ -10,10 +10,6 @@
 This repo is an exploration of how to filter data using HTML, CSS (SCSS) and JavaScript / jQuery. There's lots of plugins out there to accomplish this, but I felt like doing it myself. 
 
 Ultimately I'll use this setup on custom WordPress themes for clients, but I like getting the basics right before switching to PHP.
-
-## Some Questions & Topics I Need To Figure Out
-
-1. How to filter for multiple attributes? (ie. user wants to view all circles that are blue)
   
 
 ------

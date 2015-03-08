@@ -161,12 +161,9 @@ img {
 .container {
   width: 70%;
   margin: 0 auto; }
-  @media all and (max-width: 800px) {
-    .container {
-      width: 80%; } }
   @media all and (max-width: 400px) {
     .container {
-      width: 90%; } }
+      width: 100%; } }
 
 /*-----  End of Basic Styles  ------*/
 /*==================================
@@ -208,17 +205,23 @@ a {
 
 /*-----  End of Filter Nav  ------*/
 .filterable {
-  color: white; }
+  color: white;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2; }
+  @media all and (max-width: 1000px) {
+    .filterable {
+      -webkit-column-count: 1;
+         -moz-column-count: 1;
+              column-count: 1; } }
 
 .filterableItem {
   display: inline-block;
-  float: left;
-  width: 50%;
-  padding: 0.5em; }
-  @media all and (max-width: 800px) {
+  width: 100%;
+  padding: 0.75em 0 0.75em 0; }
+  @media all and (max-width: 400px) {
     .filterableItem {
-      width: 100%;
-      padding: 0.5em 0 0.5em 0; } }
+      padding: 0.25em 0 0.25em 0; } }
 
 /*-----  End of Filter Content Styles  ------*/
 ul.filterControls {

@@ -50,9 +50,9 @@ $(filterApp.selector[2]).addClass("animated");
 
 			$(filterApp.selector[2]).show();
 
-		// checks if Source = all but Works do not = all
-		} else if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0]) {
-			console.log(filterApp.values[0] + 'or' + filterApp.values[0] + ' All Source selected But Work != All');
+		// checks if Source = all but Works & subject do not = all
+		} else if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0] && filterApp.userSubjectSelection != filterApp.values[0]) {
+			console.log(filterApp.values[0]  + ' All Source selected But Work & subject != All');
 
 			// finds items NOT matching user's selection and hides them
 			// selection: Source: all | Work != all

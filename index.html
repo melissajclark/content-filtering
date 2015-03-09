@@ -7,15 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-
-	
-
 </head>
 
 <body>
 
 <main id="main" class="wrapper">
-	<header class="container clearfix">
+	<header class="container clearfix" id="top">
 		<h1>Content Filtering</h1>
 
 		<p class="intro"><em>Content Filtering</em> is an exploration of how to filter some basic HTML content, without the use of a jQuery plugin. It uses data-attributes to store the values, and jQuery methods to filter the content. Images are from <a href="https://unsplash.com/">Unsplash</a>, <a href="http://www.gratisography.com/">Gratisography</a>, and <a href="http://nos.twnsnd.co/">New Old Stock</a>. </p>
@@ -26,32 +23,29 @@
 
 		    <ul class="filterControls">
 
-		        <label>
-		        <li><span class="legend">Source</span></li>
-		            <li>
+		        <li>
+			        <label><span class="legend">Source &nbsp</span>
 		                <select name="source" id="sourceChoice">
-                          <option name="all" value="all">All</option>
-                          <option name="Unsplash" value="Unsplash">Unsplash</option>
-                          <option name="New Old Stock" value="New Old Stock">New Old Stock</option>
-                          <option name="gratisography" value="Gratisography">Gratisography</option>
+							<option name="all" value="all">All</option>
+							<option name="Unsplash" value="Unsplash">Unsplash</option>
+							<option name="New Old Stock" value="New Old Stock">New Old Stock</option>
+							<option name="gratisography" value="Gratisography">Gratisography</option>
 		                </select><!-- / select source -->
-		            </li>
-		        </label><!-- / source label  -->
+			        </label>
+		        </li><!-- / source -->
 
-		        <label>
-		        <li><span class="legend">Format</span></li>
-		            <li>
+		        <li>
+			        <label><span class="legend">Format &nbsp</span>
 		                <select name="work" id="workChoice">
 		                	<option value="all" name="all">All</option>
                           	<option name="black and white" value="black and white">Black and White</option>
                           	<option name="colour" value="colour">Colour</option>
 		                </select><!-- / select format -->
-		            </li>
-		        </label><!-- / format label  -->
+			        </label>
+		        </li><!-- / format -->
 
-		        <label>
-		        <li><span class="legend">Subject</span></li>
-		            <li>
+		        <li>
+		        	<label><span class="legend">Subject &nbsp</span>
 		                <select name="work" id="subjectChoice">
 		                	<option value="all" name="all">All</option>
                           	<option name="landscape" value="landscape">Landscape</option>
@@ -59,11 +53,13 @@
                           	<option name="travel" value="travel">Travel</option>
                           	<option name="people" value="people">People</option>
 		                </select><!-- / select subject -->
-		            </li>
-		        </label><!-- / subject label  -->
+		        	</label>
+		       </li><!-- / subject  -->
+
 		    </ul><!-- / ul.FilterControls -->
 		</form><!-- / form.filterNav -->
-	</header><!-- / header -->
+
+	</header><!-- / header (intro + form.filterNav)-->
 
 	<div class="container clearfix">
 
@@ -249,7 +245,7 @@
 </main><!-- / main -->
 
 <footer class="container">
-	<p class="intro"><a href="http://melissajclark.ca" rel="bookmark" title="Melissa Jean Clark's Portfolio">Project by Melissa Jean Clark</a>. <a href="https://github.com/melissajclark/content-filtering" title="Content Filtering on Github">View the Code on Github</a>
+	<p class="intro"><a href="http://melissajclark.ca" rel="bookmark" title="Melissa Jean Clark's Portfolio">Project by Melissa Jean Clark</a>. <a href="https://github.com/melissajclark/content-filtering" title="Content Filtering on Github">View the Code on Github</a>| <a href="#top">Back to Top</a>
 	</p>
 
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>

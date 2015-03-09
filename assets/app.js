@@ -25,6 +25,11 @@ filterApp.values = ['all'];
 filterApp.init = function() { // this function holds everything to start the app
 
 	$(filterApp.selector[2]).addClass("animated");
+	$(filterApp.selector[5]).hide();
+
+		$(filterApp.selector[5]).on('click',function(event){
+			event.preventDefault();
+		});
 
 	// ============ Variables for Counting Items
 
@@ -58,6 +63,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			console.log('All Source, Work & Subjects selected');
 
 			$(filterApp.selector[2]).show();
+
 
 			/**
 			*
@@ -320,7 +326,11 @@ filterApp.init = function() { // this function holds everything to start the app
 
 			/* / end Hidden & Visible count */
 
-		} // end if else statement
+		}// end if else statement
+
+		if (filterApp.userSourceSelection != filterApp.values[0] || filterApp.userWorkSelection != filterApp.values[0] || filterApp.userSubjectSelection != filterApp.values[0]){
+
+			$(filterApp.selector[5]).show(); }
 
 
 	});  // ============ End function that listens on click & evaluates filterApp.dataAttr[1] 

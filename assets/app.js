@@ -8,11 +8,12 @@ filterApp.dataAttr = ['data-source',
 					'data-subject'];
 
 // array to store selectors used throughout JS
-filterApp.selector  = ['select#sourceChoice', 
-						'select#workChoice', 
-						'div.filterableItem', 
-						'select#subjectChoice',
-						'form.filterNav'];
+filterApp.selector  = ['select#sourceChoice', // 0
+						'select#workChoice', // 1
+						'div.filterableItem',  // 2
+						'select#subjectChoice', // 3
+						'form.filterNav', // 4
+						'button.reset']; // 5
 
 // array to store classes added when hiding / showing items
 filterApp.transition = ['itemTransition'];
@@ -24,6 +25,8 @@ filterApp.values = ['all'];
 filterApp.init = function() { // this function holds everything to start the app
 
 	$(filterApp.selector[2]).addClass("animated");
+
+	$(filterApp.selector[5]).hide();
 
 	// ============ Variables for Counting Items
 
@@ -46,6 +49,11 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		console.log('Selection: Format= ' + filterApp.userWorkSelection + '. Source= ' + filterApp.userSourceSelection + '. Subject= ' + filterApp.userSubjectSelection);
 
+		$(filterApp.selector[5]).on("click",function(event){ 
+			event.preventDefault(); // prevents page from refreshing
+			$('.filterable').find('.filterableItem').show();
+		});
+
 		/**
 		*
 		* If Statement: Evaluates values on submit
@@ -57,6 +65,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			console.log('All Source, Work & Subjects selected');
 
 			$(filterApp.selector[2]).show();
+			$(filterApp.selector[5]).hide();
 
 			/**
 			*
@@ -92,6 +101,7 @@ filterApp.init = function() { // this function holds everything to start the app
 				
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').show();
+				$(filterApp.selector[5]).show();
 
 			/**
 			*
@@ -127,6 +137,8 @@ filterApp.init = function() { // this function holds everything to start the app
 				
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').show();
+
+				$(filterApp.selector[5]).hide();
 
 			/**
 			*
@@ -164,6 +176,8 @@ filterApp.init = function() { // this function holds everything to start the app
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').show();
 
+				$(filterApp.selector[5]).show();
+
 			/**
 			*
 			* Counts Hidden / Visible Items: Displays message if all items are hidden
@@ -199,6 +213,8 @@ filterApp.init = function() { // this function holds everything to start the app
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').show();
 
+				$(filterApp.selector[5]).show();
+
 			/**
 			*
 			* Counts Hidden / Visible Items: Displays message if all items are hidden
@@ -233,6 +249,8 @@ filterApp.init = function() { // this function holds everything to start the app
 				
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').show();
+
+				$(filterApp.selector[5]).show();
 
 			/**
 			*
@@ -270,6 +288,8 @@ filterApp.init = function() { // this function holds everything to start the app
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').show();
 
+				$(filterApp.selector[5]).show();
+
 			/**
 			*
 			* Counts Hidden / Visible Items: Displays message if all items are hidden
@@ -300,6 +320,8 @@ filterApp.init = function() { // this function holds everything to start the app
 			//finds items matching user's selection and shows them
 			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').show();
 
+			$(filterApp.selector[5]).show();
+
 			/**
 			*
 			* Counts Hidden / Visible Items: Displays message if all items are hidden
@@ -320,6 +342,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			/* / end Hidden & Visible count */
 
 		} // end if else statement
+
 
 	});  // ============ End function that listens on click & evaluates filterApp.dataAttr[1] 
 

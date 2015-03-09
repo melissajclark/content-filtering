@@ -16,7 +16,8 @@ filterApp.selector  = ['select#sourceChoice', // 0
 						'button.reset']; // 5
 
 // array to store classes added when hiding / showing items
-filterApp.transition = ['itemTransition'];
+filterApp.transition = ['itemTransition',
+						'itemTransitionUp'];
 
 filterApp.values = ['all'];
 						
@@ -117,10 +118,10 @@ filterApp.init = function() { // this function holds everything to start the app
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').hide();
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').toggleClass(filterApp.transition[1]).hide();
 				
 				//finds items matching user's selection and shows them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').toggleClass(filterApp.transition[0]).show()
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').toggleClass(filterApp.transition[0]).show();
 
 			/**
 			*
@@ -152,7 +153,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').hide();
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').toggleClass(filterApp.transition[1]).hide();
 				
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').toggleClass(filterApp.transition[0]).show();
@@ -188,7 +189,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').hide();
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').toggleClass(filterApp.transition[1]).hide();
 				
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').toggleClass(filterApp.transition[0]).show();
@@ -223,7 +224,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').hide();
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').toggleClass(filterApp.transition[1]).hide();
 				
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').toggleClass(filterApp.transition[0]).show();
@@ -258,7 +259,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').hide();
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').toggleClass(filterApp.transition[1]).hide();
 				
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').toggleClass(filterApp.transition[0]).show();
@@ -294,7 +295,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').hide();
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').toggleClass(filterApp.transition[1]).hide();
 				
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').toggleClass(filterApp.transition[0]).show();
@@ -324,7 +325,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			console.log(filterApp.values[0] + ' Source, Work, & Subject do not equal all'); 
 
 			// finds items NOT matching user's selection and hides them
-			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').hide();
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').toggleClass(filterApp.transition[1]).hide();
 			
 			//finds items matching user's selection and shows them
 			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').toggleClass(filterApp.transition[0]).show();

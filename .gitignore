@@ -10,4 +10,5 @@ npm-debug.log
 ### ignore resources ###
 
 assets/images/originals/
+relevant-resources/
 

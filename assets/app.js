@@ -51,7 +51,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		/**
 		*
-		* Prevents Reset button from refreshing page
+		* Reset Button Functions / Events
 		*
 		**/
 		
@@ -59,11 +59,13 @@ filterApp.init = function() { // this function holds everything to start the app
 		$(filterApp.selector[5]).on('click',function(event){
 			event.preventDefault();
 			$(filterApp.selector[2]).show();
+			$(".filterableDetails").text('');
 		});
 
 		// shows all filterableItem divs when any values are not set to "All"
 		if (filterApp.userSourceSelection != filterApp.values[0] || filterApp.userWorkSelection != filterApp.values[0] || filterApp.userSubjectSelection != filterApp.values[0]){
-			$(filterApp.selector[5]).show(); 
+			$(filterApp.selector[5]).show();
+			$(".filterableDetails").text(''); 
 		}
 
 

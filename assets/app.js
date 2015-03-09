@@ -12,8 +12,7 @@ filterApp.selector  = ['select#sourceChoice',
 						'select#workChoice', 
 						'div.filterableItem', 
 						'select#subjectChoice',
-						'form.filterNav',
-						'div.filterableItem.isVisible'];
+						'form.filterNav'];
 
 // array to store classes added when hiding / showing items
 filterApp.transition = ['itemTransition'];
@@ -24,7 +23,7 @@ filterApp.values = ['all'];
 
 filterApp.init = function() { // this function holds everything to start the app
 
-$(filterApp.selector[2]).addClass("isVisible animated");
+$(filterApp.selector[2]).addClass("animated");
 
 filterApp.totalItems = $(filterApp.selector[2]).length;
 console.log('Total # of Items: ' + filterApp.totalItems);

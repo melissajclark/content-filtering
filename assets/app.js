@@ -64,6 +64,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			$(filterApp.selector[0]).val(filterApp.values[0]);
 			$(filterApp.selector[1]).val(filterApp.values[0]);
 			$(filterApp.selector[3]).val(filterApp.values[0]);
+			$(this).hide(); // hides on click
 		});
 
 		// shows all filterableItem divs when any values are not set to "All"

@@ -47,9 +47,6 @@ console.log('Visible # of Items: ' + filterApp.visibleItemCount + '. Hidden # of
 		filterApp.userSubjectSelection = $(filterApp.selector[3]).val();
 		console.log('Selection: Format= ' + filterApp.userWorkSelection + '. Source= ' + filterApp.userSourceSelection + '. Subject= ' + filterApp.userSubjectSelection);
 
-		filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;	
-		filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
-
 		/**
 		*
 		* If Statement: Evaluates values on submit
@@ -62,7 +59,6 @@ console.log('Visible # of Items: ' + filterApp.visibleItemCount + '. Hidden # of
 
 			$(filterApp.selector[2]).show();
 
-			console.log('Visible # of Items: ' + filterApp.visibleItemCount + '. Hidden # of Items: ' + filterApp.hiddenItemCount);	
 
 		// checks if Source is selected but Subject & Work === all
 		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {

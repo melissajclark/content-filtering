@@ -56,22 +56,18 @@ console.log('# of Items: ' + filterApp.itemCount);
 		// checks if Source = all and Work = all and Subject = all (default)
 		if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
 			console.log('All Source, Work & Subjects selected');
+
+			$(filterApp.selector[2]).show();
+
 			filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
 			console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
 
 			filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
 			console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
-
-			$(filterApp.selector[2]).show();
 
 		// checks if Source is selected but Subject & Work === all
 		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
 			console.log('Source selected But Work & subject === All');
-			filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
-			console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
-
-			filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
-			console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
 
 			/**
 			*
@@ -83,18 +79,18 @@ console.log('# of Items: ' + filterApp.itemCount);
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').hide();
 				
 				//finds items matching user's selection and shows them
-
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').show();
+
+				filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
+				console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
+
+				filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
+				console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
 
 		// checks if Work Format is selected but Subject & Source === all
 		} else if (filterApp.userWorkSelection != filterApp.values[0] && filterApp.userSourceSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
 			console.log('Work selected But Source & subject === All');
 
-			filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
-			console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
-
-			filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
-			console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
 			/**
 			*
 			*  Filters for selection of DataAttr1 | other parameters are === 'All'
@@ -105,18 +101,18 @@ console.log('# of Items: ' + filterApp.itemCount);
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').hide();
 				
 				//finds items matching user's selection and shows them
-
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').show();
+
+				filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
+				console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
+
+				filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
+				console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
 
 		// checks if Subject is selected but Work & Source === all
 		} else if (filterApp.userSubjectSelection != filterApp.values[0] && filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0]) {
 			console.log('Subject selected But Source & Work === All');
 
-			filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
-			console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
-
-			filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
-			console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
 			/**
 			*
 			*  Filters for selection of DataAttr2 | other parameters are === 'All'
@@ -127,18 +123,18 @@ console.log('# of Items: ' + filterApp.itemCount);
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').hide();
 				
 				//finds items matching user's selection and shows them
-
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').show();
+
+				filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
+				console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
+
+				filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
+				console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
 
 		// checks if Source & Work are selected | Subject === all
 		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
 			console.log('Source & Work selected | Subject === all');
 
-			filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
-			console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
-
-			filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
-			console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
 			/**
 			*
 			*  Filters for selection of DataAttr0 + 1 | 2 parameter  === 'All'
@@ -149,18 +145,18 @@ console.log('# of Items: ' + filterApp.itemCount);
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').hide();
 				
 				//finds items matching user's selection and shows them
-
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').show();
+
+				filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
+				console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
+
+				filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
+				console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
 
 		// checks if Source & Subject are selected | Work === all
 		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userSubjectelection != filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0]) {
 			console.log('Source & Subject selected | Work === all');
 
-			filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
-			console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
-
-			filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
-			console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
 			/**
 			*
 			*  Filters for selection of DataAttr0 + 2 | 1 parameter  === 'All'
@@ -171,18 +167,19 @@ console.log('# of Items: ' + filterApp.itemCount);
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').hide();
 				
 				//finds items matching user's selection and shows them
-
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').show();
+
+
+				filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
+				console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
+
+				filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
+				console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
 
 		// checks if Work & Subject are selected | Source === all
 		} else if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userSubjectelection != filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0]) {
 			console.log('Work & Subject are selected | Source === all');
 
-			filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
-			console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
-
-			filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
-			console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
 			/**
 			*
 			*  Filters for selection of DataAttr1 + 2 | 0 parameter  === 'All'
@@ -193,26 +190,30 @@ console.log('# of Items: ' + filterApp.itemCount);
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').hide();
 				
 				//finds items matching user's selection and shows them
-
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').show();
+
+				filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
+				console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
+
+				filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
+				console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
 
 
 		// checks if all options are selected (none === all)
 		}  else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0] && filterApp.userSubjectSelection != filterApp.values[0]) {
 			console.log(filterApp.values[0] + ' Source, Work, & Subject do not equal all'); 
 
+			// finds items NOT matching user's selection and hides them
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').hide();
+			
+			//finds items matching user's selection and shows them
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').show();
+
 			filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
 			console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
 
 			filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
 			console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
-
-			// finds items NOT matching user's selection and hides them
-			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').hide();
-			
-			//finds items matching user's selection and shows them
-
-			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').show();
 
 		
 		} 

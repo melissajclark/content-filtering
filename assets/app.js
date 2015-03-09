@@ -221,7 +221,6 @@ console.log('Visible # of Items: ' + filterApp.visibleItemCount + '. Hidden # of
 			filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
 			console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
 
-		
 		} 
 
 	});  // ============ End function that listens on click & evaluates filterApp.dataAttr[1] 

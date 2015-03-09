@@ -84,7 +84,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
 			console.log('All Source, Work & Subjects selected');
 
-			$(filterApp.selector[2]).show(); // shows all items
+			$(filterApp.selector[2]).removeClass(filterApp.transition[1]).addClass(filterApp.transition[0]).show(); // shows all items
 			$(filterApp.selector[5]).hide(); // hides button
 
 

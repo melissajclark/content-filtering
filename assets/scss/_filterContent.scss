@@ -6,12 +6,13 @@
 .filterableItem {
 	display:inline-block;
 	float:left;
-	max-width:50%;
+	max-width:33%;
 	padding:0.7em;
-	@media all and (min-width:1400px){
-		max-width:33%;
+	@media all and (max-width:1150px){
+		margin:0.25em 0 0.25em 0;
+		max-width:50%;
 	}
-	@media all and (max-width:800px){
+	@media all and (max-width:700px){
 		margin:0.25em 0 0.25em 0;
 		max-width:100%;
 	}

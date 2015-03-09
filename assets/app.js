@@ -49,6 +49,13 @@ filterApp.hiddenMessage = 'Sorry, nothing matched your filter!';
 
 		console.log('Selection: Format= ' + filterApp.userWorkSelection + '. Source= ' + filterApp.userSourceSelection + '. Subject= ' + filterApp.userSubjectSelection);
 
+		filterApp.totalItems = $(filterApp.selector[2]).length;
+		console.log('Total # of Items: ' + filterApp.totalItems);
+
+
+		filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
+		filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
+
 		/**
 		*
 		* If Statement: Evaluates values on submit
@@ -60,12 +67,6 @@ filterApp.hiddenMessage = 'Sorry, nothing matched your filter!';
 			console.log('All Source, Work & Subjects selected');
 
 			$(filterApp.selector[2]).show();
-
-			filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
-			console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
-
-			filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
-			console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
 
 		// checks if Source is selected but Subject & Work === all
 		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
@@ -82,13 +83,6 @@ filterApp.hiddenMessage = 'Sorry, nothing matched your filter!';
 				
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').show();
-
-				// filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
-				// console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
-
-				// filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
-				// console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
-
 		// checks if Work Format is selected but Subject & Source === all
 		} else if (filterApp.userWorkSelection != filterApp.values[0] && filterApp.userSourceSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
 			console.log('Work selected But Source & subject === All');
@@ -105,13 +99,6 @@ filterApp.hiddenMessage = 'Sorry, nothing matched your filter!';
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').show();
 
-				// filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
-				// console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
-
-				// filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
-				// console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
-
-
 		// checks if Subject is selected but Work & Source === all
 		} else if (filterApp.userSubjectSelection != filterApp.values[0] && filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0]) {
 			console.log('Subject selected But Source & Work === All');
@@ -127,13 +114,6 @@ filterApp.hiddenMessage = 'Sorry, nothing matched your filter!';
 				
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').show();
-
-				// filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
-				// console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
-
-				// filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
-				// console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
-
 		// checks if Source & Work are selected | Subject === all
 		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
 			console.log('Source & Work selected | Subject === all');
@@ -149,13 +129,6 @@ filterApp.hiddenMessage = 'Sorry, nothing matched your filter!';
 				
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').show();
-
-				// filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
-				// console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
-
-				// filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
-				// console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
-
 
 		// checks if Source & Subject are selected | Work === all
 		} else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userSubjectelection != filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0]) {
@@ -174,13 +147,6 @@ filterApp.hiddenMessage = 'Sorry, nothing matched your filter!';
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').show();
 
 
-				// filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
-				// console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
-
-				// filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
-				// console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
-
-
 		// checks if Work & Subject are selected | Source === all
 		} else if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userSubjectelection != filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0]) {
 			console.log('Work & Subject are selected | Source === all');
@@ -197,13 +163,6 @@ filterApp.hiddenMessage = 'Sorry, nothing matched your filter!';
 				//finds items matching user's selection and shows them
 				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').show();
 
-				// filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
-				// console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
-
-				// filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
-				// console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
-
-
 		// checks if all options are selected (none === all)
 		}  else if (filterApp.userSourceSelection != filterApp.values[0] && filterApp.userWorkSelection != filterApp.values[0] && filterApp.userSubjectSelection != filterApp.values[0]) {
 			console.log(filterApp.values[0] + ' Source, Work, & Subject do not equal all'); 
@@ -214,21 +173,14 @@ filterApp.hiddenMessage = 'Sorry, nothing matched your filter!';
 			//finds items matching user's selection and shows them
 			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').show();
 
-			// filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
-			// console.log('Visible # of Items: ' + filterApp.visibleItemCount);		
-
-			// filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
-			// console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
-
-
-			if (filterApp.hiddenItemCount === filterApp.totalItems) {
-					console.log("All items hidden!");
-					$(".filterableDetails").text("All hidden!");
-				} else if (filterApp.hiddenItemCount != filterApp.totalItems){
-					console.log("only some items hidden!");
-					$(".filterableDetails").text("");
-				};
-
+				// evaluates if ALL items are hidden, and shows message
+				if (filterApp.hiddenItemCount === filterApp.totalItems) {
+						$(".filterableDetails").text(filterApp.hiddenMessage);
+						console.log("hidden");
+					} else if (filterApp.hiddenItemCount != filterApp.totalItems){
+						$(".filterableDetails").text("");
+						console.log("not hidden");
+					};
 		} 
 
 	});  // ============ End function that listens on click & evaluates filterApp.dataAttr[1] 

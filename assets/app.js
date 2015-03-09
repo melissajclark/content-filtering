@@ -220,6 +220,12 @@ console.log('Visible # of Items: ' + filterApp.visibleItemCount + '. Hidden # of
 			filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
 			console.log('Hidden # of Items: ' + filterApp.hiddenItemCount);
 
+			if (filterApp.hiddenItemCount === filterApp.totalItems) {
+				console.log("All items hidden!")
+			} else if (filterApp.hiddenItemCount != filterApp.totalItems){
+				console.log("only some items hidden!")
+			};
+
 		} 
 
 	});  // ============ End function that listens on click & evaluates filterApp.dataAttr[1] 

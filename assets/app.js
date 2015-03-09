@@ -29,6 +29,7 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		$(filterApp.selector[5]).on('click',function(event){
 			event.preventDefault();
+			$('.filterableItem').show();
 		});
 
 	// ============ Variables for Counting Items
@@ -52,6 +53,12 @@ filterApp.init = function() { // this function holds everything to start the app
 
 		console.log('Selection: Format= ' + filterApp.userWorkSelection + '. Source= ' + filterApp.userSourceSelection + '. Subject= ' + filterApp.userSubjectSelection);
 
+
+		if (filterApp.userSourceSelection != filterApp.values[0] || filterApp.userWorkSelection != filterApp.values[0] || filterApp.userSubjectSelection != filterApp.values[0]){
+
+			$(filterApp.selector[5]).show(); }
+
+
 		/**
 		*
 		* If Statement: Evaluates values on submit
@@ -63,6 +70,7 @@ filterApp.init = function() { // this function holds everything to start the app
 			console.log('All Source, Work & Subjects selected');
 
 			$(filterApp.selector[2]).show();
+			$(filterApp.selector[5]).hide();
 
 
 			/**
@@ -327,10 +335,6 @@ filterApp.init = function() { // this function holds everything to start the app
 			/* / end Hidden & Visible count */
 
 		}// end if else statement
-
-		if (filterApp.userSourceSelection != filterApp.values[0] || filterApp.userWorkSelection != filterApp.values[0] || filterApp.userSubjectSelection != filterApp.values[0]){
-
-			$(filterApp.selector[5]).show(); }
 
 
 	});  // ============ End function that listens on click & evaluates filterApp.dataAttr[1] 

@@ -43,7 +43,7 @@ h1 {
 	text-align:center;
 }
 
-a {
+a{
 	text-decoration:none;
 	color:$text;
 	border-bottom:2px solid $hover;
@@ -51,6 +51,18 @@ a {
 		background:rgba($hover,0.3);
 	}
 }
+
+button {
+	text-decoration:none;
+	color:$text;
+	border:2px solid $hover;
+	padding:7px;
+	background:white;
+	&:hover {
+		background:rgba($hover,0.3);
+	}
+}
+
 
 img {
 	max-width:100%;

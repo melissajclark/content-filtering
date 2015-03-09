@@ -27,11 +27,6 @@ filterApp.init = function() { // this function holds everything to start the app
 	$(filterApp.selector[2]).addClass("animated");
 	$(filterApp.selector[5]).hide();
 
-		$(filterApp.selector[5]).on('click',function(event){
-			event.preventDefault();
-			$('.filterableItem').show();
-		});
-
 	// ============ Variables for Counting Items
 
 	filterApp.totalItems = $(filterApp.selector[2]).length; // all items
@@ -54,9 +49,22 @@ filterApp.init = function() { // this function holds everything to start the app
 		console.log('Selection: Format= ' + filterApp.userWorkSelection + '. Source= ' + filterApp.userSourceSelection + '. Subject= ' + filterApp.userSubjectSelection);
 
 
-		if (filterApp.userSourceSelection != filterApp.values[0] || filterApp.userWorkSelection != filterApp.values[0] || filterApp.userSubjectSelection != filterApp.values[0]){
+		/**
+		*
+		* Prevents Reset button from refreshing page
+		*
+		**/
+		
+		// shows all filterableItem divs whhen "Reset" button is clicked
+		$(filterApp.selector[5]).on('click',function(event){
+			event.preventDefault();
+			$(filterApp.selector[2]).show();
+		});
 
-			$(filterApp.selector[5]).show(); }
+		// shows all filterableItem divs when any values are not set to "All"
+		if (filterApp.userSourceSelection != filterApp.values[0] || filterApp.userWorkSelection != filterApp.values[0] || filterApp.userSubjectSelection != filterApp.values[0]){
+			$(filterApp.selector[5]).show(); 
+		}
 
 
 		/**
@@ -69,8 +77,8 @@ filterApp.init = function() { // this function holds everything to start the app
 		if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
 			console.log('All Source, Work & Subjects selected');
 
-			$(filterApp.selector[2]).show();
-			$(filterApp.selector[5]).hide();
+			$(filterApp.selector[2]).show(); // shows all items
+			$(filterApp.selector[5]).hide(); // hides button
 
 
 			/**

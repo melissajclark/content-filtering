@@ -163,6 +163,15 @@ a {
   a:hover {
     background: rgba(96, 150, 201, 0.3); }
 
+button {
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #6096c9;
+  padding: 7px;
+  background: white; }
+  button:hover {
+    background: rgba(96, 150, 201, 0.3); }
+
 img {
   max-width: 100%;
   height: auto; }

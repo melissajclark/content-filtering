@@ -181,19 +181,26 @@ img {
       width: 100%; } }
 
 /*-----  End of Basic Styles  ------*/
+.filterable {
+  -webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3; }
+  @media all and (max-width: 1150px) {
+    .filterable {
+      -webkit-column-count: 2;
+         -moz-column-count: 2;
+              column-count: 2; } }
+  @media all and (max-width: 700px) {
+    .filterable {
+      -webkit-column-count: 1;
+         -moz-column-count: 1;
+              column-count: 1; } }
+
 .filterableItem {
   display: inline-block;
+  width: 100%;
   float: left;
-  max-width: 33%;
-  padding: 0.7em; }
-  @media all and (max-width: 1150px) {
-    .filterableItem {
-      margin: 0.25em 0 0.25em 0;
-      max-width: 50%; } }
-  @media all and (max-width: 700px) {
-    .filterableItem {
-      margin: 0.25em 0 0.25em 0;
-      max-width: 100%; } }
+  padding: 1em 0.5em 1em 0.5em; }
 
 /*-----  End of Filter Content Styles  ------*/
 span.legend {

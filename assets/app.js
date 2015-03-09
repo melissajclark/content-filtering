@@ -26,8 +26,8 @@ filterApp.init = function() { // this function holds everything to start the app
 
 $(filterApp.selector[2]).addClass("isVisible animated");
 
-filterApp.itemCount = $(filterApp.selector[2]).length;
-console.log('# of Items: ' + filterApp.itemCount);
+filterApp.totalItems = $(filterApp.selector[2]).length;
+console.log('Total # of Items: ' + filterApp.totalItems);
 
 	// ============ Function that listens on click & evaluates type data
 

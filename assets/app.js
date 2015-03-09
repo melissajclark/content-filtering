@@ -223,7 +223,7 @@ filterApp.hiddenMessage = 'Sorry, nothing matched your filter!';
 
 			if (filterApp.hiddenItemCount === filterApp.totalItems) {
 					console.log("All items hidden!");
-					$(".filterableDetails").text("All hidden!");
+					$(".filterableDetails").text();
 				} else if (filterApp.hiddenItemCount != filterApp.totalItems){
 					console.log("only some items hidden!");
 					$(".filterableDetails").text("");

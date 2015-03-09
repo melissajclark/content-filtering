@@ -24,6 +24,7 @@ body {
 	line-height: 1.8rem;
 	font-weight:300;
 	background:rgba(224, 214, 227, 0.21);
+	color:$text;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -44,6 +45,7 @@ h1 {
 
 a {
 	text-decoration:none;
+	color:$text;
 	border-bottom:2px solid $hover;
 	&:hover {
 		background:rgba($hover,0.3);
@@ -63,7 +65,7 @@ img {
 	width:70%;
 	margin:0 auto;
 
-	@media all and (max-width:1000px){
+	@media all and (max-width:1075px){
 		width:90%;
 	}
 

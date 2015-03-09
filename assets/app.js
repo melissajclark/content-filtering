@@ -29,6 +29,12 @@ $(filterApp.selector[2]).addClass("isVisible animated");
 filterApp.totalItems = $(filterApp.selector[2]).length;
 console.log('Total # of Items: ' + filterApp.totalItems);
 
+
+filterApp.visibleItemCount = $(filterApp.selector[2] + ':visible').length;
+filterApp.hiddenItemCount = $(filterApp.selector[2] + ':hidden').length;
+console.log('Visible # of Items: ' + filterApp.visibleItemCount + '. Hidden # of Items: ' + filterApp.hiddenItemCount);		
+
+
 	// ============ Function that listens on click & evaluates type data
 
 	$(filterApp.selector[4]).on("change",function(event){ 

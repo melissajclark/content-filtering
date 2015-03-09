@@ -42,9 +42,6 @@ console.log('# of Items: ' + filterApp.itemCount);
 		filterApp.userSubjectSelection = $(filterApp.selector[3]).val();
 		console.log('Selection: Format= ' + filterApp.userWorkSelection + '. Source= ' + filterApp.userSourceSelection + '. Subject= ' + filterApp.userSubjectSelection);
 
-		filterApp.currentItems = $(filterApp.selector[5]).length;
-		console.log('Current # of Items ' + filterApp.currentItems)
-
 		/**
 		*
 		* If Statement: Evaluates values on submit

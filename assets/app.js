@@ -58,16 +58,19 @@ filterApp.init = function() { // this function holds everything to start the app
 		// shows all filterableItem divs whhen "Reset" button is clicked
 		$(filterApp.selector[5]).on('click',function(event){
 			event.preventDefault();
-			$(filterApp.selector[2]).show();
+			$(filterApp.selector[2]).show(); // shows all .filterableItems
 			$(".filterableDetails").text('');
+			// resets values to all
+			$(filterApp.selector[0]).val(filterApp.values[0]);
+			$(filterApp.selector[1]).val(filterApp.values[0]);
+			$(filterApp.selector[3]).val(filterApp.values[0]);
 		});
 
 		// shows all filterableItem divs when any values are not set to "All"
 		if (filterApp.userSourceSelection != filterApp.values[0] || filterApp.userWorkSelection != filterApp.values[0] || filterApp.userSubjectSelection != filterApp.values[0]){
-			$(filterApp.selector[5]).show();
-			$(".filterableDetails").text(''); 
+			$(filterApp.selector[5]).show(); // shows reset button
+			$(".filterableDetails").text('');
 		}
-
 
 		/**
 		*

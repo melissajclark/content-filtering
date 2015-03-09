@@ -2,22 +2,20 @@
 // =            Filter Content Styles            =
 // =============================================*/
 
-.filterable {
-	column-count:3;
-	@media all and (max-width:1150px){
-		column-count:2;
-	}
-	@media all and (max-width:700px){
-		column-count:1;
-	}
-}
-
 // individual items (sections)
 .filterableItem {
 	display:inline-block;
-	width:100%;
 	float:left;
-	padding:1em 0.5em 1em 0.5em;
+	max-width:33%;
+	padding:0.7em;
+	@media all and (max-width:1150px){
+		margin:0.25em 0 0.25em 0;
+		max-width:50%;
+	}
+	@media all and (max-width:700px){
+		margin:0.25em 0 0.25em 0;
+		max-width:100%;
+	}
 }
 
 /*-----  End of Filter Content Styles  ------*/

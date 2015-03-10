@@ -84,7 +84,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		if (filterApp.userSourceSelection === filterApp.values[0] && filterApp.userWorkSelection === filterApp.values[0] && filterApp.userSubjectSelection === filterApp.values[0]) {
 			console.log('All Source, Work & Subjects selected');
 
-			$(filterApp.selector[2]).fadeIn('3000'); // shows all items
+			$(filterApp.selector[2]).fadeIn('9000'); // shows all items
 			$(filterApp.selector[5]).hide(); // hides button
 
 
@@ -118,10 +118,10 @@ filterApp.init = function() { // this function holds everything to start the app
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').fadeOut('slow');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').fadeOut('3000');
 				
 				//finds items matching user's selection and shows them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').fadeIn('3000');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]').fadeIn('9000');
 
 			/**
 			*
@@ -153,10 +153,10 @@ filterApp.init = function() { // this function holds everything to start the app
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').fadeOut('slow');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').fadeOut('3000');
 				
 				//finds items matching user's selection and shows them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').fadeIn('3000');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').fadeIn('9000');
 
 			/**
 			*
@@ -189,10 +189,10 @@ filterApp.init = function() { // this function holds everything to start the app
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeOut('slow');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeOut('3000');
 				
 				//finds items matching user's selection and shows them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeIn('3000');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeIn('9000');
 
 			/**
 			*
@@ -224,10 +224,10 @@ filterApp.init = function() { // this function holds everything to start the app
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').fadeOut('slow');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').fadeOut('3000');
 				
 				//finds items matching user's selection and shows them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').fadeIn('3000');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]').fadeIn('9000');
 
 			/**
 			*
@@ -259,10 +259,10 @@ filterApp.init = function() { // this function holds everything to start the app
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeOut('slow');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeOut('3000');
 				
 				//finds items matching user's selection and shows them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeIn('3000');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeIn('9000');
 
 			/**
 			*
@@ -295,10 +295,10 @@ filterApp.init = function() { // this function holds everything to start the app
 			**/
 			
 				// finds items NOT matching user's selection and hides them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeOut('slow');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeOut('3000');
 				
 				//finds items matching user's selection and shows them
-				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeIn('3000');
+				$(filterApp.selector[2] + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeIn('9000');
 
 			/**
 			*
@@ -325,10 +325,10 @@ filterApp.init = function() { // this function holds everything to start the app
 			console.log(filterApp.values[0] + ' Source, Work, & Subject do not equal all'); 
 
 			// finds items NOT matching user's selection and hides them
-			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeOut('slow');
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').not('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeOut('3000');
 			
 			//finds items matching user's selection and shows them
-			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeIn('3000');
+			$(filterApp.selector[2] + '[' + filterApp.dataAttr[0] + ']' + '[' + filterApp.dataAttr[1] + ']' + '[' + filterApp.dataAttr[2] + ']').filter('[' + filterApp.dataAttr[0] + '="' + filterApp.userSourceSelection + '"]' + '[' + filterApp.dataAttr[1] + '="' + filterApp.userWorkSelection + '"]' + '[' + filterApp.dataAttr[2] + '="' + filterApp.userSubjectSelection + '"]').fadeIn('9000');
 
 			/**
 			*

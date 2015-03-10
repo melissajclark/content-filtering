@@ -13,7 +13,8 @@ filterApp.selector  = ['select#sourceChoice', // 0
 						'div.filterableItem',  // 2
 						'select#subjectChoice', // 3
 						'form.filterNav', // 4
-						'button.reset']; // 5
+						'button.reset', // 5
+						'.filterableDetails']; // 6
 
 // array to store classes added when hiding / showing items
 filterApp.transition = ['itemTransition',
@@ -60,7 +61,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		$(filterApp.selector[5]).on('click',function(event){
 			event.preventDefault();
 			$(filterApp.selector[2]).fadeIn(); // shows all .filterableItems
-			$(".filterableDetails").text('');
+			$(filterApp.selector[6]).text('');
 			// resets values to all
 			$(filterApp.selector[0]).val(filterApp.values[0]);
 			$(filterApp.selector[1]).val(filterApp.values[0]);
@@ -71,7 +72,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		// shows all filterableItem divs when any values are not set to "All"
 		if (filterApp.userSourceSelection != filterApp.values[0] || filterApp.userWorkSelection != filterApp.values[0] || filterApp.userSubjectSelection != filterApp.values[0]){
 			$(filterApp.selector[5]).show(); // shows reset button
-			$(".filterableDetails").text('');
+			$(filterApp.selector[6]).text('');
 		}
 
 		/**
@@ -99,10 +100,10 @@ filterApp.init = function() { // this function holds everything to start the app
 
 				if (filterApp.hiddenItemCount === filterApp.totalItems) {
 						console.log(filterApp.visibleItemCount + " visible!");
-						$(".filterableDetails").text(filterApp.hiddenMessage);
+						$(filterApp.selector[6]).text(filterApp.hiddenMessage);
 				} else if (filterApp.hiddenItemCount != filterApp.totalItems){
 					console.log(filterApp.hiddenItemCount + " are hidden!");
-					$(".filterableDetails").text("");
+					$(filterApp.selector[6]).text("");
 				};
 
 			/* / end Hidden & Visible count */
@@ -134,10 +135,10 @@ filterApp.init = function() { // this function holds everything to start the app
 
 				if (filterApp.hiddenItemCount === filterApp.totalItems) {
 						console.log(filterApp.visibleItemCount + " visible!");
-						$(".filterableDetails").text(filterApp.hiddenMessage);
+						$(filterApp.selector[6]).text(filterApp.hiddenMessage);
 				} else if (filterApp.hiddenItemCount != filterApp.totalItems){
 					console.log(filterApp.hiddenItemCount + " are hidden!");
-					$(".filterableDetails").text("");
+					$(filterApp.selector[6]).text("");
 				};
 
 			/* / end Hidden & Visible count */
@@ -169,10 +170,10 @@ filterApp.init = function() { // this function holds everything to start the app
 
 				if (filterApp.hiddenItemCount === filterApp.totalItems) {
 						console.log(filterApp.visibleItemCount + " visible!");
-						$(".filterableDetails").text(filterApp.hiddenMessage);
+						$(filterApp.selector[6]).text(filterApp.hiddenMessage);
 				} else if (filterApp.hiddenItemCount != filterApp.totalItems){
 					console.log(filterApp.hiddenItemCount + " are hidden!");
-					$(".filterableDetails").text("");
+					$(filterApp.selector[6]).text("");
 				};
 
 			/* / end Hidden & Visible count */
@@ -205,10 +206,10 @@ filterApp.init = function() { // this function holds everything to start the app
 
 				if (filterApp.hiddenItemCount === filterApp.totalItems) {
 						console.log(filterApp.visibleItemCount + " visible!");
-						$(".filterableDetails").text(filterApp.hiddenMessage);
+						$(filterApp.selector[6]).text(filterApp.hiddenMessage);
 				} else if (filterApp.hiddenItemCount != filterApp.totalItems){
 					console.log(filterApp.hiddenItemCount + " are hidden!");
-					$(".filterableDetails").text("");
+					$(filterApp.selector[6]).text("");
 				};
 
 			/* / end Hidden & Visible count */
@@ -240,10 +241,10 @@ filterApp.init = function() { // this function holds everything to start the app
 
 				if (filterApp.hiddenItemCount === filterApp.totalItems) {
 						console.log(filterApp.visibleItemCount + " visible!");
-						$(".filterableDetails").text(filterApp.hiddenMessage);
+						$(filterApp.selector[6]).text(filterApp.hiddenMessage);
 				} else if (filterApp.hiddenItemCount != filterApp.totalItems){
 					console.log(filterApp.hiddenItemCount + " are hidden!");
-					$(".filterableDetails").text("");
+					$(filterApp.selector[6]).text("");
 				};
 
 			/* / end Hidden & Visible count */
@@ -275,10 +276,10 @@ filterApp.init = function() { // this function holds everything to start the app
 
 				if (filterApp.hiddenItemCount === filterApp.totalItems) {
 						console.log(filterApp.visibleItemCount + " visible!");
-						$(".filterableDetails").text(filterApp.hiddenMessage);
+						$(filterApp.selector[6]).text(filterApp.hiddenMessage);
 				} else if (filterApp.hiddenItemCount != filterApp.totalItems){
 					console.log(filterApp.hiddenItemCount + " are hidden!");
-					$(".filterableDetails").text("");
+					$(filterApp.selector[6]).text("");
 				};
 
 			/* / end Hidden & Visible count */
@@ -311,10 +312,10 @@ filterApp.init = function() { // this function holds everything to start the app
 
 				if (filterApp.hiddenItemCount === filterApp.totalItems) {
 						console.log(filterApp.visibleItemCount + " visible!");
-						$(".filterableDetails").text(filterApp.hiddenMessage);
+						$(filterApp.selector[6]).text(filterApp.hiddenMessage);
 				} else if (filterApp.hiddenItemCount != filterApp.totalItems){
 					console.log(filterApp.hiddenItemCount + " are hidden!");
-					$(".filterableDetails").text("");
+					$(filterApp.selector[6]).text("");
 				};
 
 			/* / end Hidden & Visible count */
@@ -341,10 +342,10 @@ filterApp.init = function() { // this function holds everything to start the app
 
 				if (filterApp.hiddenItemCount === filterApp.totalItems) {
 						console.log(filterApp.visibleItemCount + " visible!");
-						$(".filterableDetails").text(filterApp.hiddenMessage);
+						$(filterApp.selector[6]).text(filterApp.hiddenMessage);
 				} else if (filterApp.hiddenItemCount != filterApp.totalItems){
 					console.log(filterApp.hiddenItemCount + " are hidden!");
-					$(".filterableDetails").text("");
+					$(filterApp.selector[6]).text("");
 				};
 
 			/* / end Hidden & Visible count */

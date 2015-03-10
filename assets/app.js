@@ -59,7 +59,7 @@ filterApp.init = function() { // this function holds everything to start the app
 		// shows all filterableItem divs whhen "Reset" button is clicked
 		$(filterApp.selector[5]).on('click',function(event){
 			event.preventDefault();
-			$(filterApp.selector[2]).removeClass(filterApp.transition[1]).addClass(filterApp.transition[1]).show(); // shows all .filterableItems
+			$(filterApp.selector[2]).fadeIn(); // shows all .filterableItems
 			$(".filterableDetails").text('');
 			// resets values to all
 			$(filterApp.selector[0]).val(filterApp.values[0]);
